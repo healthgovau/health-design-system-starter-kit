@@ -1,3 +1,5 @@
 node_modules
 .idea/
 pancake/
+handlebars/exprimential
+.DS_Store

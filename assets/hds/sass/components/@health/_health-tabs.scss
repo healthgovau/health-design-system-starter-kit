@@ -1,0 +1,80 @@
+// Tabs
+//
+// The primary and secondary tabs.
+//
+// Markup: tabs.twig
+//
+// .tabs--secondary - Secondary tabs
+//
+// Style guide: navigation.tabs
+
+.au-body {
+
+  .health-tabs-wrapper {
+    white-space: nowrap;
+  }
+
+  .health-tabs-wrapper-inner {
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
+  .health-tabs {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $tab-border-colour;
+
+    li {
+      @include AU-space('margin', 1unit 1.5unit 0 4px);
+      @include AU-space('padding', 0);
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      a {
+        float: none;
+        display: inline-block;
+        color: #464646;
+        background-color: white;
+        text-decoration: none;
+        border-bottom: 4px solid transparent;
+        @include AU-space('padding', .5unit 0);
+
+        @include AU-media(sm){
+          @include AU-space('padding', .75unit 0);
+        }
+
+        &:hover {
+          background-color: white;
+        }
+
+        &:hover,
+        &:active {
+          border-bottom-color: $tab-border-colour--active;
+        }
+      }
+
+      &.active {
+        a {
+          border-bottom-color: $tab-border-colour--active;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .not-full-width {
+    .health-tabs {
+      margin-top: 0;
+    }
+  }
+
+  @media print {
+    .health-tabs {
+      display: none;
+    }
+  }
+}

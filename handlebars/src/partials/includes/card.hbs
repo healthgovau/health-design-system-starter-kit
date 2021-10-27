@@ -1,0 +1,27 @@
+<div class="col-lg-4">
+    <a class="
+health-card
+health-card--centered
+health-card--shadow
+health-card--top-highlight
+health-card--cta
+colour1
+{{card-class}}
+" href="#">
+        <div class="health-card__image">
+            {{#if card-img}}
+                <img src="{{card-img}}"/>
+            {{else}}
+                <img src="https://picsum.photos/300/200?random=10"/>
+            {{/if}}
+        </div>
+        <h3 class="health-card__title au-display-md au-display--heavy">
+            {{#if card-text}}
+                {{card-text}}
+            {{else}}
+                Continually empower extensible vortals via turnkey process improvements.
+            {{/if}}
+        </h3>
+    </a>
+</div>
+

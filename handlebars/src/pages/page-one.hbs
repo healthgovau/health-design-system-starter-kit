@@ -1,0 +1,38 @@
+{{!-- pages/page-one.hbs --}}
+
+{{#> layouts/base title="HDS Starter Kit" }}
+
+    {{#*inline "nav-block"}}
+        {{> includes/main-menu
+                user = user
+                hero-src="https://picsum.photos//1500/500"
+                hero-alt="Hero 1 alt title"
+        }}
+    {{/inline}}
+    {{#*inline "hero-block"}}
+        {{> includes/hero
+                hero-src="https://picsum.photos//1500/500"
+                hero-alt="Hero 1 alt title"
+        }}
+    {{/inline}}
+    {{#*inline "main-block"}}
+        {{> includes/card
+                card-text="Bens card!"
+                card-img="https://picsum.photos/300/200?random=1"
+        }}
+        {{> includes/card}}
+        {{> includes/card
+                card-text="Phosfluorescently engineer goal-oriented technologies without."
+                card-img="https://picsum.photos/300/200?random=2"
+        }}
+        {{> includes/card
+                card-text="Holisticly embrace principle-centered benefits."
+                card-img="https://picsum.photos/300/200?random=3"
+        }}
+    {{/inline}}
+    {{#*inline "footer-block"}}
+        {{> includes/footer
+                footer-text="Energistically extend value-added e-services without client-based manufactured products. Uniquely reintermediate open-source."
+        }}
+    {{/inline}}
+{{/layouts/base}}

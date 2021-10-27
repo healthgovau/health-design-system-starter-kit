@@ -5,9 +5,11 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp sync",
-    "cssonly": "gulp cssOnly",
+    "cssAndJsOnly": "gulp cssAndJsOnly",
     "react": "webpack-dev-server --mode=development",
-    "react:build": "webpack --mode=production"
+    "react:build": "webpack --mode=production",
+    "handlebars": "gulp handlebarsCompile",
+    "setup": "gulp setup"
   },
   "author": "",
   "license": "ISC",
@@ -53,5 +55,31 @@
     "react": {
       "location": "pancake/react/"
     }
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "@health.gov.au/health-design-system": "github:healthgovau/health-design-system#hds-starterkit-version",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.5",
+    "cssnano": "^5.0.8",
+    "gulp": "^4.0.2",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.0.0",
+    "gulp-terser": "^2.1.0",
+    "html-webpack-plugin": "^5.4.0",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "sass": "^1.43.3",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "devDependencies": {
+    "gulp-sourcemaps": "^3.0.0",
+    "webpack-cli": "^4.9.1"
   }
 }

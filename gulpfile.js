@@ -10,6 +10,7 @@ var sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const handlebars = require('gulp-compile-handlebars');
 const sync = require("browser-sync").create();
 
 const paths = {
@@ -26,7 +27,8 @@ const paths = {
         dest: './dist/css/',
     },
     scripts: {
-        src: ['./assets/js/**/*.js'],
+        src: ['./assets/hds/js/src/*.js'],
+        lib: ['./assets/hds/js/libraries/*'],
         dest: './dist/js/',
     },
     cachebust: {
@@ -56,6 +58,9 @@ function compileStyles() {
 }
 
 function minifyScripts() {
+
+    console.log(paths.scripts.src)
+
     return src(paths.scripts.src)
         .pipe(sourcemaps.init())
         .pipe(terser().on('error', (error) => console.log(error)))
@@ -63,6 +68,12 @@ function minifyScripts() {
         .pipe(sourcemaps.write('.'))
         .pipe(dest(paths.scripts.dest));
 }
+
+function copyLib() {
+
+    return src(paths.scripts.lib).pipe(dest(paths.scripts.dest));
+}
+
 
 function cacheBust() {
     return src(paths.cachebust.src)
@@ -102,7 +113,22 @@ function cssOnly(cb) {
     watch(["./dist/*.html","./dist/css/*"]).on('change', sync.reload);
 }
 
+function handlebarsCompile() {
+    return gulp.src('./handlebars/src/pages/*.hbs')
+        .pipe(handlebars({}, {
+            ignorePartials: true,
+            batch: ['./handlebars/src/partials']
+        }))
+        .pipe(rename({
+            basename: 'index',
+            extname: '.html',
+        }))
+        .pipe(gulp.dest('./dist'));
+};
 
+
+exports.handlebarsCompile = handlebarsCompile;
+exports.copyLib = copyLib;
 exports.copyHtml = copyHtml;
 exports.optimizeImages = optimizeImages;
 exports.compileStyles = compileStyles;

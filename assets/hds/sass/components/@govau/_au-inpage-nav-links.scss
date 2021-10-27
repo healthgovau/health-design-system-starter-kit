@@ -1,0 +1,6 @@
+.au-inpage-nav-links {
+  border-color: $inpage-nav-border-colour;
+  @media print {
+    display: none;
+  }
+}
