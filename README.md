@@ -5,6 +5,7 @@ Get started fast with the HDS starter kit!
 ## Setup
 
     git clone https://github.com/healthgovau/health-design-system-starter-kit PROJECTNAME
+    cd PROJECTNAME
     npm install
 
 
