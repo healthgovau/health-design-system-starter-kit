@@ -28,6 +28,21 @@
 
     <link rel="stylesheet" href="js/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>
+
+
+        Handlebars.registerHelper('object', function({hash}) {
+            return hash;
+        })
+        Handlebars.registerHelper('array', function() {
+            return Array.from(arguments).slice(0, arguments.length-1)
+        })
+
+        console.log(Handlebars)
+
+    </script>
+
 </head>
 <body class="au-grid au-body">
         <div class="container-fluid full-width">
@@ -70,11 +85,8 @@
                                                 Close
                                             </button>
                                             <ul class="au-link-list">
-        <!--                                        <li></li>-->
-                                                <li><a href="#" aria-current="page">Home</a></li>
-                                                <li><a href="#">Dinosaurs</a></li>
-                                                <li><a href="#">Interesting facts</a></li>
-                                                <li><a href="#">Resources</a></li>
+                                                    <li><a href="/">Home</a></li>
+                                                    <li><a href="/away">Away</a></li>
                                             </ul>
                                             <div class="au-main-nav__focus-trap-bottom"></div>
                                         </div>
@@ -89,6 +101,7 @@
                 </nav>
             </div>
         </div>
+
         <div class="hero">
             <img src="https://picsum.photos//1500/500" alt="Hero 1 alt title"/>
         </div><div class=" standard-gap">

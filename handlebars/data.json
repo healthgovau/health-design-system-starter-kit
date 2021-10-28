@@ -1,0 +1,12 @@
+{
+  "menu": [
+    {
+      "label": "Home",
+      "link": "/"
+    },
+    {
+      "label": "Away",
+      "link": "/away"
+    }
+  ]
+}

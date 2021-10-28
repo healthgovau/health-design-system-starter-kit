@@ -38,11 +38,9 @@
                                         Close
                                     </button>
                                     <ul class="au-link-list">
-<!--                                        <li>{{user}}</li>-->
-                                        <li><a href="#" aria-current="page">Home</a></li>
-                                        <li><a href="#">Dinosaurs</a></li>
-                                        <li><a href="#">Interesting facts</a></li>
-                                        <li><a href="#">Resources</a></li>
+                                        {{#each links}}
+                                            <li><a href="{{this.link}}">{{this.label}}</a></li>
+                                        {{/each}}
                                     </ul>
                                     <div class="au-main-nav__focus-trap-bottom"></div>
                                 </div>

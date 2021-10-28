@@ -53,4 +53,8 @@ Get started fast with the HDS starter kit!
 
     Partials can be referred to with or without parameters
 
+##### Menu
+
+    To customize the main nav menu use data.json
+
     

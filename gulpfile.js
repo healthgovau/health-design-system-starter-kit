@@ -12,6 +12,10 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const handlebars = require('gulp-compile-handlebars');
 const sync = require("browser-sync").create();
+const fs = require('fs');
+let rawdata = fs.readFileSync('./handlebars/data.json');
+let indata = JSON.parse(rawdata);
+
 
 const paths = {
     html: {
@@ -115,9 +119,12 @@ function cssOnly(cb) {
 
 function handlebarsCompile() {
     return gulp.src('./handlebars/src/pages/*.hbs')
-        .pipe(handlebars({}, {
-            ignorePartials: true,
-            batch: ['./handlebars/src/partials']
+        .pipe(handlebars({
+                data : indata
+            },
+            {
+                ignorePartials: true,
+                batch: ['./handlebars/src/partials'],
         }))
         .pipe(rename({
             basename: 'index',

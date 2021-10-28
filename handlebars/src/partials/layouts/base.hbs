@@ -35,6 +35,21 @@
 
     <link rel="stylesheet" href="js/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>
+
+
+        Handlebars.registerHelper('object', function({hash}) {
+            return hash;
+        })
+        Handlebars.registerHelper('array', function() {
+            return Array.from(arguments).slice(0, arguments.length-1)
+        })
+
+        console.log(Handlebars)
+
+    </script>
+
 </head>
 <body class="au-grid au-body">
 {{#> nav-block}}
