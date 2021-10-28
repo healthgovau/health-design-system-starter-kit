@@ -60,6 +60,9 @@ Get started fast with the HDS starter kit!
 
 ### Define content in json
 
+    To utilise a json source rather than adding multiple similar items to the templateuse data.json
+    See the example in page-one.hbs where include/cards outputs multiple cards.
+
     
 
     
