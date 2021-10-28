@@ -8,5 +8,19 @@
       "label": "Away",
       "link": "/away"
     }
+  ],
+  "cards": [
+    {
+      "card-text": "I'm a json card",
+      "card-img": "https://picsum.photos/300/200?random=11"
+    },
+    {
+      "card-text": "I'm another json card",
+      "card-img": "https://picsum.photos/300/200?random=12"
+    },
+    {
+      "card-text": "I'm the third json card",
+      "card-img": "https://picsum.photos/300/200?random=13"
+    }
   ]
 }
