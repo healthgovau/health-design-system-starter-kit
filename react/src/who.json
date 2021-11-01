@@ -1,0 +1,21 @@
+{
+  "faces": {
+    "Hugo": {
+      "checked": false,
+      "img": "http://placekitten.com/300/200"
+    },
+    "Nils": {
+      "checked": false,
+      "img": "http://placekitten.com/301/200"
+    },
+    "Ben": {
+      "checked": false,
+      "img": "http://placekitten.com/302/200"
+    },
+    "Sven": {
+      "checked": false,
+      "img": "http://placekitten.com/303/200"
+    }
+  },
+  "selected": "Ben"
+}

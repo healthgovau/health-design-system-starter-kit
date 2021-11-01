@@ -5,29 +5,37 @@ var webpack = require('webpack');
 module.exports = (env) => {
 
     return {
-        entry: './react/src/index.jsx',
+
+        entry: [
+            './react/src/index.jsx',
+            './react/src/test.scss',
+        ],
         plugins: [
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'react/src/index.html'),
             }),
-            // new Dotenv(),
-            // new webpack.DefinePlugin({
-            //     'process.env': {
-            //         'REACT_APP_ENDPOINT': JSON.stringify(env.REACT_APP_ENDPOINT)
-            //     }
-            // }),
         ],
         devServer: {
             static: {
                 directory: path.join(__dirname, 'dist'),
             },
-
             compress: true,
-            port: 3000,
+            port: 4000,
             historyApiFallback: true,
         },
         module: {
             rules: [
+                {
+                    test: /\.scss$/,
+                    exclude: /node_modules/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: { outputPath: './css', name: '[name].min.css'}
+                        },
+                        'sass-loader'
+                    ]
+                },
                 {
                     test: /\.(js|jsx)$/,
                     exclude: /node_modules/,
