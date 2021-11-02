@@ -1,5 +1,6 @@
 {{!-- pages/page-one.hbs --}}
 
+
 {{#> layouts/base title="HDS Starter Kit" }}
 
     {{#*inline "nav-block"}}
@@ -12,6 +13,10 @@
 
     {{/inline}}
     {{#*inline "hero-block"}}
+        {{> includes/hero
+                hero-src="https://picsum.photos//1500/500"
+                hero-alt="Hero 1 alt title"
+        }}
         {{> includes/hero
                 hero-src="https://picsum.photos//1500/500"
                 hero-alt="Hero 1 alt title"

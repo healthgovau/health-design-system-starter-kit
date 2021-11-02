@@ -14060,3 +14060,7 @@ textarea.au-text-input {
 .polaroid img {
   display: block;
 }
+
+body {
+  background-color: red;
+}

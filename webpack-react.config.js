@@ -8,7 +8,7 @@ module.exports = (env) => {
 
         entry: [
             './react/src/index.jsx',
-            './react/src/test.scss',
+            './src/scss/main.scss',
         ],
         plugins: [
             new HtmlWebpackPlugin({
@@ -22,6 +22,9 @@ module.exports = (env) => {
             compress: true,
             port: 4000,
             historyApiFallback: true,
+            devMiddleware: {
+                writeToDisk: true
+            }
         },
         module: {
             rules: [
