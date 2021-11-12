@@ -17,18 +17,14 @@ Get started fast with the HDS starter kit!
 
     Keep in mind that npm start, npm run react and npm run handlebars writes to the same html file so they will overwrite each other.
 
-### SCSS/CSS
-        
-    To watch and compile for css only run: npm run cssonly
-
 ### Static HTML
     
-    To compile scss and copy htm on change run: npm start
+    To compile scss and copy htm on change run: npm run html
 
 ### React
     The react files are located in the ./react folder
 
-    To run a local server run:  npm run react
+    To run a local server run and :  npm run react
     To build react run:         npm run react:build
 
 ### Handlebars
