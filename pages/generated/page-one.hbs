@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+            Base Page Title
+    </title>
+    <!--    <link rel="stylesheet" href="main.css">-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/anchorific.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+
+    <script src="js/jquery.once.min.js"></script>
+    <script src="js/lazyload.min.js"></script>
+    <script src="js/tippy.all.min.js"></script>
+
+    <script src="js/govau-ds.min.js"></script>
+    <script src="js/health.accordion.min.js"></script>
+    <script src="js/health.backtotop.min.js"></script>
+    <script src="js/health.fancybox.min.js"></script>
+    <script src="js/health.fieldcounter.min.js"></script>
+    <script src="js/health.inpagenav.min.js"></script>
+    <script src="js/health.lazyload.min.js"></script>
+    <script src="js/health.search.min.js"></script>
+    <script src="js/health.tooltip.min.js"></script>
+    <script src="js/health.video.min.js"></script>
+
+    <link rel="stylesheet" href="js/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>
+
+
+        Handlebars.registerHelper('object', function({hash}) {
+            return hash;
+        })
+        Handlebars.registerHelper('array', function() {
+            return Array.from(arguments).slice(0, arguments.length-1)
+        })
+
+        console.log(Handlebars)
+
+    </script>
+
+</head>
+<body class="au-grid au-body">
+<div class=" standard-gap">
+    <div class="container full-width">
+        <div class="row">
+        </div>
+    </div>
+</div>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark standard-gap" role="contentinfo">
+    <div class="container">
+    <!--        -->
+        <!--            <div></div>-->
+            <!--        -->
+    </div>
+</footer>
+
+</body>
+</html>

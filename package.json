@@ -84,6 +84,8 @@
     "css-loader": "^6.5.0",
     "file-loader": "^6.2.0",
     "gulp-sourcemaps": "^3.0.0",
+    "handlebars-layouts": "^3.1.4",
+    "handlebars-webpack-plugin": "^2.2.1",
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "null-loader": "^4.0.1",
