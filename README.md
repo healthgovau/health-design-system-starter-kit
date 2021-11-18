@@ -8,7 +8,6 @@ Get started fast with the HDS starter kit!
     cd PROJECTNAME
     npm install
 
-
 ## Base kits
 
     If you prefer to use a plain static html site you can use the npm start command and have that compile scss and publish the html to the dist folder.
@@ -57,7 +56,7 @@ Get started fast with the HDS starter kit!
 ### Define content in json
 
     To utilise a json source rather than adding multiple similar items to the templateuse data.json
-    See the example in page-one.hbs where include/cards outputs multiple cards.
+    See the example in index.hbs where include/cards outputs multiple cards from a json source.
 
     
 

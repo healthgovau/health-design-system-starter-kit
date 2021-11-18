@@ -1,13 +1,12 @@
 {{!-- pages/page-one.hbs --}}
 
 {{#> layouts/base title="HDS Starter Kit" }}
-
     {{#*inline "nav-block"}}
         {{> includes/main-menu
                 user = user
                 hero-src="https://picsum.photos//1500/500"
                 hero-alt="Hero 1 alt title"
-                links=data.menu
+                links=menu
         }}
 
     {{/inline}}
@@ -19,7 +18,7 @@
     {{/inline}}
     {{#*inline "main-block"}}
         {{> includes/cards
-                cards=data.cards
+                cards=cards
         }}
         {{> includes/card}}
         {{> includes/card

@@ -36,28 +36,16 @@
     <link rel="stylesheet" href="js/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script>
-
-
-        Handlebars.registerHelper('object', function({hash}) {
-            return hash;
-        })
-        Handlebars.registerHelper('array', function() {
-            return Array.from(arguments).slice(0, arguments.length-1)
-        })
-
-        console.log(Handlebars)
-
-    </script>
 
 </head>
 <body class="au-grid au-body">
 {{#> nav-block}}
+
 {{!-- Hero content goes here. --}}
 {{/nav-block}}
-        {{#> hero-block}}
+{{#> hero-block}}
 {{!-- Hero content goes here. --}}
-        {{/hero-block}}
+{{/hero-block}}
 <div class=" standard-gap">
     <div class="container full-width">
         <div class="row">
@@ -70,9 +58,9 @@
 
 <footer class="au-footer au-footer--dark au-body au-body--dark standard-gap" role="contentinfo">
     <div class="container">
-    <!--        {{#> footer-block}}-->
-        <!--            {{> includes/footer }}-->
-            <!--        {{/footer-block}}-->
+        {{#> footer-block}}
+            {{> includes/footer }}
+        {{/footer-block}}
     </div>
 </footer>
 

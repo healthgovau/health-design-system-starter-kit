@@ -29,19 +29,6 @@
     <link rel="stylesheet" href="js/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script>
-
-
-        Handlebars.registerHelper('object', function({hash}) {
-            return hash;
-        })
-        Handlebars.registerHelper('array', function() {
-            return Array.from(arguments).slice(0, arguments.length-1)
-        })
-
-        console.log(Handlebars)
-
-    </script>
 
 </head>
 <body class="au-grid au-body">
@@ -56,7 +43,8 @@
                                             class="au-main-nav__toggle au-main-nav__toggle--open"
                                             onclick="return AU.mainNav.Toggle( this )">
                     <span class="svg-inline--fa fa-fw">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path
+                      <svg xmlns="http://www.w3.org/200
+                      0/svg" viewBox="0 0 448 512"><path
                               d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
                     </span>
                                         Menu
@@ -85,6 +73,11 @@
                                                 Close
                                             </button>
                                             <ul class="au-link-list">
+                                                [PRE]
+                                                    [EACH]
+                                                    <li><a href="/">Home</a></li>
+                                                    [EACH]
+                                                    <li><a href="/away">Away</a></li>
                                             </ul>
                                             <div class="au-main-nav__focus-trap-bottom"></div>
                                         </div>
@@ -106,6 +99,63 @@
     <div class="container full-width">
         <div class="row">
         
+            <div class="col-lg-4 standard-gap">
+                <a class="
+            health-card
+            health-card--centered
+            health-card--shadow
+            health-card--top-highlight
+            health-card--cta
+            colour1
+            
+            " href="#">
+                    <div class="health-card__image">
+                            <img src="https://picsum.photos/300/200?random&#x3D;11"/>
+                    </div>
+                    <h3 class="health-card__title au-display-md au-display--heavy">
+                            I&#x27;m a json card
+                    </h3>
+                </a>
+            </div>
+            
+            <div class="col-lg-4 standard-gap">
+                <a class="
+            health-card
+            health-card--centered
+            health-card--shadow
+            health-card--top-highlight
+            health-card--cta
+            colour1
+            
+            " href="#">
+                    <div class="health-card__image">
+                            <img src="https://picsum.photos/300/200?random&#x3D;12"/>
+                    </div>
+                    <h3 class="health-card__title au-display-md au-display--heavy">
+                            I&#x27;m another json card
+                    </h3>
+                </a>
+            </div>
+            
+            <div class="col-lg-4 standard-gap">
+                <a class="
+            health-card
+            health-card--centered
+            health-card--shadow
+            health-card--top-highlight
+            health-card--cta
+            colour1
+            
+            " href="#">
+                    <div class="health-card__image">
+                            <img src="https://picsum.photos/300/200?random&#x3D;13"/>
+                    </div>
+                    <h3 class="health-card__title au-display-md au-display--heavy">
+                            I&#x27;m the third json card
+                    </h3>
+                </a>
+            </div>
+            
         <div class="col-lg-4 standard-gap">
             <a class="
         health-card
@@ -169,8 +219,7 @@
 
 <footer class="au-footer au-footer--dark au-body au-body--dark standard-gap" role="contentinfo">
     <div class="container">
-    <!--                <div>Energistically extend value-added e-services without client-based manufactured products. Uniquely reintermediate open-source.</div>-->
-    </div>
+        <div>Energistically extend value-added e-services without client-based manufactured products. Uniquely reintermediate open-source.</div>    </div>
 </footer>
 
 <script src="../../dist/main.js"></script></body>

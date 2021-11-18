@@ -1,6 +1,7 @@
 const path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fs = require('fs');
 
 module.exports = (env) => {
 
@@ -12,6 +13,7 @@ module.exports = (env) => {
         output: {
             path: path.resolve(__dirname, '../dist')
         },
+
         devServer: {
             static: {
                 directory: path.join(__dirname, 'dist'),
@@ -29,24 +31,25 @@ module.exports = (env) => {
                     test: /\.hbs$/,
                     loader: "handlebars-loader",
                     options: {
+                        precompileOptions : {
+                            page: 'home',
+                        },
                         partialDirs: [
                             path.join(__dirname, 'handlebars', 'src', 'partials')
-                        ]
+                        ],
                     }
                 }
             ]
         },
         plugins: [
-            new webpack.LoaderOptionsPlugin({
-                options: {
-                    handlebarsLoader: {}
-                }
-            }),
+            new webpack.LoaderOptionsPlugin({}),
             new HtmlWebpackPlugin({
+                templateParameters:require('./handlebars/data.json'),
                 title: 'My awesome service',
                 template: './handlebars/src/pages/index.hbs',
             }),
             new HtmlWebpackPlugin({
+                templateParameters:require('./handlebars/data.json'),
                 title: 'My awesome service',
                 template: './handlebars/src/pages/index.hbs',
                 filename: path.join(__dirname, "dist", "index.html"),
