@@ -12,9 +12,9 @@ Get started fast with the HDS starter kit!
 
 If you prefer to use a plain static html site you can use the `npm start` command and have that compile scss and publish the html to the dist folder.
 
-If you want to develop in react or handlebars you need to run webpack(npm run react) and the scss compiler(npm run cssonly) separately.
+If you want to develop in react or handlebars you need to run webpack (`npm run react`) and the scss compiler (`npm run cssonly`) separately.
 
-Keep in mind that npm start, npm run react and npm run handlebars writes to the same html file so they will overwrite each other.
+Keep in mind that `npm start`, `npm run react` and `npm run handlebars` all write to the same html file so they will overwrite each other.
 
 ### Static HTML
     
