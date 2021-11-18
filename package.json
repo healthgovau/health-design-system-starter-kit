@@ -4,10 +4,7 @@
   "description": "Get started fast with the HDS starter kit!",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp sync",
-    "cssOnly": "gulp cssOnly",
     "handlebars": "webpack-dev-server --config webpack-handlebars.config.js --mode=development",
-    "hb": "webpack --config webpack-handlebars.config.js",
     "html": "webpack-dev-server --config webpack-html.config.js --mode=development",
     "react": "webpack-dev-server --config webpack-react.config.js --mode=development",
     "react:build": "webpack --config webpack-react.config.js --mode=production",

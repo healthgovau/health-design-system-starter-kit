@@ -32,7 +32,7 @@ Get started fast with the HDS starter kit!
     The handlebars templates are located in handlebars/src
 
     The page skeleton can be foudn here handlebars/src/partials/layouts/base.hbs there is usually no need to change this file.
-    The file o change for a single page application is handlebars/src/page-one.hbs
+    The file o change for a single page application is handlebars/src/index.hbs
 
     handlebars is compiled by running npm run handlebars
 
