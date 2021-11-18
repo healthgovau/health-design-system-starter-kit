@@ -2,6 +2,16 @@
 
 Get started fast with the HDS starter kit!
 
+- [HDS Starter kit](#hds-starter-kit)
+  * [Setup](#setup)
+  * [Base kits](#base-kits)
+    + [Static HTML](#static-html)
+    + [React](#react)
+    + [Handlebars](#handlebars)
+      - [Quick get started for handlebars](#quick-get-started-for-handlebars)
+        * [Menu](#menu)
+    + [Define content in json](#define-content-in-json)
+
 ## Setup
 
     git clone https://github.com/healthgovau/health-design-system-starter-kit PROJECTNAME
