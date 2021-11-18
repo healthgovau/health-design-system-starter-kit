@@ -38,6 +38,37 @@ module.exports = (env) => {
                             path.join(__dirname, 'handlebars', 'src', 'partials')
                         ],
                     }
+                },
+                {
+                    test: /\.scss$/,
+                    exclude: /node_modules/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: { outputPath: './css', name: '[name].min.css'}
+                        },
+                        'sass-loader'
+                    ]
+                },
+                {
+                    test: /\.(js|jsx)$/,
+                    exclude: /node_modules/,
+                    use: ['babel-loader'],
+                },
+                {
+                    test: /\.css$/i,
+                    use: ["style-loader", "css-loader"],
+                },
+                {
+                    test: /\.(png|jpg|gif)$/i,
+                    use: [
+                        {
+                            loader: 'url-loader',
+                            options: {
+                                limit: 8192,
+                            },
+                        },
+                    ],
                 }
             ]
         },
