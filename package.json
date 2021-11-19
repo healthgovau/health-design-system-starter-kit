@@ -58,7 +58,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
-    "@health.gov.au/health-design-system": "github:healthgovau/health-design-system#hds-starterkit-version",
+    "@health.gov.au/health-design-system": "github:healthgovau/health-design-system#61fc76c5525423c9577161dc4d6c678b184bea76",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.5",
     "cssnano": "^5.0.8",
