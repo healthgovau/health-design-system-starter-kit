@@ -7,14 +7,11 @@ Get started fast with the HDS starter kit!
     git clone https://github.com/healthgovau/health-design-system-starter-kit PROJECTNAME
     cd PROJECTNAME
     npm install
+    npx hdssetup
 
 ## Base kits
 
-    If you prefer to use a plain static html site you can use the npm start command and have that compile scss and publish the html to the dist folder.
-
-    If you want to develop in react or handlebars you need to run webpack(npm run react) and the scss compiler(npm run cssonly) separately.
-
-    Keep in mind that npm start, npm run react and npm run handlebars writes to the same html file so they will overwrite each other.
+    Keep in mind that npm run html, npm run react and npm run handlebars writes to the same html file so they will overwrite each other.
 
 ### Static HTML
     
