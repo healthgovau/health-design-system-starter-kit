@@ -3,5 +3,5 @@ node_modules
 pancake/
 handlebars/exprimential
 .DS_Store
-dist/main.*.hot-update.js
-dist/main.*.hot-update.json
+dist/*.hot-update.js
+dist/*.hot-update.json

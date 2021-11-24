@@ -1,8 +1,0 @@
-
-// Visually hide (screen reader accessible)
-.visually-hidden,
-.sr-only,
-.element-invisible {
-  @include AU-sronly();
-  position: absolute !important;
-}
