@@ -18,6 +18,8 @@ Get started fast with the HDS starter kit!
     npm install
     npx hdssetup
 
+    If you get stuck on npm install, downgrade npm to version six by running npm install -g npm@6
+
 ## Base kits
 
     Keep in mind that npm run html, npm run react and npm run handlebars writes to the same html file so they will overwrite each other.
