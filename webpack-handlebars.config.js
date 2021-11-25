@@ -9,7 +9,10 @@ module.exports = (env) => {
     console.log(path.join(__dirname, 'handlebars', 'src', 'partials', 'includes'));
 
     return {
-        entry: "./handlebars/src/pages/index.hbs",
+        entry: [
+            "./handlebars/src/pages/index.hbs",
+            './src/scss/main.scss',
+            ],
         output: {
             path: path.resolve(__dirname, '../dist')
         },
