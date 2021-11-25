@@ -11,6 +11,7 @@ module.exports = (env) => {
         entry: [
             './html/index.html',
             './src/scss/main.scss',
+            './src/js/scripts.js',
         ],
         devServer: {
             static: {
@@ -39,7 +40,10 @@ module.exports = (env) => {
                     use: [
                         {
                             loader: 'file-loader',
-                            options: {outputPath: './css', name: '[name].min.css'}
+                            options: {
+                                outputPath: './css',
+                                name: '[name].min.css',
+                                sourceMap: true}
                         },
                         'sass-loader'
                     ]
@@ -47,7 +51,15 @@ module.exports = (env) => {
                 {
                     test: /\.(js|jsx)$/,
                     exclude: /node_modules/,
-                    use: ['babel-loader'],
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: './js',
+                                name: '[name].js'
+                            }
+                        },
+                    ]
                 },
                 {
                     test: /\.css$/i,

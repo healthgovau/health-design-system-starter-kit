@@ -12,7 +12,8 @@ module.exports = (env) => {
         entry: [
             "./handlebars/src/pages/index.hbs",
             './src/scss/main.scss',
-            ],
+            './src/js/scripts.js',
+        ],
         output: {
             path: path.resolve(__dirname, '../dist')
         },
@@ -21,7 +22,7 @@ module.exports = (env) => {
             static: {
                 directory: path.join(__dirname, 'dist'),
             },
-            port: 5000,
+            port: 'auto',
             open: true,
             historyApiFallback: true,
             devMiddleware: {
@@ -34,7 +35,7 @@ module.exports = (env) => {
                     test: /\.hbs$/,
                     loader: "handlebars-loader",
                     options: {
-                        precompileOptions : {
+                        precompileOptions: {
                             page: 'home',
                         },
                         partialDirs: [
@@ -48,7 +49,7 @@ module.exports = (env) => {
                     use: [
                         {
                             loader: 'file-loader',
-                            options: { outputPath: './css', name: '[name].min.css'}
+                            options: {outputPath: './css', name: '[name].min.css'}
                         },
                         'sass-loader'
                     ]
@@ -56,7 +57,15 @@ module.exports = (env) => {
                 {
                     test: /\.(js|jsx)$/,
                     exclude: /node_modules/,
-                    use: ['babel-loader'],
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: './js',
+                                name: '[name].js'
+                            }
+                        },
+                    ]
                 },
                 {
                     test: /\.css$/i,
@@ -78,12 +87,12 @@ module.exports = (env) => {
         plugins: [
             new webpack.LoaderOptionsPlugin({}),
             new HtmlWebpackPlugin({
-                templateParameters:require('./handlebars/data.json'),
+                templateParameters: require('./handlebars/data.json'),
                 title: 'My awesome service',
                 template: './handlebars/src/pages/index.hbs',
             }),
             new HtmlWebpackPlugin({
-                templateParameters:require('./handlebars/data.json'),
+                templateParameters: require('./handlebars/data.json'),
                 title: 'My awesome service',
                 template: './handlebars/src/pages/index.hbs',
                 filename: path.join(__dirname, "dist", "index.html"),
