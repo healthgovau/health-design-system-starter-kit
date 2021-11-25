@@ -18,6 +18,7 @@ module.exports = (env) => {
             },
             compress: false,
             port: 4000,
+            open: true,
             historyApiFallback: true,
             devMiddleware: {
                 writeToDisk: true
@@ -65,5 +66,6 @@ module.exports = (env) => {
                 },
             ],
         },
+
     };
 };
