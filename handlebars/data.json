@@ -3,11 +3,23 @@
   "menu": [
     {
       "label": "Home",
-      "link": "/"
+      "link": "/",
+      "link-class": "active"
     },
     {
-      "label": "Away",
-      "link": "/away"
+      "label": "Navigation 1",
+      "link": "/page1",
+      "link-class": ""
+    },
+    {
+      "label": "Navigation 2",
+      "link": "/page2",
+      "link-class": ""
+    },
+    {
+      "label": "Navigation 3",
+      "link": "/page3",
+      "link-class": ""
     }
   ],
   "cards": [
@@ -20,7 +32,7 @@
       "card-img": "https://picsum.photos/300/200?random=12"
     },
     {
-      "card-text": "I'm the third json card",
+      "card-text": "I'm the third json card, I think",
       "card-img": "https://picsum.photos/300/200?random=13"
     }
   ]

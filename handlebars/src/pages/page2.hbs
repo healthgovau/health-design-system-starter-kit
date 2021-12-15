@@ -1,9 +1,7 @@
 
 
 {{#> layouts/base title="HDS Starter Kit" }}
-    {{#*inline "header-block"}}
-        {{> includes/header}}
-    {{/inline}}
+
     {{#*inline "hero-block"}}
         {{> includes/hero
                 hero-src="https://picsum.photos//1500/500"
@@ -11,7 +9,9 @@
         }}
     {{/inline}}
     {{#*inline "main-block"}}
-        {{> includes/cards}}
+        {{> includes/cards
+                cards=cards
+        }}
         {{> includes/card}}
         {{> includes/card
                 card-text="Phosfluorescently engineer goal-oriented technologies without."
