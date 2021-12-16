@@ -2,6 +2,22 @@ const path = require('path');
 var webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
+var glob = require("glob");
+const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+/*
+ * Custom plugin to trigger a compile when
+ * saving files outside the bundle
+ */
+const WatchExternalFilesPlugin = () => {
+    WatchExternalFilesPlugin.prototype.apply = (compiler) => {
+        compiler.plugin('after-compile', (compilation, callback) => {
+            ['./templates', './config', './modules'].forEach(path => compilation.contextDependencies.add(path));
+            callback();
+        });
+    };
+};
 
 module.exports = (env) => {
 
@@ -9,22 +25,40 @@ module.exports = (env) => {
     console.log(path.join(__dirname, 'handlebars', 'src', 'partials', 'includes'));
 
     return {
-        entry: [
-            "./handlebars/src/pages/index.hbs",
-            './src/scss/main.scss',
-            './src/js/scripts.js',
-        ],
-        output: {
-            path: path.resolve(__dirname, '../dist')
+        // entry: [
+        //     './src/scss/main.scss',
+        // ],
+        entry: {
+            ...glob.sync("./src/js/*.js").reduce((acc, curr) => {
+                return {...acc, [path.basename(curr, ".js")]: curr}
+            }, {}),
+            ...glob.sync("./src/scss/*.scss").reduce((acc, curr) => {
+                return {...acc, [path.basename(curr, ".scss")]: curr}
+            }, {}),
+            ...glob.sync("./handlebars/src/pages/*.hbs").reduce((acc, curr) => {
+                return {...acc, [path.basename(curr, ".hbs")]: curr}
+            }, {}),
+            ...glob.sync("./img/*.*").reduce((acc, curr) => {
+                return {...acc, [path.basename(curr, ".*")]: curr}
+            }, {}),
         },
-
+        output: {
+            clean: true,
+            path: path.resolve(__dirname, '../dist'),
+            hotUpdateChunkFilename: 'hot/hot-update.[chunkhash].js',
+            hotUpdateMainFilename: 'hot/hot-update.[chunkhash].json'
+        },
         devServer: {
             static: {
                 directory: path.join(__dirname, 'dist'),
+                watch: true,
             },
+            watchFiles: ["./dist/*","./dist/css/*"],
             port: 'auto',
             open: true,
             historyApiFallback: true,
+            hot: true,
+            liveReload: true,
             devMiddleware: {
                 writeToDisk: true
             }
@@ -44,13 +78,11 @@ module.exports = (env) => {
                     }
                 },
                 {
-                    test: /\.scss$/,
-                    exclude: /node_modules/,
+                    test: /.(scss|sass)$/,
                     use: [
-                        {
-                            loader: 'file-loader',
-                            options: {outputPath: './css', name: '[name].min.css'}
-                        },
+                        MiniCssExtractPlugin.loader,
+                        'css-loader',
+                        'postcss-loader',
                         'sass-loader'
                     ]
                 },
@@ -85,6 +117,15 @@ module.exports = (env) => {
             ]
         },
         plugins: [
+            new MiniCssExtractPlugin({
+                filename: 'css/main.min.css',
+                chunkFilename: "[id].css",
+            }),
+            new CopyPlugin({
+                patterns: [
+                    {from: "./img", to: path.join(__dirname, "dist", "img")},
+                ],
+            }),
             new webpack.LoaderOptionsPlugin({}),
             new HtmlWebpackPlugin({
                 templateParameters: require('./handlebars/data.json'),
@@ -97,6 +138,6 @@ module.exports = (env) => {
                 template: './handlebars/src/pages/index.hbs',
                 filename: path.join(__dirname, "dist", "index.html"),
             }),
-        ]
+        ],
     };
 };

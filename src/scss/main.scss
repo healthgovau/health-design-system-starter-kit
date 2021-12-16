@@ -1,3 +1,10 @@
-@import '../../assets/hds/sass/all.scss';
+//@import '../../assets/hds/sass/all.scss';
+//
+//@import "react-custom";
+//@import "custom";
 
-@import "react-custom";
+body {
+  div {
+    border: 1px solid red;
+  }
+}
