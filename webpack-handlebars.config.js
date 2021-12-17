@@ -6,28 +6,12 @@ var glob = require("glob");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-/*
- * Custom plugin to trigger a compile when
- * saving files outside the bundle
- */
-const WatchExternalFilesPlugin = () => {
-    WatchExternalFilesPlugin.prototype.apply = (compiler) => {
-        compiler.plugin('after-compile', (compilation, callback) => {
-            ['./templates', './config', './modules'].forEach(path => compilation.contextDependencies.add(path));
-            callback();
-        });
-    };
-};
-
 module.exports = (env) => {
 
     console.log(__dirname);
     console.log(path.join(__dirname, 'handlebars', 'src', 'partials', 'includes'));
 
     return {
-        // entry: [
-        //     './src/scss/main.scss',
-        // ],
         entry: {
             ...glob.sync("./src/js/*.js").reduce((acc, curr) => {
                 return {...acc, [path.basename(curr, ".js")]: curr}
@@ -43,21 +27,20 @@ module.exports = (env) => {
             }, {}),
         },
         output: {
-            clean: true,
+            // clean: true,
             path: path.resolve(__dirname, '../dist'),
-            hotUpdateChunkFilename: 'hot/hot-update.[chunkhash].js',
-            hotUpdateMainFilename: 'hot/hot-update.[chunkhash].json'
+            // hotUpdateChunkFilename: 'hot/hot-update.[hash].js',
+            // hotUpdateMainFilename: 'hot/hot-update.[hash].json'
         },
         devServer: {
             static: {
                 directory: path.join(__dirname, 'dist'),
                 watch: true,
             },
-            watchFiles: ["./dist/*","./dist/css/*"],
+            watchFiles: ["./dist/*","./dist/css/*","./src/scss/*"],
             port: 'auto',
             open: true,
             historyApiFallback: true,
-            hot: true,
             liveReload: true,
             devMiddleware: {
                 writeToDisk: true
