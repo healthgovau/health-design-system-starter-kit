@@ -8,9 +8,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env) => {
 
-    console.log(__dirname);
-    console.log(path.join(__dirname, 'handlebars', 'src', 'partials', 'includes'));
-
     return {
         entry: {
             ...glob.sync("./src/js/*.js").reduce((acc, curr) => {
@@ -27,10 +24,7 @@ module.exports = (env) => {
             }, {}),
         },
         output: {
-            // clean: true,
             path: path.resolve(__dirname, '../dist'),
-            // hotUpdateChunkFilename: 'hot/hot-update.[hash].js',
-            // hotUpdateMainFilename: 'hot/hot-update.[hash].json'
         },
         devServer: {
             static: {
@@ -40,6 +34,7 @@ module.exports = (env) => {
             watchFiles: ["./dist/*","./dist/css/*","./src/scss/*","./src/scss/parts/*"],
             port: 'auto',
             open: true,
+            hot: true,
             historyApiFallback: true,
             liveReload: true,
             devMiddleware: {
@@ -101,8 +96,8 @@ module.exports = (env) => {
         },
         plugins: [
             new MiniCssExtractPlugin({
-                filename: 'css/main.min.css',
-                chunkFilename: "[id].css",
+                filename: '[name].css',
+                chunkFilename: '[id].[chunkhash].js'
             }),
             new CopyPlugin({
                 patterns: [
