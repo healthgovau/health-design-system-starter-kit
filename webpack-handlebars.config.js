@@ -37,7 +37,7 @@ module.exports = (env) => {
                 directory: path.join(__dirname, 'dist'),
                 watch: true,
             },
-            watchFiles: ["./dist/*","./dist/css/*","./src/scss/*"],
+            watchFiles: ["./dist/*","./dist/css/*","./src/scss/*","./src/scss/parts/*"],
             port: 'auto',
             open: true,
             historyApiFallback: true,
