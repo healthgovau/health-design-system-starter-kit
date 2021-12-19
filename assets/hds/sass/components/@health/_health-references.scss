@@ -1,0 +1,23 @@
+/*
+ * List of references
+ */
+.health-references {
+  > li {
+    transition: background-color 1s;
+
+    &.highlight {
+      background-color: $reference-bg-colour;
+    }
+  }
+}
+
+/*
+ * Links to the reference
+ */
+.health-references__links {
+  .health-references__link {
+    border-bottom: 1px dotted $reference-border-colour;
+    cursor: help;
+  }
+}
+

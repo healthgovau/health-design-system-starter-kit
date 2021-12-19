@@ -39,13 +39,13 @@ module.exports = (env) => {
                     exclude: /node_modules/,
                     use: [
                         {
-                            loader: 'file-loader',
+                            loader: 'sass-loader',
                             options: {
                                 outputPath: './css',
-                                name: '[name].min.css',
-                                sourceMap: true}
+                                sourceMap: true
+                            }
                         },
-                        'sass-loader'
+                        // 'sass-loader'
                     ]
                 },
                 {
