@@ -6,6 +6,18 @@ var glob = require("glob");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+
+const handbreakpages = './handlebars/src/pages/';
+
+
+filenames = fs.readdirSync(handbreakpages);
+var fns = [];
+
+filenames.forEach(file => {
+    fns.push(file);
+});
+
+
 module.exports = (env) => {
 
     return {
@@ -35,7 +47,13 @@ module.exports = (env) => {
             port: 'auto',
             open: true,
             hot: true,
-            historyApiFallback: true,
+            historyApiFallback: {
+                rewrites: [
+                    { from: /^\/$/, to: '/dist/index.html' },
+                    { from: /^\/about/, to: '/dist/about.js' },
+                    { from: /(.*)/, to: '/test.html' },
+                ],
+            },
             liveReload: true,
             devMiddleware: {
                 writeToDisk: true
@@ -105,16 +123,26 @@ module.exports = (env) => {
                 ],
             }),
             new webpack.LoaderOptionsPlugin({}),
-            new HtmlWebpackPlugin({
-                templateParameters: require('./handlebars/data.json'),
-                title: 'My awesome service',
-                template: './handlebars/src/pages/index.hbs',
+            // new HtmlWebpackPlugin({
+            //     templateParameters: require('./handlebars/data.json'),
+            //     title: 'My awesome service',
+            //     template: './handlebars/src/pages/index.hbs',
+            // }),
+            ...filenames.map((event) => {
+                return new HtmlWebpackPlugin({
+                    templateParameters: require('./handlebars/data.json'),
+                    title: 'My awesome service',
+                    template: './handlebars/src/pages/' + event,
+                    // filename: path.join(__dirname, "dist", event.replace(/\.[^/.]+$/, "")+".html"),
+                })
             }),
-            new HtmlWebpackPlugin({
-                templateParameters: require('./handlebars/data.json'),
-                title: 'My awesome service',
-                template: './handlebars/src/pages/index.hbs',
-                filename: path.join(__dirname, "dist", "index.html"),
+            ...filenames.map((event) => {
+                return new HtmlWebpackPlugin({
+                    templateParameters: require('./handlebars/data.json'),
+                    title: 'My awesome service',
+                    template: './handlebars/src/pages/' + event,
+                    filename: path.join(__dirname, "dist", event.replace(/\.[^/.]+$/, "")+".html"),
+                })
             }),
         ],
     };
