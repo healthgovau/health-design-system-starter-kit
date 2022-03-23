@@ -59,7 +59,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
-    "@health.gov.au/health-design-system": "github:healthgovau/health-design-system#65215ad42e45cd1abbb217d46c75fcd2af7c7ff9",
+    "@health.gov.au/health-design-system": "^1.4.0-alpha.19",
     "babel-loader": "^8.2.3",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
