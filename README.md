@@ -26,13 +26,13 @@ Get started fast with the HDS starter kit!
 
 ### Static HTML
     
-To compile scss and copy htm on change run: `npm run html`
+To compile scss and copy html on change run: `npm run html`
 
 ### React
 The react files are located in the ./react folder
 
 To run a local server run and :  `npm run react`
-To build react run:        ` npm run react:build`
+To build react run:        `npm run react:build`
 
 ### Handlebars
 

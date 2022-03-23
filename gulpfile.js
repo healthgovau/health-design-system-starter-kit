@@ -1,3 +1,4 @@
+const { watch } = require('gulp');
 // Configuration
 var filePermissions = 444; // 6=RW 4=R
 
@@ -13,7 +14,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps');
 
 // CSS
-gulp.task('default', function() {
+gulp.task('scss', function() {
     return gulp.src(['src/scss/*.scss'])
         .pipe(gulpif(argv.debug, sourcemaps.init()))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
@@ -23,4 +24,14 @@ gulp.task('default', function() {
         .pipe(chmod(filePermissions))
         .pipe(gulp.dest('dist/css/'))
         .pipe(notify({ message: 'Styles task complete' }));
+});
+
+
+// gulp.task('default', function() {
+//     gulp.watch(['src/scss/*.scss'], ['scss'])
+// });
+
+gulp.task('default', function(){
+    gulp.watch('src/scss/*.scss', gulp.series('scss'));
+    return
 });
