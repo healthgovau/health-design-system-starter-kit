@@ -36,7 +36,7 @@ module.exports = (env) => {
             }, {}),
         },
         output: {
-            path: path.resolve(__dirname, '../dist'),
+            path: path.resolve(__dirname, './dist'),
         },
         devServer: {
             static: {
@@ -50,7 +50,7 @@ module.exports = (env) => {
             historyApiFallback: {
                 rewrites: [
                     { from: /^\/$/, to: '/dist/index.html' },
-                    { from: /^\/about/, to: '/dist/about.js' },
+                    // { from: /^\/about/, to: '/dist/about.js' },
                     { from: /(.*)/, to: '/test.html' },
                 ],
             },

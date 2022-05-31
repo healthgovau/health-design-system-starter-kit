@@ -25,7 +25,7 @@ Get started fast with the HDS starter kit!
     Keep in mind that npm run html, npm run react and npm run handlebars writes to the same html file so they will overwrite each other.
 
 ### Static HTML
-    
+
 To compile scss and copy html on change run: `npm run html`
 
 ### React
@@ -40,6 +40,8 @@ The handlebars templates are located in handlebars/src
 
 The page skeleton can be foun here handlebars/src/partials/layouts/base.hbs there is usually no need to change this file.
 The file o change for a singdle page application is handlebars/src/index.hbs
+
+To have multiple pages add a new hbs-file to handlebars/src/pages it can be accessed by going to filename.html at the same address as the main page.
 
 handlebars is compiled by running `npm run handlebars`
 
@@ -66,6 +68,13 @@ To customize the main nav menu use data.json
 To utilise a json source rather than adding multiple similar items to the templateuse data.json
 See the example in index.hbs where include/cards outputs multiple cards from a json source.
 
-    
 
-    
+### Export files
+
+To use the generated page as a standalone static page. Copy the files from the dist-folder.
+
+
+
+
+
+
