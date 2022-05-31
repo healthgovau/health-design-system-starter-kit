@@ -1,5 +1,5 @@
 {
-  "foo" : "foo-as",
+  "foo": "foo-as",
   "menu": [
     {
       "label": "Home",
@@ -22,6 +22,62 @@
     {
       "card-text": "I'm the third json card",
       "card-img": "https://picsum.photos/300/200?random=13"
+    }
+  ],
+  "tiles": [
+    {
+      "tile-figure": "58,554,430",
+      "tile-label": "Total vaccine doses administered nationally",
+      "tile-icon": "Australia_tick.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "66,565",
+      "tile-label": "Vaccine doses reported in the last 24 hours",
+      "tile-icon": "Big_Tick_Box.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "97%",
+      "tile-label": "People aged 16+ have had at least one dose",
+      "tile-icon": "Vaccine_ThunbsUp.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "97%",
+      "tile-label": "People aged 16+ have had at least one dose",
+      "tile-icon": "Prcnt_1_dose_yellow.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "96%",
+      "tile-label": "People aged 16+ with two doses",
+      "tile-icon": "Prcnt_2_doses_orange.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "70%",
+      "tile-label": "People aged 16+ with three doses",
+      "tile-icon": "Prcnt_3_doses_green.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "20,047,557",
+      "tile-label": "People aged 16+ have had at least one dose",
+      "tile-icon": "Vaccine_vile_one.png",
+      "tile-currency": "Updated: dd/mm/yyyy, 8pm"
+    },
+    {
+      "tile-figure": "2,254,471",
+      "tile-label": "People aged 5-15 have had at least one dose",
+      "tile-icon": "5_15_Doses_Girl.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "19,520,059",
+      "tile-label": "Population aged 16+ eligible for a third dose",
+      "tile-icon": "Vaccine_Australia_Shield.png",
+      "tile-currency": ""
     }
   ]
 }

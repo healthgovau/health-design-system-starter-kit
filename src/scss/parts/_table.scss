@@ -1,0 +1,9 @@
+.dataTables_wrapper {
+    table.dataTable.compact {
+
+        thead th,
+        tbody td {
+            @include AU-fontgrid(xs);
+        }
+    }
+}

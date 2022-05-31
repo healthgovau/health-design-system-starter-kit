@@ -1,9 +1,5 @@
 @import '../../assets/hds/sass/all.scss';
 //@import "react-custom";
 @import "parts/custom";
-
-body {
-  div {
-    border: 5px;
-  }
-}
+@import "parts/tile";
+@import "parts/table";
