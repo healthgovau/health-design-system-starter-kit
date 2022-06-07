@@ -2,12 +2,16 @@
   "foo": "foo-as",
   "menu": [
     {
-      "label": "Home",
+      "label": "Standard page",
       "link": "/"
     },
     {
-      "label": "Away",
-      "link": "/away"
+      "label": "Full-width page",
+      "link": "/full-width-page.html"
+    },
+    {
+      "label": "Campaigns",
+      "link": "/campaign1.html"
     }
   ],
   "cards": [
@@ -78,6 +82,58 @@
       "tile-label": "Population aged 16+ eligible for a third dose",
       "tile-icon": "Vaccine_Australia_Shield.png",
       "tile-currency": ""
+    }
+  ],
+  "bands": [
+    {
+      "band-title": "Band neutral 1",
+      "band-class": "health-band--neutral-1"
+    },
+    {
+      "band-title": "Band neutral 2",
+      "band-class": "health-band--neutral-2"
+    },
+    {
+      "band-title": "Band primary",
+      "band-class": "health-band--primary"
+    },
+    {
+      "band-title": "Band secondary",
+      "band-class": "health-band--secondary"
+    }
+  ],
+  "campaign-links": [
+    {
+      "label": "Campaign1",
+      "link": "/campaign1.html"
+    },
+    {
+      "label": "Campaign2",
+      "link": "/campaign2.html"
+    },
+    {
+      "label": "Campaign3",
+      "link": "/campaign3.html"
+    },
+    {
+      "label": "Campaign4",
+      "link": "/campaign4.html"
+    },
+    {
+      "label": "Campaign5",
+      "link": "/campaign5.html"
+    },
+    {
+      "label": "Campaign6",
+      "link": "/campaign6.html"
+    },
+    {
+      "label": "Campaign7",
+      "link": "/campaign7.html"
+    },
+    {
+      "label": "Campaign8",
+      "link": "/campaign8.html"
     }
   ]
 }

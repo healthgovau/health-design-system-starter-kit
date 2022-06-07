@@ -1,0 +1,30 @@
+
+{{#> layouts/boilerplate-fullwidth
+    title="Medical Research Future Fund – our 10-year Investment Plan"
+    summary="The Medical Research Future Fund (MRFF) is a $20 billion long-term investment supporting Australian health and medical research. Our 10-year plan for the MRFF supports life-saving and job-creating medical research, reaffirming Australia’s reputation as a global leader in the field."
+    callout-text="Learn about the program"
+    body-class="mrff-campaign"
+}}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/nav--campaigns }}
+        {{> includes/subheader--campaign }}
+    {{/inline}}
+
+    {{!-- Main content --}}
+    {{#*inline "main-block"}}
+
+        {{> includes/band--video }}
+        {{# each bands}}
+            {{> includes/band
+                    band-title=this.band-title
+                    band-class=this.band-class
+            }}
+        {{/each}}
+
+    {{/inline}}
+
+{{/layouts/boilerplate-fullwidth}}
+
+

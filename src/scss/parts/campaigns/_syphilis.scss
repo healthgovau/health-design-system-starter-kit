@@ -1,0 +1,14 @@
+// https://health.govcms.gov.au/campaigns/dont-fool-around-with-syphilis
+
+.syphilis-campaign {
+    .health-sub-header {
+        &.health-sub-header--campaign {
+            background-image: url("/img/campaigns/syphilis.jpg") !important;
+        }
+
+        .health-sub-header__content {
+            //background-color: $syphilis-campaign-navy-blue;
+            background: transparent;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+
+{{#> layouts/boilerplate-fullwidth
+    title="Your Healthy Pregnancy"
+    summary="Keeping yourself and your baby healthy during pregnancy starts with 3 steps: eat well, stay active and ask for support."
+    callout-text="See our printable resources"
+    body-class="healthy-pregnancy-campaign"
+}}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/nav--campaigns }}
+        {{> includes/subheader--campaign }}
+    {{/inline}}
+
+    {{!-- Main content --}}
+    {{#*inline "main-block"}}
+
+        {{> includes/band--video }}
+        {{# each bands}}
+            {{> includes/band
+                    band-title=this.band-title
+                    band-class=this.band-class
+            }}
+        {{/each}}
+
+    {{/inline}}
+
+{{/layouts/boilerplate-fullwidth}}
+
+

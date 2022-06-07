@@ -1,0 +1,30 @@
+
+{{#> layouts/boilerplate-fullwidth
+    title="HPV vaccine for teens – tips for parents"
+    summary="Help protect young people from a range of cancers and diseases caused by HPV. Young people aged 12 to 13 years can get the free HPV vaccine at school."
+    callout-text="Find out more"
+    body-class="hpv-vaccine-for-teens-tips-for-parents"
+}}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/nav--campaigns }}
+        {{> includes/subheader--campaign }}
+    {{/inline}}
+
+    {{!-- Main content --}}
+    {{#*inline "main-block"}}
+
+        {{> includes/band--video }}
+        {{# each bands}}
+            {{> includes/band
+                    band-title=this.band-title
+                    band-class=this.band-class
+            }}
+        {{/each}}
+
+    {{/inline}}
+
+{{/layouts/boilerplate-fullwidth}}
+
+

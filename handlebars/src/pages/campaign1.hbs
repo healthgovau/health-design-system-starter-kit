@@ -1,0 +1,30 @@
+
+{{#> layouts/boilerplate-fullwidth
+    title="Don't fool around with syphilis"
+    summary="Syphilis is a sexually transmissible infection (STI) that can affect your whole body. It's serious and cases are on the rise in Australia."
+    callout-text="Download our campaign resources"
+    body-class="syphilis-campaign"
+}}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/nav--campaigns }}
+        {{> includes/subheader--campaign }}
+    {{/inline}}
+
+    {{!-- Main content --}}
+    {{#*inline "main-block"}}
+
+        {{> includes/band--video }}
+        {{# each bands}}
+            {{> includes/band
+                    band-title=this.band-title
+                    band-class=this.band-class
+            }}
+        {{/each}}
+
+    {{/inline}}
+
+{{/layouts/boilerplate-fullwidth}}
+
+

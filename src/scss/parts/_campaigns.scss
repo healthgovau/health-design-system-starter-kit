@@ -1,0 +1,5 @@
+.health-sub-header {
+    &.health-sub-header--campaign {
+        background-image: url('https://picsum.photos/id/867/1920/700') !important; // reqd to override .au-body--dark bg
+    }
+}
