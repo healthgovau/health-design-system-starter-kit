@@ -1,4 +1,38 @@
-// https://health.govcms.gov.au/campaigns/meningococcal-acwy-vaccine-for-teens
-// No prod SASS
+.meningococcal-acwy-vaccine {
+    // Locally-scoped variables
+    $colour-primary: #6a2874; // Dark
+    $colour-secondary: #7dcaa8;
+    $colour-tertiary: #6a2874; // Dark
 
-.meningococcal-acwy-vaccine {}
+    .au-body {
+
+        // Sub-header
+        .health-sub-header {
+            background-image: url("https://www.health.gov.au/sites/default/files/styles/hero_image/public/images/campaigns/2020/01/doh_men_meningococcal_acwy_banner_1920x500px_v3_er_copy.png?itok=YR6ZHPPG");
+
+            &__content {
+                background: $colour-primary;
+            }
+
+            @extend %sub-brand--dark;
+        }
+
+        // Bands
+        .health-band {
+            &--primary {
+                background: $colour-primary;
+                @extend %band--dark;
+            }
+
+            &--secondary {
+                background: $colour-secondary;
+            }
+
+            &--tertiary {
+                background: $colour-tertiary;
+                @extend %band--dark;
+            }
+        }
+
+    }
+}

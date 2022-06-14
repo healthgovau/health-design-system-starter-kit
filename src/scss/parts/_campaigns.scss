@@ -1,5 +1,38 @@
-.health-sub-header {
-    &.health-sub-header--campaign {
-        background-image: url('https://picsum.photos/id/867/1920/700') !important; // reqd to override .au-body--dark bg
+// TODO move to HDS
+// Ghost classes to be extended onto others
+// This allows for SASS-side theming and doesn't require --dark class output within Drupal
+
+%subheader--dark {
+
+    h1,
+    p,
+    .au-introduction {
+        color: $AU-colordark-foreground-text;
+    }
+
+    a {
+        color: $AU-colordark-foreground-text;
+    }
+
+    .health-toolbar {
+        .au-btn.au-btn--tertiary {
+            color: $AU-colordark-foreground-text;
+
+            &:hover:not(:disabled) {
+                color: $AU-colordark-foreground-text;
+            }
+        }
+    }
+}
+
+%band--dark {
+    color: $AU-colordark-foreground-text;
+
+    a {
+        color: $AU-colordark-foreground-text;
+    }
+
+    .au-cta-link {
+        @extend .au-cta-link--dark;
     }
 }

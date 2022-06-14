@@ -86,20 +86,24 @@
   ],
   "bands": [
     {
-      "band-title": "Band neutral 1",
-      "band-class": "health-band--neutral-1"
-    },
-    {
-      "band-title": "Band neutral 2",
-      "band-class": "health-band--neutral-2"
-    },
-    {
       "band-title": "Band primary",
       "band-class": "health-band--primary"
     },
     {
       "band-title": "Band secondary",
       "band-class": "health-band--secondary"
+    },
+    {
+      "band-title": "Band tertiary",
+      "band-class": "health-band--tertiary"
+    },
+    {
+      "band-title": "Band neutral 1",
+      "band-class": "health-band--neutral-1"
+    },
+    {
+      "band-title": "Band neutral 2",
+      "band-class": "health-band--neutral-2"
     }
   ],
   "campaign-links": [

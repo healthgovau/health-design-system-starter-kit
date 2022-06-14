@@ -1,22 +1,18 @@
-// No PRD SASS
-
-.hpv-vaccine-for-teens-tips-for-parents {
+.CAMPAIGNCLASS {
     // Locally-scoped variables
-    $colour-primary: #F1F1F2;
-    $colour-secondary: #E5E5E5;
-    $colour-tertiary: #0095a2; //Dark
+    $colour-primary: ;
+    $colour-secondary: ;
+    $colour-tertiary: ;
 
     .au-body {
 
         // Sub-header
         .health-sub-header {
-            background-image: url("https://www.health.gov.au/sites/default/files/styles/hero_image/public/images/campaigns/2021/02/hpv3584_web-banner_1920x500.jpg?itok=MCIlJlBC");
+            background-image: url(IMAGE);
 
             &__content {
-                background: $colour-tertiary; // Dark
+                background: transparent;
             }
-
-            @extend %sub-brand--dark;
         }
 
         // Bands
@@ -31,7 +27,6 @@
 
             &--tertiary {
                 background: $colour-tertiary;
-                @extend %band--dark;
             }
         }
 

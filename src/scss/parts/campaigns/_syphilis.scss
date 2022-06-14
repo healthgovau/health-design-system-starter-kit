@@ -1,14 +1,39 @@
 // https://health.govcms.gov.au/campaigns/dont-fool-around-with-syphilis
 
 .syphilis-campaign {
-    .health-sub-header {
-        &.health-sub-header--campaign {
-            background-image: url("/img/campaigns/syphilis.jpg") !important;
+    // Locally-scoped variables
+    $colour-primary: #95e6e1;
+    $colour-secondary: #EDC2F5;
+    $colour-tertiary: #000456; // Dark
+
+    .au-body {
+
+        // Sub-header
+        .health-sub-header {
+            background-image: url("https://www.health.gov.au/sites/default/files/styles/hero_image/public/images/campaigns/2021/07/02_-_practise_safe_sex_-_smaller_-_dark_blue.jpg?itok=iw_PJwOT");
+
+            &__content {
+                background: transparent;
+            }
+
+            @extend %sub-brand--dark;
         }
 
-        .health-sub-header__content {
-            //background-color: $syphilis-campaign-navy-blue;
-            background: transparent;
+        // Bands
+        .health-band {
+            &--primary {
+                background: $colour-primary;
+            }
+
+            &--secondary {
+                background: $colour-secondary;
+            }
+
+            &--tertiary {
+                background: $colour-tertiary;
+                @extend %band--dark;
+            }
         }
+
     }
 }

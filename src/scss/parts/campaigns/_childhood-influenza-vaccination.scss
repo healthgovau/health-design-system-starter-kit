@@ -1,1 +1,54 @@
-.health-childhood-influenza-vaccination-campaign {}
+.health-childhood-influenza-vaccination-campaign {
+    // Locally-scoped variables
+    $colour-primary: #A4D0EE;
+    $colour-secondary: #6fb5e4; // #774E9F; Dark
+    $colour-tertiary: #F7CF66;
+
+    .au-body {
+
+        // Sub-header
+        .health-sub-header {
+            background-image: url("https://www.health.gov.au/sites/default/files/styles/hero_image/public/images/campaigns/2022/04/doh_flu1344_under5_homepagebanner_1920x700px_v1.png?itok=5YdUfXYu");
+
+            &__content {
+                background-image: none;
+                background-color: $colour-secondary;
+                color: black;
+
+                // On anything 768px or wider.
+                @include AU-media(sm) {
+                    position: relative;
+                    top: 11.5rem;
+                    padding: 0;
+                    padding-left: 2rem;
+                    color: black;
+                }
+
+                .au-introduction {
+                    color: black;
+
+                    // On anything 768px or wider.
+                    @include AU-media(sm) {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        // Bands
+        .health-band {
+            &--primary {
+                background: $colour-primary;
+            }
+
+            &--secondary {
+                background: $colour-secondary;
+            }
+
+            &--tertiary {
+                background: $colour-tertiary;
+            }
+        }
+
+    }
+}

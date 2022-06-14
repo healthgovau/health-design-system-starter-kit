@@ -1,2 +1,35 @@
 // No PRD SASS
-.mrff-campaign {}
+.mrff-campaign {
+    // Locally-scoped variables
+    $colour-primary: #42617e; // Dark
+    $colour-secondary: #15233D; // Dark
+    // $colour-tertiary: ;
+
+    .au-body {
+
+        // Sub-header
+        .health-sub-header {
+            background-image: url("https://www.health.gov.au/sites/default/files/styles/hero_image/public/images/campaigns/2022/03/mrff_banner.png?itok=PWEuC5Ju");
+            @extend %sub-brand--dark;
+        }
+
+        // Bands
+        .health-band {
+            &--primary {
+                background: $colour-primary;
+                @extend %band--dark;
+            }
+
+            &--secondary {
+                background: $colour-secondary;
+                @extend %band--dark;
+            }
+
+            &--tertiary {
+                background: $colour-primary;
+                @extend %band--dark;
+            }
+        }
+
+    }
+}
