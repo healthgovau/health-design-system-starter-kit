@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Custom mixins used to generate background styles.
+ */
+
+/// Generate coloured background.
+/// Supports single colour and bicolour gradient backgrounds.
+/// @param {string} $colour_a - A colour value (e.g. white, #ffffff, rgb(255, 255, 255)).
+/// @param {string} $colour_b - A colour value (e.g. black, #000, rgb(0, 0, 0)).
+/// @param {string} $angle - Gradient angle expressed either in degrees (e.g. 105deg) or as texts (e.g. to right, to bottom).
+@mixin background-style($colour_a: null, $colour_b: null, $angle: to right) {
+    @if $colour_a and $colour_b {
+        background-color: $colour_a;
+        background: linear-gradient($angle, $colour_a, $colour_b);
+    }
+
+    @else if $colour_a {
+        background: $colour_a;
+    }
+
+    @else {
+        @error "Something went wrong with the background-style mixin. Check the mixin arguments and try again.";
+    }
+}

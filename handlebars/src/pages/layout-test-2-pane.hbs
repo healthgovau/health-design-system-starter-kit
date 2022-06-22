@@ -1,0 +1,54 @@
+
+{{#> layouts/boilerplate-global title="Layout test (2-pane)" summary="This page uses a fixed container but can accommodate variable internal layouts and contents."}}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader }}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+        <main class="col-xs-8" id="content" role="main">
+             {{> includes/band 
+                band-title="Band"
+                band-content="This is a regular band and is contained."
+                band-class="health-band--primary"
+            }}
+            {{> includes/band 
+                band-title="Magic band"
+                band-content="This is a regular band but breaks out of its container and used 100vw."
+                band-class="health-band--red health-band--full-width"
+            }}
+            {{> includes/band 
+                band-title="Magic band 2"
+                band-content="This is like the above band but uses some clever clip-path vmax CSS."
+                band-class="health-band--red health-band--full-width-2"
+            }}
+            {{> includes/band 
+                band-title="Image band"
+                band-content="This is a regular band but breaks out of its container and used 100vw."
+                band-class="health-band--image health-band--full-width"
+            }}
+            {{> includes/band--cards 
+                band-title="Cards band"
+                band-content="This is a regular band but breaks out of its container and used 100vw."
+                band-class="health-band--neutral-1 health-band--full-width"
+            }}
+            {{> includes/band--cards 
+                band-title="Cards band full width"
+                band-content="This is a regular band but breaks out of its container and used 100vw."
+                band-class="health-band--neutral-1"
+            }}
+            <h2>Some cards</h2>
+            <p>These are not in a band.</p>
+            {{> includes/cards }}
+            {{> includes/sample--bodycontent }}
+        </main>
+    {{/inline}}
+
+    {{#*inline "sidenav-block"}}
+        <aside class="col-xs-4 au-side-nav--right rs_skip" role="navigation">
+            {{> includes/nav--side }}
+        </aside>
+    {{/inline}}
+
+{{/layouts/boilerplate-global}}

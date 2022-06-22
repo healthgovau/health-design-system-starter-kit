@@ -12,7 +12,7 @@
     </head>
 
     <body class="au-grid">
-        <div class="page au-body">
+        <div class="au-body">
             {{> includes/nav--skipto }}
 
             {{> includes/header }}
@@ -25,7 +25,9 @@
                 }}
             {{/nav-block}}
 
-            {{> includes/subheader }}
+            {{#> subheader-block}}
+                {{!-- Subheader block --}}
+            {{/subheader-block}}
 
             {{!-- Page layout --}}
             <div class="container not-full-width">

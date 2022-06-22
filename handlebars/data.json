@@ -105,39 +105,5 @@
       "band-title": "Band neutral 2",
       "band-class": "health-band--neutral-2"
     }
-  ],
-  "campaign-links": [
-    {
-      "label": "Campaign1",
-      "link": "/campaign1.html"
-    },
-    {
-      "label": "Campaign2",
-      "link": "/campaign2.html"
-    },
-    {
-      "label": "Campaign3",
-      "link": "/campaign3.html"
-    },
-    {
-      "label": "Campaign4",
-      "link": "/campaign4.html"
-    },
-    {
-      "label": "Campaign5",
-      "link": "/campaign5.html"
-    },
-    {
-      "label": "Campaign6",
-      "link": "/campaign6.html"
-    },
-    {
-      "label": "Campaign7",
-      "link": "/campaign7.html"
-    },
-    {
-      "label": "Campaign8",
-      "link": "/campaign8.html"
-    }
   ]
 }

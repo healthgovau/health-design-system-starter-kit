@@ -3,7 +3,7 @@
     <head>
         <title>
             {{#unless title}}
-                HDS Boilerplate full width
+                HDS Boilerplate
             {{/unless}}
         </title>
         
@@ -11,7 +11,7 @@
 
     </head>
 
-    <body class="au-grid {{ body-class }}">
+    <body class="au-grid">
         <div class="au-body">
             {{> includes/nav--skipto }}
 
@@ -30,17 +30,20 @@
             {{/subheader-block}}
 
             {{!-- Page layout --}}
-            <div class="container-fluid full-width">
+            <div class="container">
                 <div class="row">
 
-                    {{!-- Main content pane --}}
-                    <main class="main-content-full" id="content" role="main">
-                        <div class="region region-content">
-                            {{#> main-block}}
-                                {{!-- Main content bands go here --}}
-                            {{/main-block}}
-                        </div>
-                    </main>
+                    {{#> full-width-block}}
+                        {{!-- Full-width content goes here. --}}
+                    {{/full-width-block}}
+ 
+                    {{#> main-block}}
+                        {{!-- Main content goes here. --}}
+                    {{/main-block}}
+
+                    {{#> sidenav-block}}
+                        {{!-- Side goes here. --}}
+                    {{/sidenav-block}}
 
                 </div>
             </div>

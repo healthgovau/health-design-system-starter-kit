@@ -1,0 +1,75 @@
+
+{{#> layouts/boilerplate-global title="Updated boilerplate and band demo" summary="This page uses a fixed container with slightly simplified bands." }}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader }}
+        <p>Check <a href="https://abc.useallfive.com/?colors[]=014181,1B8A96,0191D5,27B3BB,FFFFFF,000000">colour contrast compliance</a></p>
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+        <main class="col-xs-12" id="content" role="main">
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (primary)"
+                band-content="health-band--primary"
+                band-class="health-band--primary health-band--full-width"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (primary)"
+                band-content="health-band--primary"
+                band-class="health-band--primary health-band--full-width-2"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (primary)"
+                band-content="health-band--primary-animation"
+                band-class="health-band--primary-animation health-band--full-width"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (primary) not full width"
+                band-content="health-band--primary"
+                band-class="health-band--primary health-band--padded"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (secondary)"
+                band-content="health-band--secondary"
+                band-class="health-band--secondary health-band--full-width"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (tertiary)"
+                band-content="health-band--tertiary"
+                band-class="health-band--tertiary health-band--full-width"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (quaternary)"
+                band-content="health-band--quaternary"
+                band-class="health-band--quaternary health-band--full-width"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (neutral 1)"
+                band-content="health-band--neutral-1"
+                band-class="health-band--neutral-1 health-band--full-width"
+            }}
+
+            {{> includes/band--nocontainer 
+                band-title="New band markup (neutral 2)"
+                band-content="health-band--neutral-2"
+                band-class="health-band--neutral-2 health-band--full-width"
+            }}
+          
+            <p>This content is not in a band.</p>
+            {{> includes/cards }}
+            {{> includes/sample--bodycontent }}
+
+        </main>
+    {{/inline}}
+
+
+{{/layouts/boilerplate-global}}

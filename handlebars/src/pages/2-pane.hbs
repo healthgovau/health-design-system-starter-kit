@@ -1,6 +1,11 @@
 
 {{#> layouts/boilerplate title="Standard 2-pane page" summary="This is the page summary. Thanks for the memories."}}
 
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader }}
+    {{/inline}}
+
     {{!-- Main content --}}
     {{#*inline "main-block"}}
         {{> includes/nav--onthispage }}

@@ -1,0 +1,74 @@
+
+{{#> layouts/boilerplate-global title="Layout test (1 pane)" summary="This page uses a fixed container but can accommodate variable internal layouts and contents."}}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader }}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+        <main class="col-xs-12" id="content" role="main">
+            {{> includes/band 
+                band-title="Band"
+                band-content="This is a regular band and is contained."
+                band-class="health-band--primary"
+            }}
+            {{> includes/band 
+                band-title="Magic band 1"
+                band-content="This is a regular band but breaks out of its container and uses 100vw. It's not exactly magic but still..."
+                band-class="health-band--red health-band--full-width"
+            }}
+            {{> includes/band--nocontainer 
+                band-title="Magic band 1b"
+                band-content="As above but no container"
+                band-class="health-band--red health-band--full-width"
+            }}
+             {{> includes/band 
+                band-title="Magic band 2"
+                band-content="This is like the above band but uses margin-inline-start."
+                band-class="health-band--red2 health-band--full-width-2"
+            }}
+            {{> includes/band--nocontainer 
+                band-title="Magic band 2b"
+                band-content="As above but no container"
+                band-class="health-band--red2 health-band--full-width-2"
+            }}
+            {{> includes/band 
+                band-title="Magic band 3"
+                band-content="This is like the above band but uses some clever clip-path vmax CSS."
+                band-class="health-band--red3 health-band--full-width-3"
+            }}
+             {{> includes/band--nocontainer 
+                band-title="Magic band 3b"
+                band-content="As above but no container"
+                band-class="health-band--red3 health-band--full-width-3"
+            }}
+            {{> includes/band 
+                band-title="Image band"
+                band-content="This is a regular band using a background cover image."
+                band-class="health-band--image"
+            }}
+            {{> includes/band 
+                band-title="Image band full width"
+                band-content="This is a regular band using a background cover image but breaks out of its container and uses 100vw"
+                band-class="health-band--image health-band--full-width"
+            }}
+            {{> includes/band--cards 
+                band-title="Cards band"
+                band-content="This is a regular band."
+                band-class="health-band--neutral-1"
+            }}
+            {{> includes/band--cards 
+                band-title="Cards band full width"
+                band-content="This is a regular band but breaks out of its container and uses 100vw."
+                band-class="health-band--neutral-1 health-band--full-width"
+            }}
+            <h2>Some cards</h2>
+            <p>These are not in a band.</p>
+            {{> includes/cards }}
+            {{> includes/sample--bodycontent }}
+        </main>
+    {{/inline}}
+
+
+{{/layouts/boilerplate-global}}

@@ -1,0 +1,69 @@
+.au-body {
+    .health-band {
+
+        // Colours
+        &.health-band {
+            &--primary {
+                @include background-style($colour-complementary-blue-dark, $colour-complementary-blue-bg);
+            }
+
+            &--secondary {
+                @include background-style($colour-primary-teal-bg, $colour-primary-teal);
+            }
+
+            &--tertiary {
+                @include background-style($colour-complementary-skyblue-dark, $colour-complementary-skyblue-bg);
+            }
+
+            &--quaternary {
+                @include background-style($colour-primary-blue, $colour-primary-blue-bg);
+            }
+
+            &--neutral-1 {
+                @include background-style($colour-light, $colour-lightest);
+            }
+
+            &--neutral-2 {
+                @include background-style($colour-lightest, $colour-light);
+            }
+
+            &--primary-animation {
+                background: linear-gradient(42deg, #014181, #1b8a96, #0191d5);
+                background-size: 180% 180%;
+                animation: gradient-animation 9s ease infinite;
+            }
+
+            @keyframes gradient-animation {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+        }
+
+        // Full width background
+        &--full-width {
+            box-shadow: 0 0 0 100vmax rgb(215, 0, 0);
+            clip-path: inset(0 -100vmax);
+        }
+
+        &--full-width-2 {
+            width: 100vw;
+            margin-inline-start: 50%;
+            transform: translateX(-50%);
+        }
+
+        // Padded for contained colour band
+        &--padded {
+            @include AU-space(padding-left, 2unit);
+            @include AU-space(padding-right, 2unit);
+        }
+    }
+}
