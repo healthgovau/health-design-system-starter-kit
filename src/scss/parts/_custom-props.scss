@@ -1,0 +1,14 @@
+// Output SASS colour variables as custom props
+
+// Colours need to be stored in a map (name/value pairs) to output via a loop
+$colours: (primary: #0061BE,
+    secondary: #1B8A96,
+    tertiary: #27B3BB);
+
+:root {
+
+    @each $key_name,
+    $value in $colours {
+        --#{$key_name}: #{$value};
+    }
+}

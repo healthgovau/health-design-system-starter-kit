@@ -1,0 +1,45 @@
+$health-toc-item-level-gap: 1rem;
+
+.health-toc {}
+
+// .health-toc__heading {}
+
+// .health-toc__item {}
+
+// .health-toc__item--level-0 {}
+
+.health-toc__item--level-1 {
+  padding-left: $health-toc-item-level-gap * 1;
+}
+
+.health-toc__item--level-2 {
+  padding-left: $health-toc-item-level-gap * 2;
+}
+
+.health-toc__item--level-3 {
+  padding-left: $health-toc-item-level-gap * 3;
+}
+
+.health-toc__item--level-4 {
+  padding-left: $health-toc-item-level-gap * 4;
+}
+
+.health-toc__item--level-5 {
+  padding-left: $health-toc-item-level-gap * 5;
+}
+
+.health-toc__item--level-6 {
+  padding-left: $health-toc-item-level-gap * 6;
+}
+
+.health-toc__item--level-7 {
+  padding-left: $health-toc-item-level-gap * 7;
+}
+
+.health-toc__item--level- {
+  padding-left: $health-toc-item-level-gap * 8;
+}
+
+.health-toc__item--level-9 {
+  padding-left: $health-toc-item-level-gap * 9;
+}

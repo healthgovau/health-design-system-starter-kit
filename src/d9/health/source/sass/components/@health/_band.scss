@@ -1,0 +1,155 @@
+.health-band {
+
+  h2+.health-layout {
+    @include AU-space(margin-top, 2.5unit);
+  }
+}
+
+// Band types and colours
+
+/**
+ * Markup:
+ * <div class="health-band health-band--MODIFIERS"> - This div doesn't style the band.
+ *   <div class="health-band__container"> - This div styles the contained band. This is included to permit stacking.
+ *     BAND CONTENT
+ *   </div>::before - This pseudo-class styles the full width band.
+ * </div>
+ */
+
+.au-body {
+  .health-band {
+
+    // TODO Add adjacent selector handling so that stacked bands don't double the margin
+    position: relative; // reqd for inner container behaviour
+    isolation: isolate;
+    background: none !important; // Remove as applies to container to allow layer management
+    background-color: none !important;
+    padding: 0 !important;
+    @include AU-space(margin, 1.5unit 0);
+
+
+    // Types/layouts
+    // Contained band (default)
+    &[class*="health-band--"] {
+      .health-band__container {
+        @include AU-space(padding, 2unit);
+        border-radius: 6px;
+      }
+    }
+
+    // Full width background
+    &.health-band--full-width-bg {
+      @include AU-space(margin, 0);
+
+      .health-band__container {
+        @include AU-space(padding, 2unit 0);
+
+        // Apply full width background
+        // No default colour specified. Do it for each band colour.
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          width: 100vw;
+          margin-inline-start: 50%;
+          transform: translatex(-50%);
+          display: inherit;
+        }
+      }
+    }
+
+    // Everything goes full-width
+    // TODO fix horizontal scrolling
+    &.health-band--full-width {
+      width: 100vw;
+      margin-inline-start: 50%;
+      transform: translateX(-50%);
+    }
+
+    // Colours - declared in _colours-map.scss
+    // Primary
+    &.health-band--primary {
+
+      // Contained
+      .health-band__container {
+        @include background-style(var(--primary), var(--primary-alt));
+      }
+
+      &.health-band--full-width-bg {
+
+        // Full-width
+        .health-band__container::before {
+          @include background-style(var(--primary), var(--primary-alt));
+        }
+      }
+    }
+
+    // Secondary
+    &.health-band--secondary {
+
+      // Contained
+      .health-band__container {
+        @include background-style(var(--secondary), var(--secondary-alt));
+      }
+
+      &.health-band--full-width-bg {
+
+        // Full-width
+        .health-band__container::before {
+          @include background-style(var(--secondary), var(--secondary-alt));
+        }
+      }
+    }
+
+    // Tertiary
+    &.health-band--tertiary {
+
+      // Contained
+      .health-band__container {
+        @include background-style(var(--tertiary), var(--tertiary-alt));
+      }
+
+      &.health-band--full-width-bg {
+
+        // Full-width
+        .health-band__container::before {
+          @include background-style(var(--tertiary), var(--tertiary-alt));
+        }
+      }
+    }
+
+    // Tertiary 2
+    &.health-band--tertiary-2 {
+
+      // Contained
+      .health-band__container {
+        @include background-style(var(--tertiary-2), var(--tertiary-2-alt));
+      }
+
+      &.health-band--full-width-bg {
+
+        // Full-width
+        .health-band__container::before {
+          @include background-style(var(--tertiary-2), var(--tertiary-2-alt));
+        }
+      }
+    }
+
+    // Tertiary 2
+    &.health-band--neutral {
+
+      // Contained
+      .health-band__container {
+        background: var(--neutral);
+      }
+
+      &.health-band--full-width-bg {
+
+        // Full-width
+        .health-band__container::before {
+          background: var(--neutral);
+        }
+      }
+    }
+  }
+}

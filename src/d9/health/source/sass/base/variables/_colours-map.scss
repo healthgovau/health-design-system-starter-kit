@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Define mappings between colour variables and components.
+ */
+
+/**
+ * Health Pillars component.
+ *
+ * The Health Pillars colour scheme can be overridden by setting the
+ * `$brand-primary-colour` variable in the `_colours.scss` file and uncommenting
+ * the four lines below.
+ */
+// $brand-colour-1: tint($brand-primary-colour,20%);
+// $brand-colour-2: tint($brand-primary-colour,30%);
+// $brand-colour-3: tint($brand-primary-colour,50%);
+// $brand-colour-4: tint($brand-primary-colour,70%);
+
+/**
+ * Health Hero component.
+ */
+
+$health-hero-title: $white;
+
+// Band colours (AS CUSTOM PROPERTIES
+$colours: (primary: $colours-ask-4,
+    primary-alt: $colours-ask-4-alt,
+    secondary: $colours-ask-2,
+    secondary-alt: $colours-ask-2-alt,
+    tertiary: $colours-ask-3,
+    tertiary-alt: $colours-ask-3-alt,
+    tertiary-2: $colours-ask-1,
+    tertiary-2-alt: $colours-ask-1-alt,
+    neutral: $colours-ask-5);
+
+:root {
+
+    @each $key_name,
+    $value in $colours {
+        --#{$key_name}: #{$value};
+    }
+}

@@ -1,0 +1,58 @@
+.book-tree {
+
+  > ul {
+
+    > li {
+
+      &.leaf {
+
+        > a {
+          padding-left: 2rem;
+          border-bottom: 2px solid gray;
+          color: #313131;
+          font-weight: 700;
+        }
+      }
+
+      > ul {
+
+        > li {
+          border-bottom: 1px solid gray;
+
+          &:last-child {
+            border: none;
+          }
+
+          ul {
+
+            li {
+
+              a{
+
+                &:before {
+                  display: none;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.health-book-nav {
+  margin-left: 0;
+  margin-right: 0;
+
+  .align-self-start {
+    float: left;
+    padding-left: 0;
+  }
+
+  .align-self-end {
+    float: right;
+    padding-right: 0;
+  }
+}

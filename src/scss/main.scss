@@ -1,5 +1,15 @@
-@import '../../assets/hds/sass/all.scss';
-@import "hga/mixins";
+// Reference HDS in /assets (pulled in via NPM)
+@import "../../assets/hds/sass/all.scss";
+
 // @import "react-custom";
 // @import "parts/custom";
-@import "parts/band";
+@import "parts/custom-props";
+
+// ASK components
+@import "../d9/health/source/sass/styles.scss";
+
+// HGA D9 components - comment out to see styling for ASK only from above
+@import "../d9/hga/source/sass/styles.scss";
+
+// HDS starter kit components
+@import "parts/custom";

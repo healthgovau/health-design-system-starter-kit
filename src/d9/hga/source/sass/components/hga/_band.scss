@@ -1,0 +1,22 @@
+/**
+ * HGA specific bands.
+ */
+
+.au-body {
+  .health-band {
+
+    // Colours ======
+    &.health-band--healthy-pregnancy-green {
+      @include background-style($healthy-pregnancy-green);
+    }
+
+    &.health-band--healthy-pregnancy-pink {
+      @include background-style($healthy-pregnancy-pink);
+    }
+
+    &.health-band--healthy-pregnancy-yellow {
+      @include background-style($healthy-pregnancy-yellow);
+    }
+
+  }
+}

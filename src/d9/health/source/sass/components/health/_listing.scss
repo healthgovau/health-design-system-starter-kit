@@ -1,0 +1,56 @@
+.health-listing--grid {
+
+  > li + li {
+    border-top: none;
+  }
+
+  @at-root * + .row .health-listing--grid, * + .health-listing--grid {
+
+    > li:first-of-type {
+      border-top: none;
+    }
+
+    > li:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.health-listing--grid.health-listing--teaser {
+
+  > li + li{
+    border-top: 6px solid $colour-light-dark;
+  }
+
+  @at-root * + .row .health-listing--grid.health-listing--teaser, * + .health-listing--grid.health-listing--teaser {
+
+    > li {
+      border-top: 6px solid $colour-light-dark;
+    }
+
+    > li:first-of-type {
+      border-top: 6px solid $colour-light-dark;
+    }
+  }
+}
+
+.health-listing__items--tile {
+
+  .health-grid {
+    margin-bottom: 0;
+    margin-top: 0;
+    @include AU-media(sm) {
+      margin-top: -2rem;
+      margin-bottom: -1rem;
+    }
+  }
+}
+
+.health-listing.health-listing--basic {
+
+  > li + li {
+    border-top: none;
+    padding-top: 0;
+    @include AU-space(margin-top, 18px);
+  }
+}

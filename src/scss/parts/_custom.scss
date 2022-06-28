@@ -1,86 +1,30 @@
 // For layout-test
-.health-sub-header {
-    background: #ECECEC;
+.debug * {
+    outline: 1px solid #006565 !important; // applied outlines
+    background: rgb(0 134 134 / 10%) !important; // applies BGs to elements
 }
 
 p:empty {
     display: none;
 }
 
-%white-text {
-    color: #FFF;
+%more-white-inners {
 
-    a,
-    .au-introduction {
+    .au-introduction,
+    a {
         color: #FFF;
     }
-}
 
-.health-band--primary {
-    @extend %white-text;
-}
-
-// Forced band contents outside of container
-.health-band--full-width {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    position: relative;
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 100%;
-        width: 100vw;
+    .au-cta-link {
+        @extend .au-cta-link--dark;
     }
 }
 
-.health-band--full-width-2 {
-    width: 100vw;
-    margin-inline-start: 50%;
-    transform: translateX(-50%);
-}
-
-.health-band--full-width-3 {
-    //Has to be block colour
-    box-shadow: 0 0 0 100vmax rgb(215, 0, 0);
-    clip-path: inset(0 -100vmax);
-}
-
-// Add padding to content before band
-:not(.health-band)+.health-band {
-    @include AU-space(margin-top, 2.5unit);
-}
-
-// My band colours
-.health-band--red {
-    background: rgb(80, 0, 0);
-    @extend %white-text;
-}
-
-.health-band--red2 {
-    background: rgb(132, 0, 0);
-    @extend %white-text;
-}
-
-.health-band--red3 {
-    background: rgb(215, 0, 0);
-    @extend %white-text;
-}
-
-.health-band--image {
-    background: url('https://p0.piqsels.com/preview/571/469/218/aerial-shot-beach-bird-s-eye-view-from-above.jpg') no-repeat center center/cover;
-    min-height: 20rem;
-
-    h2,
-    p {
-        @include opacity(0.7);
-        background: #000;
-        color: #FFF;
-        display: inline-block;
-        @include AU-space(padding, 1unit);
-
-    }
+.health-band--primary,
+.health-band--secondary,
+.health-band--tertiary,
+.health-band--tertiary-2 {
+    @extend %colour-text-inverse;
+    @extend %more-white-inners;
+    // TODO apply robust dark/light to components
 }

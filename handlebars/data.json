@@ -2,16 +2,12 @@
   "foo": "foo-as",
   "menu": [
     {
-      "label": "Standard page",
+      "label": "Full-width",
       "link": "/"
     },
     {
-      "label": "Full-width page",
-      "link": "/full-width-page.html"
-    },
-    {
-      "label": "Campaigns",
-      "link": "/campaign1.html"
+      "label": "2-pane",
+      "link": "/2-pane-test.html"
     }
   ],
   "cards": [
