@@ -37,7 +37,9 @@ module.exports = (env) => {
         },
         output: {
             path: path.resolve(__dirname, './dist'),
-        },
+            hotUpdateChunkFilename: 'hot/hot-update.js',
+            hotUpdateMainFilename: 'hot/hot-update.json'
+          },
         devServer: {
             static: {
                 directory: path.join(__dirname, 'dist'),
