@@ -4,7 +4,8 @@
     background: rgb(0 134 134 / 10%) !important; // applies BGs to elements
 }
 
-p:empty {
+p:empty,
+.health-card__text:empty {
     display: none;
 }
 
@@ -27,4 +28,50 @@ p:empty {
     @extend %colour-text-inverse;
     @extend %more-white-inners;
     // TODO apply robust dark/light to components
+}
+
+// Let's have some fun
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.au-body {
+    .health-band.health-band--animated {
+        &.health-band--full-width-bg {
+            h2 {
+                font-size: 3rem;
+            }
+
+            // Full-width
+            .health-band__container {
+                @include AU-space(padding, 5unit 0);
+                text-align: center;
+
+                p {
+                    max-width: 100%;
+                    margin-bottom: 30px;
+                }
+
+                &::before {
+                    background: linear-gradient(300deg, #002058, #006269, #0057b8);
+                    background-size: 180% 180%;
+                    animation: gradient-animation 15s ease infinite;
+                }
+            }
+        }
+
+        .health-video img {
+            width: 100%;
+        }
+    }
 }

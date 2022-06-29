@@ -83,6 +83,17 @@
                 band-class="health-band--neutral health-band--full-width-bg"
             }}
 
+            {{> includes/band--video-campaign 
+                band-title="How about something new?"
+                band-content="This band has a big title and an animated background!"
+                band-class="health-band--primary health-band--full-width-bg health-band--animated"
+            }}
+            
+            {{!-- Work out how to call band -> component to stay DRY --}}
+            <div class="health-band">
+            {{> includes/cards }}
+            </div>
+
             {{> includes/stats }}
 
             {{> includes/band--stats

@@ -1,27 +1,17 @@
-<div class="col-lg-4 standard-gap">
-    <a class="
-health-card
-health-card--centered
-health-card--shadow
-health-card--top-highlight
-health-card--cta
-colour1
-{{card-class}}
-" href="#">
-        <div class="health-card__image">
-            {{#if card-img}}
-                <img src="{{card-img}}"/>
-            {{else}}
-                <img src="https://picsum.photos/300/200?random=10"/>
-            {{/if}}
-        </div>
-        <h3 class="health-card__title au-display-md au-display--heavy">
-            {{#if card-text}}
-                {{card-text}}
-            {{else}}
-                Still empower extensible vortals via turnkey process improvements. Yes!
-            {{/if}}
-        </h3>
-    </a>
+<div class="col-sm-3">
+  <a class="health-card health-card--centered health-card--shadow {{card-class}}" href="#">
+    <div class="health-card__image">
+      <img src="{{card-img}}" />
+    </div>
+    <h3 class="health-card__title">
+      {{#if card-title}}
+        {{card-title}}
+      {{else}}
+        Still empower extensible vortals via turnkey process improvements. Yes!
+      {{/if}}
+    </h3>
+    <div class="health-card__text">
+      {{card-text}}
+    </div>
+  </a>
 </div>
-

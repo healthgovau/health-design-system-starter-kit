@@ -16,6 +16,29 @@
  * </div>
  */
 
+// Make band mixin
+@mixin make-band($variant, $colour1: null, $colour2: null) {
+  &.health-band--#{$variant} {
+
+    .health-band__container,
+    &.health-band--full-width-bg::before {
+      @if $colour1 and $colour2 {
+        @include background-style(var(--#{$colour1}), var(--#{$colour2}));
+      }
+
+      @else {
+        @include background-style(var(--#{$colour1}));
+      }
+    }
+
+    &.health-band--full-width-bg {
+      .health-band__container {
+        background: none;
+      }
+    }
+  }
+}
+
 .au-body {
   .health-band {
 
@@ -37,24 +60,25 @@
       }
     }
 
-    // Full width background
+    // Full width background setup
     &.health-band--full-width-bg {
       @include AU-space(margin, 0);
 
+      // Apply full width background
+      // No default colour specified. Do it for each band colour.
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        margin-inline-start: 50%;
+        transform: translatex(-50%);
+        display: inherit;
+        z-index: -1;
+      }
+
       .health-band__container {
         @include AU-space(padding, 2unit 0);
-
-        // Apply full width background
-        // No default colour specified. Do it for each band colour.
-        &::before {
-          content: "";
-          position: absolute;
-          inset: 0;
-          width: 100vw;
-          margin-inline-start: 50%;
-          transform: translatex(-50%);
-          display: inherit;
-        }
       }
     }
 
@@ -66,90 +90,15 @@
       transform: translateX(-50%);
     }
 
-    // Colours - declared in _colours-map.scss
-    // Primary
-    &.health-band--primary {
+    // Colours are declared in _colours-map.scss as CSS vars
 
-      // Contained
-      .health-band__container {
-        @include background-style(var(--primary), var(--primary-alt));
-      }
+    // Make band variants via mixin args: variant-name, start colour, end colour (opt)
+    @include make-band("primary", "primary", "primary-alt");
+    @include make-band("secondary", "secondary", "secondary-alt");
+    @include make-band("tertiary", "tertiary", "tertiary-alt");
+    @include make-band("tertiary-2", "tertiary-2-alt", "tertiary-2-alt");
+    @include make-band("primary", "primary", "primary-alt");
+    @include make-band("neutral", "neutral");
 
-      &.health-band--full-width-bg {
-
-        // Full-width
-        .health-band__container::before {
-          @include background-style(var(--primary), var(--primary-alt));
-        }
-      }
-    }
-
-    // Secondary
-    &.health-band--secondary {
-
-      // Contained
-      .health-band__container {
-        @include background-style(var(--secondary), var(--secondary-alt));
-      }
-
-      &.health-band--full-width-bg {
-
-        // Full-width
-        .health-band__container::before {
-          @include background-style(var(--secondary), var(--secondary-alt));
-        }
-      }
-    }
-
-    // Tertiary
-    &.health-band--tertiary {
-
-      // Contained
-      .health-band__container {
-        @include background-style(var(--tertiary), var(--tertiary-alt));
-      }
-
-      &.health-band--full-width-bg {
-
-        // Full-width
-        .health-band__container::before {
-          @include background-style(var(--tertiary), var(--tertiary-alt));
-        }
-      }
-    }
-
-    // Tertiary 2
-    &.health-band--tertiary-2 {
-
-      // Contained
-      .health-band__container {
-        @include background-style(var(--tertiary-2), var(--tertiary-2-alt));
-      }
-
-      &.health-band--full-width-bg {
-
-        // Full-width
-        .health-band__container::before {
-          @include background-style(var(--tertiary-2), var(--tertiary-2-alt));
-        }
-      }
-    }
-
-    // Tertiary 2
-    &.health-band--neutral {
-
-      // Contained
-      .health-band__container {
-        background: var(--neutral);
-      }
-
-      &.health-band--full-width-bg {
-
-        // Full-width
-        .health-band__container::before {
-          background: var(--neutral);
-        }
-      }
-    }
   }
 }

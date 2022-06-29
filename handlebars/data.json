@@ -10,17 +10,39 @@
       "link": "/2-pane-test.html"
     }
   ],
-  "cards": [
+  "cards--text": [
     {
-      "card-text": "I'm a json card",
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour1"
+    },
+    {
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour2"
+    },
+    {
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour3"
+    },
+    {
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour4"
+    }
+  ],
+  "cards--images": [
+    {
+      "card-title": "I'm a json card",
       "card-img": "https://picsum.photos/300/200?random=11"
     },
     {
-      "card-text": "I'm another json card",
+      "card-title": "I'm another json card",
       "card-img": "https://picsum.photos/300/200?random=12"
     },
     {
-      "card-text": "I'm the third json card",
+      "card-title": "I'm the third json card",
       "card-img": "https://picsum.photos/300/200?random=13"
     }
   ],
