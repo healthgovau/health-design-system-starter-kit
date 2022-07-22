@@ -52,20 +52,29 @@ p:empty,
                 font-size: 3rem;
             }
 
+            &::before {
+                background: linear-gradient(300deg, #002058, #006269, #0057b8);
+                background-size: 180% 180%;
+                animation: gradient-animation 15s ease infinite;
+            }
+
             // Full-width
             .health-band__container {
                 @include AU-space(padding, 5unit 0);
                 text-align: center;
+                background: linear-gradient(300deg, #002058, #006269, #0057b8);
+                background-size: 180% 180%;
+                animation: gradient-animation 15s ease infinite;
 
                 p {
                     max-width: 100%;
                     margin-bottom: 30px;
                 }
+            }
 
-                &::before {
-                    background: linear-gradient(300deg, #002058, #006269, #0057b8);
-                    background-size: 180% 180%;
-                    animation: gradient-animation 15s ease infinite;
+            &.health-band--full-width-bg {
+                .health-band__container {
+                    background: none;
                 }
             }
         }

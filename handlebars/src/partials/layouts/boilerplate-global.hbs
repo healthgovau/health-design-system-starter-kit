@@ -32,18 +32,26 @@
             {{!-- Page layout --}}
             <div class="container">
                 <div class="row">
-
+        
+                    {{!-- 1-pane only --}}
                     {{#> full-width-block}}
-                        {{!-- Full-width content goes here. --}}
+                        <main class="col-xs-12" id="content" role="main">
+                            {{!-- Full-width content goes here. --}}
+                        </main>
                     {{/full-width-block}}
- 
-                    {{#> main-block}}
-                        {{!-- Main content goes here. --}}
-                    {{/main-block}}
+                    
+                    {{!-- 2-pane --}}
+                    <main class="col-xs-12 col-sm-8" id="content" role="main">
+                        {{#> main-block}}
+                            {{!-- Main content goes here. --}}
+                        {{/main-block}}
+                    </main>
 
-                    {{#> sidenav-block}}
-                        {{!-- Side goes here. --}}
-                    {{/sidenav-block}}
+                    <aside class="col-xs-12 col-sm-4 au-side-nav--right rs_skip" role="navigation">
+                        {{#> sidenav-block}}
+                            {{!-- Side goes here. --}}
+                        {{/sidenav-block}}
+                    </aside>
 
                 </div>
             </div>

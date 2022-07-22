@@ -8,6 +8,14 @@
     {
       "label": "2-pane",
       "link": "/2-pane-test.html"
+    },
+    {
+      "label": "HDS components (1-pane)",
+      "link": "test-content-1.html"
+    },
+    {
+      "label": "HDS components (2-pane)",
+      "link": "test-content-2.html"
     }
   ],
   "cards--text": [
