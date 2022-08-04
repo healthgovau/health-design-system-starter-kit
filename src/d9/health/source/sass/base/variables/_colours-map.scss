@@ -21,17 +21,26 @@
 
 $health-hero-title: $white;
 
-// Band colours (AS CUSTOM PROPERTIES
-$colours: (primary: $colours-ask-4,
-    primary-alt: $colours-ask-4-alt,
-    secondary: $colours-ask-2,
-    secondary-alt: $colours-ask-2-alt,
-    tertiary: $colours-ask-3,
-    tertiary-alt: $colours-ask-3-alt,
-    tertiary-2: $colours-ask-1,
-    tertiary-2-alt: $colours-ask-1-alt,
-    neutral: $colours-ask-5);
 
+// Declare and override high-level custom properties for the site
+$colours: (primary-gradient-bg--start:$ask-primary,
+    primary-gradient-bg--end:$ask-primary--alt,
+    secondary-gradient-bg--start: $ask-secondary,
+    secondary-gradient-bg--end: $ask-secondary--alt,
+    tertiary-gradient-bg--start: $ask-tertiary,
+    tertiary-gradient-bg--end: $ask-tertiary--alt,
+    footer-gradient-bg--start: $footer-start,
+    footer-gradient-bg--end: $footer-end,
+    footer-border: $footer-border,
+    subheader-gradient-bg--start: $subheader-gradient-content-bg--start,
+    subheader-gradient-bg--end: $subheader-gradient-content-bg--end,
+    subheader-gradient-content-bg--start: $subheader-gradient-content-bg--start,
+    subheader-gradient-content-bg--end: $subheader-gradient-content-bg--end,
+    main-nav-border: $main-nav-border-colour);
+
+
+
+// Output CSS custom properties
 :root {
 
     @each $key_name,
