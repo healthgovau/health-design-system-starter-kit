@@ -9,6 +9,12 @@
     {{/inline}}
 
     {{#*inline "full-width-block"}}
+    
+            {{> includes/band
+                band-title="Band fully-contained (tertiary)"
+                band-content="health-band health-band--tertiary"
+                band-class="health-band--tertiary"
+            }}
             {{> includes/band
                 band-title="Band fully-contained (primary)"
                 band-content="health-band health-band--primary"
@@ -21,16 +27,10 @@
                 band-class="health-band--secondary"
             }}
 
-            {{> includes/band
-                band-title="Band fully-contained (tertiary)"
-                band-content="health-band health-band--tertiary"
-                band-class="health-band--tertiary"
-            }}
-
-            {{> includes/band
-                band-title="Band fully-contained (tertiary 2)"
-                band-content="health-band health-band--tertiary-2"
-                band-class="health-band--tertiary-2"
+            {{> includes/band 
+                band-title="Completely full-width background (neutral darker)"
+                band-content="health-band health-band--neutral--darker health-band--full-width"
+                band-class="health-band--neutral--darker health-band--full-width"
             }}
 
             {{> includes/band
@@ -39,17 +39,24 @@
                 band-class="health-band--neutral"
             }}
 
+
+            {{> includes/band
+                band-title="Band fully-contained (neutral darker)"
+                band-content="health-band health-band--neutral--darker"
+                band-class="health-band--neutral--darker"
+            }}
+
             {{> includes/band
                 band-title="Band with no background"
                 band-content="health-band"
                 band-class=""
             }}
-
+{{!-- 
             {{> includes/band--hotline
                 band-title="Hotline band"
                 band-content="health-band health-band--primary"
                 band-class="health-band--primary"
-            }}
+            }} --}}
 
             {{> includes/band 
                 band-title="Full-width background (primary)"
@@ -70,15 +77,15 @@
             }}
 
             {{> includes/band 
-                band-title="Full-width background (tertiary 2)"
-                band-content="health-band health-band--tertiary-2 health-band--full-width-bg"
-                band-class="health-band--tertiary-2 health-band--full-width-bg"
-            }}
-
-            {{> includes/band 
                 band-title="Full-width background (neutral)"
                 band-content="health-band health-band--neutral health-band--full-width-bg"
                 band-class="health-band--neutral health-band--full-width-bg"
+            }}
+
+            {{> includes/band 
+                band-title="Full-width background (neutral darker)"
+                band-content="health-band health-band--neutral--darker health-band--full-width-bg"
+                band-class="health-band--neutral--darker health-band--full-width-bg"
             }}
 
             {{> includes/band--video-campaign 
