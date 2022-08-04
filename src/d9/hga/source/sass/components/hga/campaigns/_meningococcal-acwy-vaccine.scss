@@ -1,0 +1,20 @@
+.meningococcal-acwy-vaccine {
+    // Custom properties for colours
+    --primary-gradient-bg--start: #6a2874;
+    --primary-gradient-bg--end: #6a2874;
+    --secondary-gradient-bg--start: #7dcaa8;
+    --secondary-gradient-bg--end: #7dcaa8;
+    --tertiary-gradient-bg--start: #6a2874;
+    --tertiary-gradient-bg--end: #6a2874;
+    --subheader-gradient-bg--start: #6a2874;
+    --subheader-gradient-bg--end: #6a2874;
+    --subheader-gradient-content-bg--start: #6a2874;
+    --subheader-gradient-content-bg--end: #6a2874;
+    --subheader-minheight--desktop: 500px;
+
+    // Other custom styles
+    .health-sub-header {
+        background-image: url(https://picsum.photos/id/867/1920/700) !important;
+        // background-image: url("/themes/custom/hga/images/campaigns/meningococcal-acwy-vaccine/hero-bg.jpg");
+    }
+}

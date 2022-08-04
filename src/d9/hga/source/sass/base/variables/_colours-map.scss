@@ -14,36 +14,3 @@
 // $brand-colour-2: tint($brand-primary-colour,30%);
 // $brand-colour-3: tint($brand-primary-colour,50%);
 // $brand-colour-4: tint($brand-primary-colour,70%);
-
-// Test of custom props
-// TODO expend to include all vars and groupings.
-/// For example:
-/// $colours: (
-///   button: (
-///     primary: xxx,
-///     secondary: xxx,
-///   ),
-///   calllout: (
-///     primary: xxx,
-///     secondary: xxx,
-///   )
-/// );
-
-$colours: (primary: $colour-complementary-blue-dark,
-    primary-alt: $colour-complementary-blue-bg,
-    secondary: $colour-primary-teal-bg,
-    secondary-alt: $colour-primary-teal,
-    tertiary: $colour-complementary-skyblue-bg,
-    tertiary-alt: $colour-complementary-skyblue-dark,
-    tertiary-2: $colour-primary-blue,
-    tertiary-2-alt: $colour-primary-blue-bg,
-    neutral: $colour-light);
-
-// Output colour map as custom properties    
-:root {
-
-    @each $key_name,
-    $value in $colours {
-        --#{$key_name}: #{$value};
-    }
-}

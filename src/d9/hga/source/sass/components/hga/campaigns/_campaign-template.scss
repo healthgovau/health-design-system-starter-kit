@@ -1,0 +1,21 @@
+// Campaign template
+
+.campaign-name {
+    // Custom properties for colours
+    --primary-gradient-bg--start: #f4f3d4;
+    --primary-gradient-bg--end: #f4f3d4;
+    --secondary-gradient-bg--start: #d8f0b0;
+    --secondary-gradient-bg--end: #d8f0b0;
+    --tertiary-gradient-bg--start: #ffd772;
+    --tertiary-gradient-bg--end: #ffd772;
+    --subheader-gradient-bg--start: #f4f3d4;
+    --subheader-gradient-bg--end: #f4f3d4;
+    --subheader-gradient-content-bg--start: #f4f3d4;
+    --subheader-gradient-content-bg--end: #f4f3d4;
+    --subheader-minheight--desktop: 500px;
+
+    // Other custom styles
+    // .health-sub-header {
+    //     background-image: url(https://picsum.photos/id/867/1920/700) !important;
+    // }
+}
