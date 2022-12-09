@@ -1,0 +1,123 @@
+.au-body {
+
+  .health-grid > * + p {
+    margin-top: 0;
+  }
+}
+
+.health-grid {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  > * {
+    box-sizing: border-box;
+    flex-basis: 100%;
+    -ms-flex: auto;
+    margin-bottom: $grid-gutter-size;
+    margin-right: $grid-gutter-size;
+    padding: 1rem;
+  }
+
+  > img {
+    padding: 0;
+  }
+
+  &--1col-xs {
+
+    > * {
+      @include AU-media(xs) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+      }
+    }
+
+    > img {
+      @include AU-media(xs) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+
+  &--1col-sm {
+
+    > * {
+      @include AU-media(sm) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+      }
+    }
+
+    > img {
+      @include AU-media(sm) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+
+  &--1col-md {
+
+    > * {
+      @include AU-media(md) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+      }
+    }
+
+    > img {
+      @include AU-media(md) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+
+  &--1col-lg {
+
+    > * {
+      @include AU-media(lg) {
+        flex-basis: health-grid-item-width();
+        -ms-flex: auto;
+      }
+    }
+
+    > img {
+      @include AU-media(lg) {
+        max-width: health-grid-item-width();
+      }
+    }
+  }
+}
+
+@each $bp in $breakpoint-sizes {
+  @for $i from 2 through 8 {
+    .health-grid--#{$i}col-#{$bp} {
+
+      > * {
+        @include AU-media($bp) {
+          flex-basis: health-grid-item-width($i, $grid-gutter-size);
+          -ms-flex: auto;
+        }
+      }
+
+      > *:not(*:nth-child(#{$i}n + #{$i})) {
+        @include AU-media($bp) {
+          margin-right: $grid-gutter-size;
+        }
+      }
+
+      > *:nth-child(#{$i}n + #{$i}) {
+        @include AU-media($bp) {
+          margin-right: 0rem;
+        }
+      }
+
+      > img {
+        @include AU-media($bp) {
+          margin-top: 0;
+          max-width: health-grid-item-width($i, $grid-gutter-size);
+        }
+      }
+    }
+  }
+}

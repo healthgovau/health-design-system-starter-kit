@@ -1,5 +1,11 @@
 <ul>
-    {{#each links}}
-        <li><a href="{{this.link}}">{{this.label}}</a></li>
-    {{/each}}
+  {{#each links}}
+    <li><a href="{{this.link}}">{{this.label}}</a></li>
+  {{/each}}
 </ul>
+
+<div class="tiles">
+  <div class="col-xs-6 col-lg-4">
+    {{>tile }}
+  </div>
+</div>

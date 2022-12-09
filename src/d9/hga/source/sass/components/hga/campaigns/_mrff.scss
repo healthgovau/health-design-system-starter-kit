@@ -1,0 +1,21 @@
+// No PRD SASS
+.mrff-campaign {
+    // Custom properties for colours
+    --primary-gradient-bg--start: #42617e;
+    --primary-gradient-bg--end: #42617e;
+    --secondary-gradient-bg--start: #15233D;
+    --secondary-gradient-bg--end: #15233D;
+    --tertiary-gradient-bg--start: #15233D;
+    --tertiary-gradient-bg--end: #15233D;
+    --subheader-gradient-bg--start: #42617e;
+    --subheader-gradient-bg--end: #42617e;
+    --subheader-gradient-content-bg--start: #42617e;
+    --subheader-gradient-content-bg--end: #42617e;
+    --subheader-minheight--desktop: 500px;
+
+    // Other custom styles
+    .health-sub-header {
+        background-image: url(https://picsum.photos/id/867/1920/700) !important;
+        //     background-image: url("/themes/custom/hga/images/campaigns/mrff/hero-bg.jpg");
+    }
+}

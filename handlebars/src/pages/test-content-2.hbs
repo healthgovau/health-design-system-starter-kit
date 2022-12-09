@@ -1,0 +1,49 @@
+
+{{#> layouts/boilerplate-global title="Program (long form) example" summary="This is a port of a typical program page from HGA." }}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader 
+            subheader-class="health-sub-header--dark"
+        }}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+         
+            {{> includes/hds-components/in-page-nav }}
+            {{> includes/hds-components/accordion }}
+            {{> includes/hds-components/definition-list }}
+            {{> includes/hds-components/typography }}
+            {{> includes/hds-components/page-alert }}
+            {{> includes/hds-components/page-alert alert-class="au-page-alerts--success"}}
+            {{> includes/hds-components/page-alert alert-class="au-page-alerts--warning"}}
+            {{> includes/hds-components/page-alert alert-class="au-page-alerts--error"}}
+            {{> includes/hds-components/lists }}
+            {{> includes/hds-components/lists class="list--large" title="List large" }}
+            {{> includes/hds-components/lists class="list--large--plain" title="List large plain" }}
+            {{> includes/hds-components/lists class="list--large--checklist" title="List large checklist" }}
+            {{> includes/hds-components/book-nav }}
+            {{> includes/hds-components/callout}}
+            {{> includes/hds-components/callout callout-class="au-callout--secondary"}}
+            {{> includes/hds-components/callout callout-class="au-callout--tertiary" }}
+            {{> includes/hds-components/callout callout-class="au-callout--success" }}
+            {{> includes/hds-components/callout callout-class="au-callout--simple" }}
+            {{> includes/hds-components/compare }}
+            {{> includes/hds-components/figure }}
+            {{> includes/hds-components/table }}
+            {{> includes/hds-components/file }}
+            {{> includes/hds-components/video }}
+            {{> includes/hds-components/facet }}
+            {{> includes/hds-components/inline-reference }}
+            {{> includes/hds-components/references }}
+            {{> includes/hds-components/footnotes }}
+            {{> includes/hds-components/tags }}
+    {{/inline}}
+
+    {{#*inline "sidenav-block"}}
+    {{/inline}}
+
+
+
+{{/layouts/boilerplate-global}}

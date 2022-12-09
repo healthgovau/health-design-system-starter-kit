@@ -1,0 +1,21 @@
+
+{{#> layouts/boilerplate-fullwidth title="Full width page" summary="This is the page summary. Thanks for the memories."}}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader }}
+    {{/inline}}
+
+    {{!-- Main content --}}
+    {{#*inline "main-block"}}
+        {{# each bands}}
+            
+            {{> includes/band
+                    band-title=this.band-title
+                    band-class=this.band-class
+            }}
+        {{/each}}
+
+    {{/inline}}
+
+{{/layouts/boilerplate-fullwidth}}

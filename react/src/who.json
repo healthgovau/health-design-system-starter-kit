@@ -1,0 +1,17 @@
+{
+  "faces": {
+    "Darth": {
+      "checked": false,
+      "img": "http://placekitten.com/300/200"
+    },
+    "Han Solo": {
+      "checked": false,
+      "img": "http://placekitten.com/301/200"
+    },
+    "R2D2": {
+      "checked": false,
+      "img": "http://placekitten.com/302/200"
+    }
+  },
+  "selected": "R2D2"
+}

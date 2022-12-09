@@ -5,17 +5,20 @@
     @include AU-space('margin-top', -1unit);
 
     // Add our colours.
-    @extend %bg-gradient--neutral;
+    @include background-style(var(--neutral-bg));
+
     @include AU-media(sm) {
       background: $AU-color-background;
     }
 
     a {
       background: transparent;
+
       &:hover,
       &:focus {
         background-color: $side-nav-link-bg-colour--hover;
       }
+
       &.active {
         font-weight: bold;
         color: $AU-color-foreground-text;
@@ -23,7 +26,8 @@
       }
     }
 
-    li, ul {
+    li,
+    ul {
       position: relative;
     }
 
@@ -39,7 +43,8 @@
     padding-left: 0;
     padding-right: 0;
     @include AU-space(padding-bottom, 2unit);
-    @include AU-media(sm){
+
+    @include AU-media(sm) {
       float: right;
       padding-left: 12px;
       padding-right: 12px;

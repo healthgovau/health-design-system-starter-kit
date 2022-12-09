@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            {{#unless title}}
+                HDS Boilerplate
+            {{/unless}}
+        </title>
+        
+        {{> includes/head }}
+
+    </head>
+
+    <body class="au-grid {{body-class}}">
+        <div class="au-body">
+            {{> includes/nav--skipto }}
+
+            {{> includes/header }}
+            
+            {{#> nav-block}}
+                {{> includes/nav--primary
+                        hero-src="https://picsum.photos//1500/500"
+                        hero-alt="Hero 1 alt title"
+                        links=menu
+                }}
+            {{/nav-block}}
+
+            {{#> subheader-block}}
+                {{!-- Subheader block --}}
+            {{/subheader-block}}
+
+            {{!-- Page layout --}}
+            <div class="container">
+                <div class="row">
+        
+                    {{!-- 1-pane only --}}
+                    <main class="col-xs-12" id="content" role="main">
+                        {{#> full-width-block}}
+                            {{!-- Full-width content goes here. --}}
+                        {{/full-width-block}}
+                    </main>
+
+                    {{!-- 2-pane --}}
+                    <main class="col-xs-12 col-sm-8" id="content" role="main">
+                        {{#> main-block}}
+                            {{!-- Main content goes here. --}}
+                        {{/main-block}}
+                    </main>
+
+                    <aside class="col-xs-12 col-sm-4 au-side-nav--right rs_skip" role="navigation">
+                        {{#> sidenav-block}}
+                            {{!-- Side goes here. --}}
+                        {{/sidenav-block}}
+                    </aside>
+
+                </div>
+            </div>
+            
+            {{> includes/postbody }}
+        </div>
+
+        <footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">
+            <div class="container">
+                {{#> footer-block}}
+                    {{> includes/footer }}
+                {{/footer-block}}
+            </div>
+        </footer>
+
+        {{> includes/backtotop }}
+
+        {{#> scripts-block}}
+            {{!-- Custom scripts per page can be added. --}}
+        {{/scripts-block}}
+    
+    </body>
+</html>

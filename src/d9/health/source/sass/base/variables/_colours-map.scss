@@ -1,0 +1,50 @@
+/**
+ * @file
+ * Define mappings between colour variables and components.
+ */
+
+/**
+ * Health Pillars component.
+ *
+ * The Health Pillars colour scheme can be overridden by setting the
+ * `$brand-primary-colour` variable in the `_colours.scss` file and uncommenting
+ * the four lines below.
+ */
+// $brand-colour-1: tint($brand-primary-colour,20%);
+// $brand-colour-2: tint($brand-primary-colour,30%);
+// $brand-colour-3: tint($brand-primary-colour,50%);
+// $brand-colour-4: tint($brand-primary-colour,70%);
+
+/**
+ * Health Hero component.
+ */
+
+$health-hero-title: $white;
+
+
+// Declare and override high-level custom properties for the site
+$colours: (primary-gradient-bg--start:$ask-primary,
+    primary-gradient-bg--end:$ask-primary--alt,
+    secondary-gradient-bg--start: $ask-secondary,
+    secondary-gradient-bg--end: $ask-secondary--alt,
+    tertiary-gradient-bg--start: $ask-tertiary,
+    tertiary-gradient-bg--end: $ask-tertiary--alt,
+    footer-gradient-bg--start: $footer-start,
+    footer-gradient-bg--end: $footer-end,
+    footer-border: $footer-border,
+    subheader-gradient-bg--start: $subheader-gradient-content-bg--start,
+    subheader-gradient-bg--end: $subheader-gradient-content-bg--end,
+    subheader-gradient-content-bg--start: $subheader-gradient-content-bg--start,
+    subheader-gradient-content-bg--end: $subheader-gradient-content-bg--end,
+    main-nav-border: $main-nav-border-colour);
+
+
+
+// Output CSS custom properties
+:root {
+
+    @each $key_name,
+    $value in $colours {
+        --#{$key_name}: #{$value};
+    }
+}

@@ -32,47 +32,51 @@
     <script src="js/health.search.min.js"></script>
     <script src="js/health.tooltip.min.js"></script>
     <script src="js/health.video.min.js"></script>
-
+    <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="js/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <script>
-
-
-        Handlebars.registerHelper('object', function({hash}) {
-            return hash;
-        })
-        Handlebars.registerHelper('array', function() {
-            return Array.from(arguments).slice(0, arguments.length-1)
-        })
-
-        console.log(Handlebars)
-
-    </script>
-
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body class="au-grid au-body">
 {{#> nav-block}}
+
 {{!-- Hero content goes here. --}}
 {{/nav-block}}
-        {{#> hero-block}}
+{{#> hero-block}}
 {{!-- Hero content goes here. --}}
-        {{/hero-block}}
-<div class=" standard-gap">
-    <div class="container full-width">
+{{/hero-block}}
+<div class="standard-gap">
+    <div class="container not-full-width">
         <div class="row">
-            {{#> main-block}}
-            {{!-- Hero content goes here. --}}
-            {{/main-block}}
+
+            <main class="col-sm-8 main-content" id="content" role="main">
+                <div class="region region-content">
+                    {{#> main-block}}
+                    {{!-- Hero content goes here. --}}
+                    {{/main-block}}
+                </div>
+            </main>
+
+
+            <aside class="sidebar sidebar-right rs_skip col-sm-4 au-side-nav--right" role="navigation">
+                <div class="region region-sidebar-second">
+                    {{#> sidenav-block}}
+                    {{!-- Side goes here. --}}
+                    {{/sidenav-block}}
+                </div>
+            </aside>
         </div>
     </div>
 </div>
 
 <footer class="au-footer au-footer--dark au-body au-body--dark standard-gap" role="contentinfo">
     <div class="container">
-    <!--        {{#> footer-block}}-->
-        <!--            {{> includes/footer }}-->
-            <!--        {{/footer-block}}-->
+        {{#> footer-block}}
+            {{> includes/footer }}
+        {{/footer-block}}
     </div>
 </footer>
 

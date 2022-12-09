@@ -1,0 +1,48 @@
+
+{{#> layouts/boilerplate-global title="Campaign" body-class="health-for-all-of-us-campaign" summary="Campaign variant to test CSS custom properties. Campaign variant to test CSS custom properties." }}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader--campaign 
+            subheader-class="health-sub-header--dark"
+            callout-text="Call to action"
+            callout-text-2="Secondary action"
+        }}
+    {{/inline}}
+
+    {{#*inline "full-width-block"}}
+            {{> includes/band
+                band-title="Band fully-contained (primary)"
+                band-content="health-band health-band--primary"
+                band-class="health-band--primary"
+            }}
+
+            {{> includes/band
+                band-title="Band fully-contained (secondary)"
+                band-content="health-band health-band--secondary"
+                band-class="health-band--secondary"
+            }}
+
+            {{> includes/band 
+                band-title="Full-width background (tertiary)"
+                band-content="health-band health-band--tertiary"
+                band-class="health-band--tertiary"
+            }}
+
+            {{> includes/band
+                band-title="Band (neutral)"
+                band-content="health-band health-band--full-width-bg health-band--neutral"
+                band-class=" health-band--full-width-bg health-band--neutral"
+            }}
+
+            {{> includes/band
+                band-title="Band (neutral darker)"
+                band-content="health-band health-band--full-width-bg health-band--neutral-darker"
+                band-class=" health-band--full-width-bg health-band--neutral--darker"
+            }}
+
+
+    {{/inline}}
+
+
+{{/layouts/boilerplate-global}}

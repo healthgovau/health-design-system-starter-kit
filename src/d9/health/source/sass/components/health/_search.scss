@@ -1,0 +1,18 @@
+.health-search__query-field,
+.health-search__scope-field {
+  display: inline-block;
+  flex-grow: 1;
+}
+
+.health-search__scope-field {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.health-search__select.au-select {
+  margin-top: 0;
+}
+
+.health-search__submit--in-page {
+  border-radius: 0.25rem;
+}

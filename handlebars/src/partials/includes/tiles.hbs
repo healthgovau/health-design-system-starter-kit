@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="tiles">
+        {{# each tiles}}
+            {{> includes/tile
+                    tile-figure=this.tile-figure
+                    tile-label=this.tile-label
+                    tile-icon=this.tile-icon
+                    tile-currency=this.tile-currency
+            }}
+        {{/each}}
+    </div>
+</div>

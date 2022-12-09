@@ -1,0 +1,33 @@
+// Search bar.
+.health-search {
+  position: relative;
+  display: block;
+  max-width: none;
+
+  @media print {
+    display: none;
+  }
+
+  // The search form.
+  &__form {
+    &__input,
+    &__input.au-text-input {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.health-search__form {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.health-search__form__submit {
+  position: relative;
+  right: auto;
+  top: auto;
+}

@@ -1,26 +1,139 @@
 {
+  "foo": "foo-as",
   "menu": [
     {
-      "label": "Home",
+      "label": "Full-width",
       "link": "/"
     },
     {
-      "label": "Away",
-      "link": "/away"
+      "label": "2-pane",
+      "link": "/2-pane-test.html"
+    },
+    {
+      "label": "HDS components (1-pane)",
+      "link": "test-content-1.html"
+    },
+    {
+      "label": "HDS components (2-pane)",
+      "link": "test-content-2.html"
+    },
+    {
+      "label": "Campaign",
+      "link": "/campaign.html"
     }
   ],
-  "cards": [
+  "cards--text": [
     {
-      "card-text": "I'm a json card",
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour1"
+    },
+    {
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour2"
+    },
+    {
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour3"
+    },
+    {
+      "card-title": "Card title",
+      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--top-highlight health-card--cta health-card--colour4"
+    }
+  ],
+  "cards--images": [
+    {
+      "card-title": "I'm a json card",
       "card-img": "https://picsum.photos/300/200?random=11"
     },
     {
-      "card-text": "I'm another json card",
+      "card-title": "I'm another json card",
       "card-img": "https://picsum.photos/300/200?random=12"
     },
     {
-      "card-text": "I'm the third json card",
+      "card-title": "I'm the third json card",
       "card-img": "https://picsum.photos/300/200?random=13"
+    }
+  ],
+  "tiles": [
+    {
+      "tile-figure": "58,554,430",
+      "tile-label": "Total vaccine doses administered nationally",
+      "tile-icon": "Australia_tick.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "66,565",
+      "tile-label": "Vaccine doses reported in the last 24 hours",
+      "tile-icon": "Big_Tick_Box.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "97%",
+      "tile-label": "People aged 16+ have had at least one dose",
+      "tile-icon": "Vaccine_ThunbsUp.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "97%",
+      "tile-label": "People aged 16+ have had at least one dose",
+      "tile-icon": "Prcnt_1_dose_yellow.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "96%",
+      "tile-label": "People aged 16+ with two doses",
+      "tile-icon": "Prcnt_2_doses_orange.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "70%",
+      "tile-label": "People aged 16+ with three doses",
+      "tile-icon": "Prcnt_3_doses_green.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "20,047,557",
+      "tile-label": "People aged 16+ have had at least one dose",
+      "tile-icon": "Vaccine_vile_one.png",
+      "tile-currency": "Updated: dd/mm/yyyy, 8pm"
+    },
+    {
+      "tile-figure": "2,254,471",
+      "tile-label": "People aged 5-15 have had at least one dose",
+      "tile-icon": "5_15_Doses_Girl.png",
+      "tile-currency": ""
+    },
+    {
+      "tile-figure": "19,520,059",
+      "tile-label": "Population aged 16+ eligible for a third dose",
+      "tile-icon": "Vaccine_Australia_Shield.png",
+      "tile-currency": ""
+    }
+  ],
+  "bands": [
+    {
+      "band-title": "Band primary",
+      "band-class": "health-band--primary"
+    },
+    {
+      "band-title": "Band secondary",
+      "band-class": "health-band--secondary"
+    },
+    {
+      "band-title": "Band tertiary",
+      "band-class": "health-band--tertiary"
+    },
+    {
+      "band-title": "Band neutral 1",
+      "band-class": "health-band--neutral-1"
+    },
+    {
+      "band-title": "Band neutral 2",
+      "band-class": "health-band--neutral-2"
     }
   ]
 }
