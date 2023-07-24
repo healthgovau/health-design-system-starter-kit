@@ -37,7 +37,9 @@ module.exports = (env) => {
         },
         output: {
             path: path.resolve(__dirname, './dist'),
-        },
+            hotUpdateChunkFilename: 'hot/hot-update.js',
+            hotUpdateMainFilename: 'hot/hot-update.json'
+          },
         devServer: {
             static: {
                 directory: path.join(__dirname, 'dist'),
@@ -96,20 +98,34 @@ module.exports = (env) => {
                     ]
                 },
                 {
+                    test: /\.(png|jpg|gif)$/,
+                    exclude: /node_modules/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            options: {
+                                outputPath: './',
+                                name: '[name].[ext]'
+                            }
+                        },
+                    ]
+                },
+                {
                     test: /\.css$/i,
                     use: ["style-loader", "css-loader"],
                 },
-                {
-                    test: /\.(png|jpg|gif)$/i,
-                    use: [
-                        {
-                            loader: 'url-loader',
-                            options: {
-                                limit: 8192,
-                            },
-                        },
-                    ],
-                }
+                // {
+                //     test: /\.(png|jpg|gif)$/i,
+                //     type: 'asset/resource'
+                //     // use: [
+                //     //     {
+                //     //         loader: 'url-loader',
+                //     //         options: {
+                //     //             limit: 8192,
+                //     //         },
+                //     //     },
+                //     // ],
+                // }
             ]
         },
         plugins: [
@@ -117,11 +133,11 @@ module.exports = (env) => {
                 filename: '[name].css',
                 chunkFilename: '[id].[chunkhash].js'
             }),
-            new CopyPlugin({
-                patterns: [
-                    {from: "./img", to: path.join(__dirname, "dist", "img")},
-                ],
-            }),
+            // new CopyPlugin({
+            //     patterns: [
+            //         {from: "./img", to: path.join(__dirname, "img")},
+            //     ],
+            // }),
             new webpack.LoaderOptionsPlugin({}),
             // new HtmlWebpackPlugin({
             //     templateParameters: require('./handlebars/data.json'),
