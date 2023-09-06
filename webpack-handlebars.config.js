@@ -22,33 +22,35 @@ module.exports = (env) => {
 
     return {
         entry: {
+            // Added path to pull-in HDS JS 
             ...glob.sync("./src/js/*.js").reduce((acc, curr) => {
-                return {...acc, [path.basename(curr, ".js")]: curr}
+                return { ...acc, [path.basename(curr, ".js")]: curr }
+            }, {}),
+            ...glob.sync("./assets/hds/js/*/*.js").reduce((acc, curr) => {
+                return { ...acc, [path.basename(curr, ".js")]: curr }
             }, {}),
             ...glob.sync("./src/scss/*.scss").reduce((acc, curr) => {
-                return {...acc, [path.basename(curr, ".scss")]: curr}
+                return { ...acc, [path.basename(curr, ".scss")]: curr }
             }, {}),
             ...glob.sync("./handlebars/src/pages/*.hbs").reduce((acc, curr) => {
-                return {...acc, [path.basename(curr, ".hbs")]: curr}
+                return { ...acc, [path.basename(curr, ".hbs")]: curr }
             }, {}),
-            ...glob.sync("./img/*.*").reduce((acc, curr) => {
-                return {...acc, [path.basename(curr, ".*")]: curr}
+            ...glob.sync("./src/img/*.*").reduce((acc, curr) => {
+                return { ...acc, [path.basename(curr, ".*")]: curr }
             }, {}),
         },
         output: {
-            path: path.resolve(__dirname, './dist'),
-            hotUpdateChunkFilename: 'hot/hot-update.js',
-            hotUpdateMainFilename: 'hot/hot-update.json'
-          },
+            path: path.resolve(__dirname, './dist')
+        },
         devServer: {
             static: {
                 directory: path.join(__dirname, 'dist'),
                 watch: true,
             },
-            watchFiles: ["./dist/*","./dist/css/*","./src/scss/*","./src/scss/parts/*"],
+            watchFiles: ["./dist/*", "./dist/css/*", "./src/scss/*", "./src/scss/parts/*"],
             port: 'auto',
             open: true,
-            hot: true,
+            hot: false,
             historyApiFallback: {
                 rewrites: [
                     { from: /^\/$/, to: '/dist/index.html' },
@@ -104,7 +106,7 @@ module.exports = (env) => {
                         {
                             loader: 'file-loader',
                             options: {
-                                outputPath: './',
+                                outputPath: './img',
                                 name: '[name].[ext]'
                             }
                         },
@@ -157,7 +159,7 @@ module.exports = (env) => {
                     templateParameters: require('./handlebars/data.json'),
                     title: 'My awesome service',
                     template: './handlebars/src/pages/' + event,
-                    filename: path.join(__dirname, "dist", event.replace(/\.[^/.]+$/, "")+".html"),
+                    filename: path.join(__dirname, "dist", event.replace(/\.[^/.]+$/, "") + ".html"),
                 })
             }),
         ],
