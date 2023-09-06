@@ -1,0 +1,12 @@
+.health-figure {
+
+  &--border {
+    display: inline-block;
+  }
+
+  // Fixes issue of top margin disappearing when ".health-figure" is wrapped
+  // by ".au-body".
+  figure {
+    margin-top: 1rem;
+  }
+}

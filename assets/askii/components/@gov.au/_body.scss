@@ -1,0 +1,10 @@
+.au-body {
+
+  // Apply a standard gap
+  // .standard-gap and .standarg-gap--soft force margin
+  // .standard-gap--after only if it has content before it
+  *+.standard-gap--after,
+  .standard-gap--soft {
+    @include AU-space('margin-top', 1.5unit);
+  }
+}

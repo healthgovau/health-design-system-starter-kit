@@ -1,0 +1,6 @@
+// Limit card width in content
+.au-body {
+    .health-card {
+        max-width: $content-width;
+    }
+}

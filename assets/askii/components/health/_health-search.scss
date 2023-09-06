@@ -1,0 +1,31 @@
+// Search bar.
+.health-search {
+
+  // The search form.
+  &__form {
+    &__input {
+      &-wrapper {
+        padding-right: 0px;
+      }
+    }
+  }
+}
+
+// Search in listings
+.health-view-paragraph__listing {
+  .au-text-input {
+    border-color: $AU-color-foreground-text;
+  }
+
+  @include AU-media('sm') {
+    .health-search {
+      float: right;
+    }
+  }
+}
+
+@media print {
+  .region--content .health-search {
+    display: block;
+  }
+}

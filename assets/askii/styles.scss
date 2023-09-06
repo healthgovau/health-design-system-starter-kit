@@ -1,0 +1,76 @@
+/**
+ * @file
+ * Theme styling.
+ */
+
+// Support theme development with out relying on DTA DS functions.
+@import '../hds/sass/themes/theme-functions';
+
+/**
+ * Colours and colour mappings.
+ */
+
+// HDS Health theme colours.
+@import '../hds/sass/themes/health/colours';
+@import '../hds/sass/themes/health/colours-map';
+
+//////////////////////////////////////////////////////////
+// Add custom colour variables or colour overrides here.
+//////////////////////////////////////////////////////////
+@import 'base/variables/colours'; // Setup to make it greyscale
+@import 'base/variables/colours-map'; // Setup to make it greyscale
+/**
+ * DTA Design System.
+ *
+ * Must come after themes partials to ensure that the defaults are overridden.
+ */
+
+@import '../hds/sass/themes/health/govau-variable-overrides';
+@import '../hds/sass/vendors/govau-ds'; // This is referenced differently here in the HDS SK compared to in GovCMS given post-install scripting.
+
+/**
+ * Utilities, functions and mixins.
+ */
+
+// Add all utilities, functions and mixins from the HDS.
+@import '../hds/sass/abstracts/abstracts';
+
+///////////////////////////////////////////////////////////
+// Add Health theme utilities, functions and mixins here.
+///////////////////////////////////////////////////////////
+
+@import 'base/mixins/background';
+
+/**
+ * Variables
+ *
+ * Excludes colour and colour mapping variables which must be defined earlier
+ * in the process.
+ */
+
+// Add Health theme variables.
+@import '../hds/sass/themes/health/variables';
+
+/////////////////////////////////////
+// Add Health theme variables here.
+/////////////////////////////////////
+
+@import 'base/variables/grid';
+
+/**
+ * Resets.
+ */
+@import '../hds/sass/base/normalize';
+
+/**
+ * Components.
+ */
+
+// DTA Design System and Health Design System components.
+@import '../hds/sass/components/components';
+
+///////////////////////////////////////////////
+// Add Health theme specific components here.
+///////////////////////////////////////////////
+
+@import 'components/components';

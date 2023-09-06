@@ -1,0 +1,38 @@
+// Metadata, such as dates and types, used mainly in listings.
+.health-metadata {
+
+  *+& {
+    @include AU-space(margin-top, 0unit);
+  }
+
+  h2+&,
+  h3+&,
+  h4+&,
+  h5+&,
+  h6+& {
+    @include AU-space(margin-top, .5unit);
+  }
+
+  &.health-metadata--inline {
+    .health-field {
+      @include AU-space(margin-left, 0.25unit);
+      @include AU-space(padding-left, 0.5unit);
+    }
+
+    > :first-child {
+      border-left: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+
+  // Paragraph immediately afterwards
+  +p {
+    @include AU-space(margin-top, 0.5unit);
+
+    @include AU-media('sm') {
+      @include AU-space(margin-top, 1unit);
+    }
+  }
+}
