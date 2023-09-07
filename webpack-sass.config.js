@@ -32,7 +32,7 @@ module.exports = {
         ]
     },
     output: {
-        path: path.resolve(__dirname, 'dist','css')
+        path: path.resolve(__dirname, 'dist', 'css')
     },
     plugins: [
         new MiniCssExtractPlugin({

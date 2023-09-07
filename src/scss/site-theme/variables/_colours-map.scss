@@ -1,0 +1,117 @@
+// This file maps colour variables defined in _colours.scss (base/sub-theme, HDS and Gold) to CSS custom properties.
+// The custom properties override those above them in the chain (via redeclaration) or are new to this theme/sub-theme.
+
+// SCSS variables are accessible from the HDS and @GOLD design system (dependency).
+// They can be transformed with @mixins and @functions but are not accessible in the DOM. Custom properties can be accessed and altered in the DOM.
+
+// Map variables as follows:
+// --custom-property: #{$scss-variable};
+
+:root {
+
+    // FOR SITE PILLAR
+    --brand-primary-colour: #{$project-brand-primary};
+    --brand-colour-1: #{tint($project-brand-primary,20%)};
+    --brand-colour-2: #{tint($project-brand-primary,30%)};
+    --brand-colour-3: #{tint($project-brand-primary,50%)};
+    --brand-colour-4: #{tint($project-brand-primary,70%)};
+
+    // Primary coloured elements (e.g. bands, cards, text, links, etc)
+    --primary-gradient-bg--start: #{$project-primary-bg};
+    --primary-gradient-bg--end: #{lighten($project-primary-bg, 15%)};
+    --primary-body-text: #{$project-primary-text};
+    --primary-link-text: #{$project-primary-link-text};
+    --card-text--primary: #{$project-primary-text};
+    --card-clickable-icon--primary: #{$project-primary-text};
+    --card-text-minor--primary: #{$project-primary-text};
+    --card-link--primary: #{$project-primary-card-link-text};
+    --primary-btn-bg: #{$project-primary-btn-bg};
+    --primary-btn-bg--hover: #{darken($project-primary-btn-bg, 10%)};
+    --primary-btn-text: #{$project-primary-btn-text};
+
+    // Secondary coloured elements (e.g. bands, cards, text, links, etc)
+    --secondary-gradient-bg--start: #{$project-secondary-bg};
+    --secondary-gradient-bg--end: #{lighten($project-secondary-bg, 15%)};
+    --secondary-body-text: #{$project-secondary-text};
+    --secondary-link-text: #{$project-secondary-link-text};
+    --card-text--secondary: #{$project-secondary-text};
+    --card-clickable-icon--secondary: #{$project-secondary-text};
+    --card-text-minor--secondary: #{$project-secondary-text};
+    --card-link--secondary: #{$project-secondary-card-link-text};
+    --secondary-btn-bg: #{$project-secondary-btn-bg};
+    --secondary-btn-bg--hover: #{darken($project-secondary-btn-bg, 10%)};
+    --secondary-btn-text: #{$project-secondary-btn-text};
+
+    // Tertiary coloured elements (e.g. bands, cards, text, links, etc)
+    --tertiary-gradient-bg--start: #{$project-tertiary-bg};
+    --tertiary-gradient-bg--end: #{lighten($project-tertiary-bg, 15%)};
+    --tertiary-body-text: #{$project-tertiary-text};
+    --tertiary-link-text: #{$project-tertiary-link-text};
+    --card-text--tertiary: #{$project-tertiary-text};
+    --card-clickable-icon--tertiary: #{$project-tertiary-text};
+    --card-text-minor--tertiary: #{$project-tertiary-text};
+    --card-link--tertiary: #{$project-tertiary-card-link-text};
+    --tertiary-btn-bg: #{$project-tertiary-btn-bg};
+    --tertiary-btn-bg--hover: #{darken($project-tertiary-btn-bg, 10%)};
+    --tertiary-btn-text: #{$project-tertiary-btn-text};
+
+    // Sub-header
+    --subheader-gradient-bg--start: #{$project-subheader-bg};
+    --subheader-gradient-bg--end: #{lighten($project-subheader-bg, 15%)};
+    --subheader-gradient-content-bg--start: #{$project-subheader-bg};
+    --subheader-gradient-content-bg--end: #{lighten($project-subheader-bg, 15%)};
+    --subheader-text: #{$project-subheader-text};
+
+    // Main-nav
+    --main-nav-border: #{darken($project-subheader-bg, 10%)};
+    --main-nav-active-link-bg--hover: #{$project-main-nav--hover};
+
+    // Callouts
+    --callout-border--primary: #{$project-primary-bg};
+    --callout-border--secondary:#{$project-secondary-bg};
+    --callout-border--tertiary: #{$project-tertiary-bg};
+
+    // On this page
+    --inpage-nav-border: #{$project-inpage-nav-border};
+
+    // Tabbed navigation
+    --tab-border--active: #{$project-tab-nav-border};
+
+    // Side navigation
+    --side-nav-link-bg--active: #{$side-nav-link-bg--active};
+    --side-nav-link-border: #{$side-nav-link-border};
+    --side-nav-link-border--bottom: #{$side-nav-link-border--bottom};
+    --side-nav-parent-bg: #{$project-primary-bg};
+
+    // Footer
+    --footer-gradient-bg--start: #{$project-footer-bg};
+    --footer-gradient-bg--end: #{lighten($project-footer-bg, 15%)};
+    --footer-border: #{darken($project-footer-bg, 15%)};
+
+    // Card defaults
+    --card-highlight-border: #{$project-card-highlight-border};
+    --card-text: #{$project-card-text};
+
+    // Button defaults - just amend $project-btn-bg and $project-btn-text otherwise inherits HDS blue
+    --btn-bg: #{$project-btn-bg};
+    --neutral-btn-bg: #{$project-btn-bg};
+    --neutral--darker-btn-bg: #{$project-btn-bg};
+
+    --btn-bg--hover: #{darken($project-btn-bg, 10%)};
+    --neutral-btn-bg--hover: #{darken($project-btn-bg, 10%)};
+    --neutral--darker-btn-bg--hover: #{darken($project-btn-bg, 10%)};
+
+    --btn-text: #{$project-btn-text};
+    --neutral-btn-text: #{$project-btn-text};
+    --neutral--darker-btn-text: #{$project-btn-text};
+
+    // Tags
+    --tag-link-bg: #{$project-tag-link-bg};
+    --tag-link-border: #{darken($project-tag-link-bg, 10%)};
+    --tag-link-text: #{$project-tag-link-text};
+
+    // Hero
+    --hero-bg: #{$project-hero-bg};
+    --hero-bg--trans: #{rgba($project-hero-bg, 0.9)};
+    --hero-text: #{$project-hero-text};
+}

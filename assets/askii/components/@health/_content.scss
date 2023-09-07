@@ -1,0 +1,49 @@
+.health-content {
+  @include AU-space('margin-top', 2unit);
+
+  @include AU-media('sm') {
+    @include AU-space('margin-top', 2.5unit);
+  }
+
+  &--flush {
+    @include AU-space('margin-top', 0unit);
+  }
+
+  @media print {
+    margin-top: 0;
+  }
+
+}
+
+// Define new max-width for content given larger breakpoint
+.au-body {
+
+  // Include sub-header and content areas only
+  .health-sub-header,
+  .health-content {
+    p {
+      max-width: $content-width;
+    }
+
+    ol,
+    ul:not(.health-listing) {
+      >li {
+        max-width: $content-width - 40px;
+      }
+    }
+
+    ul[class*="list--large"],
+    ol[class*="list--large"] {
+      >li {
+        max-width: $content-width;
+      }
+    }
+  }
+
+  .au-footer {
+    p {
+      max-width: 100%;
+    }
+  }
+
+}

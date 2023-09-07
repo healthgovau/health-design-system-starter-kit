@@ -1,0 +1,52 @@
+.health-sub-header {
+  @include AU-media('sm') {
+    @include AU-space('padding', 2unit 0unit 3unit 0unit);
+  }
+
+  // Dark sub-header
+  &#{&}--dark {
+    @extend %subheader--dark;
+
+    @media print {
+      background: none;
+      color: #000;
+      padding-bottom: 0;
+    }
+  }
+
+  @media print {
+    background: none;
+    color: #000;
+    padding-bottom: 0;
+  }
+
+  // If specified via local custom property (ie.. minisites, campaigns, etc)
+  .health-sub-header__content,
+  .au-introduction {
+    color: var(--subheader-text);
+  }
+
+  // Campaigns
+  // (template at /themes/hga/templates/custom/hga-subheader--campaign.html.twig)
+  &.health-sub-header--campaign {
+    h1 {
+      margin-top: 0;
+    }
+
+    // Buttons (make block for mobile only)
+    .au-btn--block {
+      @include AU-media('sm') {
+        display: inline-block !important;
+        width: auto !important;
+      }
+    }
+
+    .health-sub-header__content {
+      @include AU-media('sm') {
+        @include AU-space(margin-top, 3unit);
+        @include AU-space(margin-bottom, 3unit);
+        width: var(--subheader-content-width--desktop);
+      }
+    }
+  }
+}

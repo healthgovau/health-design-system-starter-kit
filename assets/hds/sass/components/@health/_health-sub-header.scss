@@ -11,12 +11,12 @@
   // Dark variant
   &#{&}--dark {
     @include background-style(var(--subheader-gradient-bg--start), var(--subheader-gradient-bg--end));
-    @extend %colour-text-inverse;
+    @extend %light-text-on-dark;
   }
 
   // Title.
   h1 {
-    margin-top: 0;
+    @include AU-space(margin-top, 1unit);
   }
 
   .au-introduction {
@@ -84,13 +84,13 @@
 
     // Hero content
     .health-sub-header__content {
-      @include AU-space(padding, 1.5unit 12px);
+      @include AU-space(padding, 1.5unit $AU-grid-12-gutter-width/2);
 
       @include AU-media(sm) {
         @include AU-space(padding, 3unit);
+        border-radius: 6px;
       }
 
-      border-radius: 6px;
       @include background-style(var(--subheader-gradient-content-bg--start), var(--subheader-gradient-content-bg--end));
     }
   }

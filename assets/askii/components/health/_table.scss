@@ -1,0 +1,36 @@
+.health-table__responsive {
+
+  .dataTables_wrapper {
+
+    // Spacing above.
+    * + & {
+      @include AU-space('margin-top', 1.5unit);
+    }
+
+    .dataTables_filter {
+      float: left;
+      text-align: left;
+      padding-bottom: 1rem;
+    }
+  }
+
+  table.dataTable.compact {
+
+    thead {
+
+      td,
+      th {
+        padding: 0.625rem 1.625rem 0.625rem 0.625rem;
+      }
+    }
+
+    tbody,
+    tfoot {
+
+      td,
+      th {
+        padding: 0.625rem;
+      }
+    }
+  }
+}

@@ -2,8 +2,41 @@
 .au-btn,
 a.au-btn {
 
+  // Default
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border-color: var(--btn-bg);
+
+  &:hover:not(:disabled) {
+    border-color: var(--btn-bg--hover);
+    background-color: var(--btn-bg--hover);
+  }
+
+  // Primary and secondary
+  &.au-btn--primary {
+    background-color: var(--btn-bg);
+    color: var(--btn-text) !important;
+    border-color: var(--btn-bg);
+
+    &:hover:not(:disabled) {
+      border-color: var(--btn-bg--hover);
+      background-color: var(--btn-bg--hover);
+    }
+  }
+
+  &.au-btn--secondary {
+    border-color: var(--btn-bg);
+    color: var(--btn-bg) !important;
+    ;
+
+    &:hover:not(:disabled) {
+      border-color: var(--btn-bg--hover);
+      color: var(--btn-bg--hover);
+    }
+  }
+
   // Convert tertiary button to look like a link.
-  &--tertiary {
+  &.au-btn--tertiary {
     padding: 0;
   }
 
@@ -21,7 +54,10 @@ a.au-btn {
     }
   }
 
-  &+.au-btn {
-    @include AU-space(margin-left, 1unit);
+  // Override to return au-btn--block to normal for upper breakpoints
+  &.au-btn--inline {
+    display: inline-block;
+    width: auto;
   }
+
 }

@@ -1,15 +1,19 @@
+// Import options (only use one - comment out the other one)
+// 1. HDS only
 // Reference HDS in /assets (pulled in via NPM)
-@import "../../assets/hds/sass/all.scss";
+// @import "../../assets/hds/sass/all.scss";
 
+// 2. ASKii and HDS
+// Reference the ASKii files in /assets
+@import "../../assets/askii/styles.scss";
+
+// Local files in /src - add whatever you like - this is the playground!
+@import "parts/custom";
+@import "site-theme/styles";
+
+
+
+
+// ==========================
+// ReactJS files
 // @import "react-custom";
-// @import "parts/custom";
-// @import "parts/custom-props";
-
-// ASK components
-// @import "../d9/health/source/sass/styles.scss";
-
-// HGA D9 components - comment out to see styling for ASK only from above
-@import "../d9/hga/source/sass/styles.scss";
-
-// HDS starter kit components
-// @import "parts/custom";

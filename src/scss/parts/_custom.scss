@@ -1,36 +1,10 @@
-// For layout-test
-.debug * {
-    outline: 1px solid #006565 !important; // applied outlines
-    background: rgb(0 134 134 / 10%) !important; // applies BGs to elements
-}
-
+// Resets
 p:empty,
 .health-card__text:empty {
     display: none;
 }
 
-%more-white-inners {
-
-    .au-introduction,
-    a {
-        color: #FFF;
-    }
-
-    .au-cta-link {
-        @extend .au-cta-link--dark;
-    }
-}
-
-.health-band--primary,
-.health-band--secondary,
-.health-band--tertiary,
-.health-band--tertiary-2 {
-    @extend %colour-text-inverse;
-    @extend %more-white-inners;
-    // TODO apply robust dark/light to components
-}
-
-// Let's have some fun
+// Animated background
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
@@ -53,7 +27,7 @@ p:empty,
             }
 
             &::before {
-                background: linear-gradient(300deg, #002058, #006269, #0057b8);
+                background: linear-gradient(300deg, var(--primary-gradient-bg--start), var(--secondary-gradient-bg--start), var(--tertiary-gradient-bg--start));
                 background-size: 180% 180%;
                 animation: gradient-animation 15s ease infinite;
             }
@@ -62,7 +36,7 @@ p:empty,
             .health-band__container {
                 @include AU-space(padding, 5unit 0);
                 text-align: center;
-                background: linear-gradient(300deg, #002058, #006269, #0057b8);
+                background: linear-gradient(300deg, var(--primary-gradient-bg--start), var(--secondary-gradient-bg--start), var(--tertiary-gradient-bg--start));
                 background-size: 180% 180%;
                 animation: gradient-animation 15s ease infinite;
 
@@ -79,8 +53,16 @@ p:empty,
             }
         }
 
-        .health-video img {
-            width: 100%;
+        .health-video {
+            max-width: 100%;
+
+            &__transcript {
+                max-width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
         }
     }
 }

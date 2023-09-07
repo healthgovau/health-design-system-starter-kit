@@ -1,0 +1,70 @@
+// Flex header to accommodate text or lockup image with logo
+.au-body {
+
+    .au-header__flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include AU-media('md') {
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        // Text
+        .au-header__logo {
+            max-width: 400px;
+            float: none;
+            margin: 0;
+        }
+
+        // Text
+        .au-header__text {
+            margin: 0.75rem 0;
+            text-align: center;
+            flex-grow: 1;
+
+            @include AU-media('md') {
+                text-align: left;
+                // Align site title and description automatically
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+                &:has(.au-header__subline) {
+                    flex-direction: column;
+                }
+
+                .au-header__subline {
+                    margin: 0;
+                }
+            }
+        }
+
+        // Image
+        .au-header__lockup {}
+    }
+
+    // Style the elements
+    .au-header {
+        .au-header__text {
+            @include AU-media('md') {
+                border-left: 1px solid #7e7e7e;
+                padding-left: 2rem;
+            }
+        }
+
+        // Site title
+        .au-header__heading {
+            @extend .au-display-xl;
+        }
+
+        // Site subline (optional)
+        .au-header__subline {
+            @extend .au-display-lg;
+            @extend .au-display--light;
+            @extend .au-display--inline;
+            font-weight: 400;
+        }
+    }
+}

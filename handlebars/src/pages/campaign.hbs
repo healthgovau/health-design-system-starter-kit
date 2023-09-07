@@ -1,5 +1,5 @@
 
-{{#> layouts/boilerplate-global title="Campaign" body-class="health-for-all-of-us-campaign" summary="Campaign variant to test CSS custom properties. Campaign variant to test CSS custom properties." }}
+{{#> layouts/boilerplate-landing-page title="Campaign" body-class="health-for-all-of-us-campaign" summary="Campaign variant to test CSS custom properties. Campaign variant to test CSS custom properties." }}
 
     {{!-- Subheader --}}
     {{#*inline "subheader-block"}}
@@ -10,7 +10,13 @@
         }}
     {{/inline}}
 
-    {{#*inline "full-width-block"}}
+    {{#*inline "main-block"}}
+
+            {{> includes/band--video-campaign 
+                band-title="How about something new?"
+                band-content="This band has a big title and an animated background!"
+                band-class="health-band--primary health-band--full-width-bg health-band--animated"
+            }}
             {{> includes/band
                 band-title="Band fully-contained (primary)"
                 band-content="health-band health-band--primary"
@@ -45,4 +51,4 @@
     {{/inline}}
 
 
-{{/layouts/boilerplate-global}}
+{{/layouts/boilerplate-landing-page}}

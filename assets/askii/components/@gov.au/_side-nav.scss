@@ -1,0 +1,24 @@
+.au-body {
+    .au-side-nav {
+
+        // Flush with edge of screen on mobile.
+        // @include AU-space('margin-left', - ceil(($AU-grid-12-gutter-width / 2)));
+        // @include AU-space('margin-right', - floor(($AU-grid-12-gutter-width / 2)));
+
+        // @include AU-media('sm') {
+        //     // Normal gutter on desktop.
+        //     @include AU-space('margin-left', 0);
+        //     @include AU-space('margin-right', 0);
+        // }
+
+        .au-side-nav__header {
+            @include AU-space('margin', 1unit 0);
+
+            @include AU-media('md') {
+                @include AU-sronly();
+                position: absolute !important;
+            }
+        }
+
+    }
+}

@@ -2,60 +2,31 @@
   "foo": "foo-as",
   "menu": [
     {
-      "label": "Full-width",
-      "link": "/"
+      "label": "Home",
+      "link": "index.html"
     },
     {
-      "label": "2-pane",
-      "link": "/2-pane-test.html"
-    },
-    {
-      "label": "HDS components (1-pane)",
-      "link": "test-content-1.html"
-    },
-    {
-      "label": "HDS components (2-pane)",
-      "link": "test-content-2.html"
-    },
-    {
-      "label": "Campaign",
-      "link": "/campaign.html"
+      "label": "All components",
+      "link": "test-content.html"
     }
   ],
-  "cards--text": [
+  "cards": [
     {
-      "card-title": "Card title",
-      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
-      "card-class": "health-card--top-highlight health-card--cta health-card--colour1"
+      "card-title": "Card title 1",
+      "card-text": "This card has a randomised image, background colour and includes a date field.",
+      "card-class": "health-card--shadow health-card--clickable health-card--colour-neutral",
+      "card-image": "https://picsum.photos/400/225",
+      "card-date": "12 Dec 2023"
     },
     {
-      "card-title": "Card title",
-      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
-      "card-class": "health-card--top-highlight health-card--cta health-card--colour2"
+      "card-title": "Card title 2",
+      "card-text": "Morbi luctus ipsum at nisi cursus mattis.",
+      "card-class": "health-card--shadow health-card--clickable"
     },
     {
-      "card-title": "Card title",
-      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
-      "card-class": "health-card--top-highlight health-card--cta health-card--colour3"
-    },
-    {
-      "card-title": "Card title",
-      "card-text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi cursus mattis.",
-      "card-class": "health-card--top-highlight health-card--cta health-card--colour4"
-    }
-  ],
-  "cards--images": [
-    {
-      "card-title": "I'm a json card",
-      "card-img": "https://picsum.photos/300/200?random=11"
-    },
-    {
-      "card-title": "I'm another json card",
-      "card-img": "https://picsum.photos/300/200?random=12"
-    },
-    {
-      "card-title": "I'm the third json card",
-      "card-img": "https://picsum.photos/300/200?random=13"
+      "card-title": "Card title 3",
+      "card-text": "Cursus mattis lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi ",
+      "card-class": "health-card--shadow health-card--clickable"
     }
   ],
   "tiles": [
@@ -134,6 +105,11 @@
     {
       "band-title": "Band neutral 2",
       "band-class": "health-band--neutral-2"
+    }
+  ],
+  "img": [
+    {
+      "url": "https://picsum.photos/400/225"
     }
   ]
 }

@@ -1,8 +1,17 @@
+// GOLD Design System default overrides
+$AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.0 compliant on backgrounds up to $colour-light (#ECECEC)
+$AU-color-foreground-action--active: darken($AU-color-foreground-action, 10%);
+$AU-color-foreground-text: #313131;
+$AU-colordark-foreground-action: #FFF;
+$AU-colordark-foreground-action--active: darken($AU-colordark-foreground-action, 10%);
+$AU-colordark-foreground-text: #FFF;
+$AU-colordark-background: #000;
+
 // HEALTH COLOURS
-$colour-Shadow: rgba(0, 0, 0, 0.1);
-$colour-card: #fff;
+$colour-shadow: rgba(0, 0, 0, 0.2);
+$colour-shadow-hover: rgba(0, 0, 0, 0.4);
+$colour-bg-light: #fff;
 $colour-Error-light: #ffe7ea;
-$colour-foreground-text--dark: #000000;
 
 // HEALTH VISUAL IDENTITY
 // Primaries with variants
@@ -10,9 +19,12 @@ $colour-foreground-text--dark: #000000;
 $colour-primary-blue: #072e7e; // Redeclared web version of #002058
 $colour-primary-blue-lighter-1: #005ab0;
 $colour-primary-blue-lighter-2: #074cd9;
+$colour-primary-blue-lighter-2-5: #034295;
 $colour-primary-blue-lighter-3: #072e7e;
 $colour-primary-blue-darker-1: #002058;
 $colour-primary-blue-darker-2: #00153b;
+$colour-primary-blue-very-pale: #e6f3ff;
+$colour-primary-blue-very-pale-2: #bacbdb;
 
 $colour-primary-teal-darker-2: #00535A;
 $colour-primary-teal-darker-1: #006972;
@@ -46,6 +58,7 @@ $colour-accent-red: #D50032;
 $colour-accent-orange: #FFB500;
 
 // Neutrals
+$colour-black: #000000;
 $colour-dark: #87888A; // core
 $colour-darker: #626366;
 $colour-darkest: #58585b;
@@ -55,6 +68,7 @@ $colour-lighter: #f1f1f2;
 $colour-light: #ececec;
 $colour-light-dark: #e5e5e5;
 $colour-light-darker: #cdcdcd;
+$colour-white: #ffffff;
 
 // Health pillar colours
 // These get generated automatically for aligned sites in _health-brand.scss
@@ -65,36 +79,7 @@ $brand-colour-4: #004181;
 
 // TYPOGRAPHY ================================
 // Colours
-%colour-text-inverse {
-  color: $AU-colordark-foreground-text;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: $AU-colordark-foreground-text;
-  }
-
-  a {
-    color: $AU-colordark-foreground-text;
-    border-bottom-color: white;
-
-    &:hover {
-      color: $AU-colordark-foreground-text;
-      text-decoration: none;
-    }
-  }
-
-  .au-cta-link {
-    @extend .au-cta-link--dark;
-  }
-}
-
 $colour-minorText: #414141;
-$colour-primary-teal-text: #99d4de;
 
 // Service delivery
 $alpha-background: #c22f73;
@@ -112,8 +97,8 @@ $colour-positive: #a5ffa5;
 $colour-negative: #ffaaaa;
 $colour-path: #006621;
 
-// Design System default overrides
-$AU-color-foreground-action: #006FB0; // override of default link colour WCAG 2.0 compliant on backgrounds up to $colour-light (#ECECEC)
-$AU-colordark-foreground-action: #FFF;
-$AU-colordark-foreground-text: #FFF;
-$AU-colordark-background: #000;
+// Back to top
+$button-bg-colour--secondary: $colour-lighter;
+$button-bg-colour--secondary-hover: $colour-light;
+$button-bg-colour--dark-hover: $colour-light;
+$button-border-colour--dark-hover: $colour-light;

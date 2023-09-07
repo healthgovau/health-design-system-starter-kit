@@ -1,0 +1,14 @@
+.au-body {
+    .image--circle {
+        img {
+            border-radius: 50%;
+            border: none;
+        }
+    }
+
+    .au-responsive-media-img {
+        img {
+            width: 100%;
+        }
+    }
+}

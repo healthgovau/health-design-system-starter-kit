@@ -1,0 +1,77 @@
+.health-hero {
+
+  $parent: &; // more readable than &#{&}
+  background: var(--hero-bg);
+  position: relative;
+
+  @include AU-media('md') {
+    // height: 380px; This can be fixed is reqd
+    overflow: hidden;
+  }
+
+  &__image-container {
+    max-height: 200px;
+    overflow: hidden;
+
+    @include AU-media('md') {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      max-height: none;
+    }
+  }
+
+  &__image {
+    height: auto;
+    display: block;
+    width: 100%;
+
+    @include AU-media('md') {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border-bottom: 0;
+    }
+  }
+
+  &__content {
+    background: var(--hero-bg);
+    position: relative;
+    @include AU-space('padding', 2unit);
+    width: 100%;
+
+    @include AU-media(md) {
+      background: var(--hero-bg--trans);
+      @include AU-space('padding', 3unit);
+      width: 60%;
+    }
+
+    @include AU-media(lg) {
+      @include AU-space('padding', 4unit);
+      background: var(--hero-bg--trans);
+      min-height: 400px; // so that image is a sliver at most popular desktop width 1920
+      width: 65%;
+    }
+  }
+
+  &__title {
+    color: var(--hero-text);
+  }
+
+  &__summary {
+    @include health-fontgrid(lg, default, light);
+  }
+
+  &__call-to-action {}
+
+  // Dark modifier
+  &#{$parent}--dark {
+    background: var(--hero-bg);
+
+    #{$parent}__content {
+      color: var(--hero-text);
+    }
+  }
+}

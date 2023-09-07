@@ -1,0 +1,19 @@
+.health-video+.au-accordion {
+  margin-top: 0;
+}
+
+.health-video__preview {
+
+  .health-video__preview__length {
+
+    svg {
+      height: 1em;
+    }
+  }
+}
+
+
+.health-video,
+.health-video__transcript {
+  max-width: $content-width;
+}

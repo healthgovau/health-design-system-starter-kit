@@ -1,0 +1,98 @@
+.health-listing {
+  *+& {
+    @include AU-space(margin-top, 2unit);
+  }
+
+  margin-bottom: 0;
+}
+
+// Override for glabal notification
+.view--h-global-notifications {
+  .health-listing {
+    @include AU-space(margin-top, 0);
+  }
+}
+
+.health-listing--grid {
+
+  >li+li {
+    border-top: none;
+  }
+
+  @at-root *+.row .health-listing--grid,
+  *+.health-listing--grid {
+
+    >li:first-of-type {
+      border-top: none;
+    }
+
+    >li:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.health-listing--grid.health-listing--teaser {
+
+  >li+li {
+    border-top: 6px solid $colour-light-dark;
+  }
+
+  @at-root *+.row .health-listing--grid.health-listing--teaser,
+  *+.health-listing--grid.health-listing--teaser {
+
+    >li {
+      border-top: 6px solid $colour-light-dark;
+    }
+
+    >li:first-of-type {
+      border-top: 6px solid $colour-light-dark;
+    }
+  }
+}
+
+.health-listing__items--tile {
+
+  .health-grid {
+    margin-bottom: 0;
+    margin-top: 0;
+
+  }
+}
+
+.health-listing.health-listing--basic {
+
+  >li+li {
+    border-top: none;
+    padding-top: 0;
+    @include AU-space(margin-top, 18px);
+  }
+}
+
+// Card listing (applied to il>li and using Boostrap layout classes)
+.au-body {
+  ul.health-card-list {
+    @include AU-clearfix;
+    padding: 0;
+    @include AU-space(margin-left, -#{($grid-gutter-size)/2});
+    @include AU-space(margin-right, -#{($grid-gutter-size)/2});
+
+    li {
+      max-width: 100%;
+      list-style-type: none;
+      @include AU-space(margin-bottom, $grid-gutter-size);
+    }
+  }
+}
+
+// Embedded listing filters.
+form[data-drupal-selector*='views-exposed-form-h-embedded-listing-embed-'] {
+  display: flex;
+  align-items: flex-end;
+  gap: 1em;
+  flex-wrap: wrap;
+
+  input[type="submit"] {
+    margin: 0;
+  }
+}

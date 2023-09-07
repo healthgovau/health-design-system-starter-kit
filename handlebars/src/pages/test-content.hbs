@@ -1,0 +1,131 @@
+
+{{#> layouts/boilerplate-landing-page title="All components" summary="This is a full-width page to test output of any and all Handlebar components." }}
+
+    {{!-- Subheader --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader 
+            subheader-class="health-sub-header--dark"
+        }}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+      
+        {{> includes/in-page-nav }}
+
+        {{> includes/band
+            band-title="Band fully-contained (primary)"
+            band-content="Custom content"
+            band-class="health-band--primary"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (secondary)"
+            band-class="health-band--secondary"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (tertiary)"
+            band-class="health-band--tertiary"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (neutral)"
+            band-class="health-band--neutral"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (neutral darker)"
+            band-class="health-band--neutral--darker"
+        }}
+
+        {{> includes/band 
+            band-title="Completely full-width background (neutral darker)"
+            band-class="health-band--neutral--darker health-band--full-width"
+        }}
+
+        {{> includes/band
+            band-title="Band with no background"
+        }}
+
+        {{> includes/band 
+            band-title="Full-width background (primary)"
+            band-class="health-band--primary health-band--full-width-bg"
+        }}
+
+        {{> includes/band 
+            band-title="Full-width background (secondary)"
+            band-class="health-band--secondary health-band--full-width-bg"
+        }}
+
+        {{> includes/band 
+            band-title="Full-width background (tertiary)"
+            band-class="health-band--tertiary health-band--full-width-bg"
+        }}
+
+        {{> includes/band 
+            band-title="Full-width background (neutral)"
+            band-class="health-band--neutral health-band--full-width-bg"
+        }}
+
+        {{> includes/band 
+            band-title="Full-width background (neutral darker)"
+            band-class="health-band--neutral--darker health-band--full-width-bg"
+        }}
+
+        {{> includes/band--video-campaign 
+            band-title="How about something new?"
+            band-content="This band has a big title and an animated background!"
+            band-class="health-band--primary health-band--full-width-bg health-band--animated"
+        }}
+        
+        
+        {{!-- Work out how to call band -> component to stay DRY --}}
+        <div class="health-band">
+        {{> includes/cards }}
+        </div>
+    
+
+
+        <h2>Components copied from the HDS</h2>
+        <p>This content is not in a band.</p>
+        {{> includes/colours }}
+        {{> includes/band--hotline band-class="health-band--neutral" }}
+        {{> includes/band--resources band-class="health-band--neutral" }}
+        {{> includes/tabs }}
+        {{> includes/accordion }}
+        {{> includes/definition-list }}
+        {{> includes/typography }}
+        {{> includes/page-alert }}
+        {{> includes/page-alert alert-class="au-page-alerts--success"}}
+        {{> includes/page-alert alert-class="au-page-alerts--warning"}}
+        {{> includes/page-alert alert-class="au-page-alerts--error"}}
+        {{> includes/lists }}
+        {{> includes/lists class="list--large" title="List large" }}
+        {{> includes/lists class="list--large--plain" title="List large plain" }}
+        {{> includes/lists class="list--large--checklist" title="List large checklist" }}
+        {{> includes/book-nav }}
+        {{> includes/callout}}
+        {{> includes/callout callout-class="au-callout--secondary"}}
+        {{> includes/callout callout-class="au-callout--tertiary" }}
+        {{> includes/callout callout-class="au-callout--success" }}
+        {{> includes/callout callout-class="au-callout--simple" }}
+        {{> includes/compare }}
+        {{> includes/figure }}
+        {{> includes/table }}
+        {{> includes/file }}
+        {{> includes/video }}
+        {{> includes/facet }}
+        {{> includes/inline-reference }}
+        {{> includes/references }}
+        {{> includes/footnotes }}
+        {{> includes/tags }}
+
+        
+    {{/inline}}
+
+    {{#*inline "sidenav-block"}}
+    {{/inline}}
+
+
+
+{{/layouts/boilerplate-landing-page}}
