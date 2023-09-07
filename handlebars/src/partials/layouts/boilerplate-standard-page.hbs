@@ -3,7 +3,7 @@
     <head>
         <title>
             {{#unless title}}
-                HDS Boilerplate
+                HDS Boilerplate - standard page
             {{/unless}}
         </title>
         
@@ -19,8 +19,6 @@
             
             {{#> nav-block}}
                 {{> includes/nav--primary
-                        hero-src="https://picsum.photos//1500/500"
-                        hero-alt="Hero 1 alt title"
                         links=menu
                 }}
             {{/nav-block}}
@@ -30,28 +28,27 @@
             {{/subheader-block}}
 
             {{!-- Page layout --}}
-            <div class="container">
+            <div class="container health-content">
                 <div class="row">
-        
-                    {{!-- 1-pane only --}}
-                    <main class="col-xs-12" id="content" role="main">
-                        {{#> full-width-block}}
-                            {{!-- Full-width content goes here. --}}
-                        {{/full-width-block}}
-                    </main>
 
                     {{!-- 2-pane --}}
-                    <main class="col-xs-12 col-sm-8" id="content" role="main">
-                        {{#> main-block}}
-                            {{!-- Main content goes here. --}}
-                        {{/main-block}}
-                    </main>
+                   <div class="col-md-8" id="content">
+                        <main class="main-content" role="main">
+                            <div class="region region-content">
+                                {{#> main-block}}
+                                    {{!-- Main content goes here. --}}
+                                {{/main-block}}
+                            </div>
+                        </main>
+                    </div>
 
-                    <aside class="col-xs-12 col-sm-4 au-side-nav--right rs_skip" role="navigation">
-                        {{#> sidenav-block}}
-                            {{!-- Side goes here. --}}
-                        {{/sidenav-block}}
-                    </aside>
+                    <div class="col-sm-4">
+                        <aside class="au-side-nav--right rs_skip" role="navigation" aria-label="side navigation">
+                            {{#> sidenav-block}}
+                                {{!-- Side goes here. --}}
+                            {{/sidenav-block}}
+                        </aside>
+                    </div>
 
                 </div>
             </div>

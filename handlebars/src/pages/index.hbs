@@ -1,127 +1,50 @@
 
-{{#> layouts/boilerplate-global title="Updated boilerplate and band demo" summary="This page uses a fixed container with slightly simplified bands." }}
+{{#> layouts/boilerplate-landing-page title="Home page" body-class="test-body-class" summary="This is the home page and demonstrates how to include partials and pass properties to them." }}
 
-    {{!-- Subheader --}}
+    {{!-- Subheader region (defined in layouts/boilerplate-landing-page --}}
     {{#*inline "subheader-block"}}
         {{> includes/subheader 
             subheader-class="health-sub-header--dark"
         }}
     {{/inline}}
 
-    {{#*inline "full-width-block"}}
+    {{#*inline "main-block"}}
+
+        {{> includes/band
+            band-title="Band fully-contained (primary)"
+            band-content="This content is passed to the band partial."
+            band-class="health-band--primary"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (secondary)"
+            band-class="health-band--secondary"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (tertiary)"
+            band-class="health-band--tertiary"
+        }}
+
+        {{> includes/band 
+            band-title="Completely full-width background (neutral)"
+            band-content="This band's background uses the full screen width."
+            band-class="health-band--neutral--darker health-band--full-width-bg"
+        }}
+ 
+        {{> includes/cards
+            grid-num-xs="1"
+            grid-num-md="2"
+            grid-num-lg="3"
+            grid-title="Grid of cards"
+        }}
+
+        {{> includes/cta
+            cta-text="Read more"
+        }}
     
-            {{> includes/band
-                band-title="Band fully-contained (tertiary)"
-                band-content="health-band health-band--tertiary"
-                band-class="health-band--tertiary"
-            }}
-            {{> includes/band
-                band-title="Band fully-contained (primary)"
-                band-content="health-band health-band--primary"
-                band-class="health-band--primary"
-            }}
-
-            {{> includes/band
-                band-title="Band fully-contained (secondary)"
-                band-content="health-band health-band--secondary"
-                band-class="health-band--secondary"
-            }}
-
-            {{> includes/band 
-                band-title="Completely full-width background (neutral darker)"
-                band-content="health-band health-band--neutral--darker health-band--full-width"
-                band-class="health-band--neutral--darker health-band--full-width"
-            }}
-
-            {{> includes/band
-                band-title="Band fully-contained (neutral)"
-                band-content="health-band health-band--neutral"
-                band-class="health-band--neutral"
-            }}
-
-
-            {{> includes/band
-                band-title="Band fully-contained (neutral darker)"
-                band-content="health-band health-band--neutral--darker"
-                band-class="health-band--neutral--darker"
-            }}
-
-            {{> includes/band
-                band-title="Band with no background"
-                band-content="health-band"
-                band-class=""
-            }}
-{{!-- 
-            {{> includes/band--hotline
-                band-title="Hotline band"
-                band-content="health-band health-band--primary"
-                band-class="health-band--primary"
-            }} --}}
-
-            {{> includes/band 
-                band-title="Full-width background (primary)"
-                band-content="health-band health-band--primary health-band--full-width-bg"
-                band-class="health-band--primary health-band--full-width-bg"
-            }}
-
-            {{> includes/band 
-                band-title="Full-width background (secondary)"
-                band-content="health-band health-band--secondary health-band--full-width-bg"
-                band-class="health-band--secondary health-band--full-width-bg"
-            }}
-
-            {{> includes/band 
-                band-title="Full-width background (tertiary)"
-                band-content="health-band health-band--tertiary health-band--full-width-bg"
-                band-class="health-band--tertiary health-band--full-width-bg"
-            }}
-
-            {{> includes/band 
-                band-title="Full-width background (neutral)"
-                band-content="health-band health-band--neutral health-band--full-width-bg"
-                band-class="health-band--neutral health-band--full-width-bg"
-            }}
-
-            {{> includes/band 
-                band-title="Full-width background (neutral darker)"
-                band-content="health-band health-band--neutral--darker health-band--full-width-bg"
-                band-class="health-band--neutral--darker health-band--full-width-bg"
-            }}
-
-            {{> includes/band--video-campaign 
-                band-title="How about something new?"
-                band-content="This band has a big title and an animated background!"
-                band-class="health-band--primary health-band--full-width-bg health-band--animated"
-            }}
-            
-            {{!-- Work out how to call band -> component to stay DRY --}}
-            <div class="health-band">
-            {{> includes/cards }}
-            </div>
-
-            {{> includes/stats }}
-
-            {{> includes/band--stats
-                band-class="health-band--secondary"
-            }}
-
-            {{> includes/band--stats
-                band-title=""
-                band-class="health-band--secondary health-band--full-width-bg"
-            }}
-
-            {{!-- // TODO fix horizontal scroll --}}
-            {{!-- {{> includes/band
-                band-title="Band completely full-width"
-                band-content="health-band--full-width"
-                band-class="health-band--primary health-band--full-width"
-            }} --}}
-          
-            <p>This content is not in a band.</p>
-            {{> includes/colours }}
-            {{> includes/sample--bodycontent }}
 
     {{/inline}}
 
 
-{{/layouts/boilerplate-global}}
+{{/layouts/boilerplate-landing-page}}

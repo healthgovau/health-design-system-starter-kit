@@ -1,9 +1,16 @@
+{{#if grid-title}} <h2>{{ grid-title }}</h2>{{/if}}
 
-{{# each cards--text}}
+<div class="health-grid health-grid--{{grid-num-xs}}col-xs health-grid--{{grid-num-md}}col-md health-grid--{{grid-num-lg}}col-lg standard-gap--soft">
+
+{{!-- Card data comes from data.json --}}
+{{# each cards}}
     {{> includes/card
             card-title=this.card-title
             card-text=this.card-text
-            card-img=this.card-img
+            card-img=this.card-image
             card-class=this.card-class
+            card-date=this.card-date
     }}
 {{/each}}
+
+</div>
