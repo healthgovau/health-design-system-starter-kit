@@ -14,11 +14,12 @@ Get started fast with the HDS starter kit!
     - [Guide to using Handlebars](#guide-to-using-handlebars)
       - [Templates](#templates)
       - [Menu](#menu)
-    - [Define content in json](#define-content-in-json)
-    - [SCSS](#scss-1)
-    - [JavaScript](#javascript-1)
-    - [Images](#images-1)
-    - [Export files](#export-files)
+      - [Define content in json](#define-content-in-json)
+      - [SCSS](#scss-1)
+      - [JavaScript](#javascript-1)
+      - [Images](#images-1)
+      - [Export files](#export-files)
+      - [Handlebar references](#handlebar-references)
 
 ---
 
@@ -93,19 +94,19 @@ Partials can be referred to with or without parameters
 
 To customize the main nav menu use data.json
 
-### Define content in json
+#### Define content in json
 
 To utilise a json source rather than adding multiple similar items to the templateuse `data.json`
 
 See the example in ` index.hbs`` where  `include/cards` outputs multiple cards from a json source.
 
-### SCSS
+#### SCSS
 
 The root SCSS file is setup as `/src/scss/main.scss` as defined in `webpack-sass.config.js`. This references other SCSS files as required (such as the HDS via `@import "../../assets/hds/sass/all.scss";`).a1
 
 Addition custom SCSS files can be added to `/src/scss/parts/*.scss`.
 
-### JavaScript
+#### JavaScript
 
 The project includes JS files as referenced in `/handlebars/src/partials/includes/head.hbs`. For example:
 
@@ -122,7 +123,7 @@ These can be customised according to needs.
 
 The root SCSS file is setup as `/src/scss/main.scss`. T
 
-### Images
+#### Images
 
 Place images in `/src/img` and reference directly. For example:
 
@@ -132,6 +133,11 @@ Place images in `/src/img` and reference directly. For example:
 
 **Note:** Webpack (used for compilation) does not handle SVG images.
 
-### Export files
+#### Export files
 
 To use the generated page as a standalone static page. Copy the files from the `dist` folder.
+
+#### Handlebar references
+
+- https://www.reddit.com/r/node/comments/9hd442/how_do_i_pass_data_to_a_handlebars_partial/
+- https://zordius.github.io/HandlebarsCookbook/
