@@ -31,8 +31,6 @@
     @include AU-space('padding', .75unit .75unit .75unit 0);
     width: 100%;
     max-width: 250px;
-    // For IE 9, 10.
-    color: transparent;
 
     @include AU-media(md) {
       max-width: 300px;
@@ -46,6 +44,7 @@
       width: 30%;
     }
 
+    // When the logo and lockup are a combined single image
     &-image {
       display: block;
       width: 100%;
@@ -63,11 +62,4 @@
   }
 
   background-color: white;
-
-  // a.au-header__logo {
-  //   &:hover,
-  //   &:focus {
-  //     background: $colour-light-dark;
-  //   }
-  // }
 }
