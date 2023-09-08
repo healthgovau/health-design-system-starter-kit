@@ -25,7 +25,12 @@
     },
     {
       "card-title": "Card title 3",
-      "card-text": "Cursus mattis lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi ",
+      "card-text": "Cursus mattis lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi.",
+      "card-class": "health-card--shadow health-card--clickable"
+    },
+    {
+      "card-title": "Card title 4",
+      "card-text": "Cursus mattis lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi.",
       "card-class": "health-card--shadow health-card--clickable"
     }
   ],
