@@ -1,0 +1,213 @@
+<SearchResult responseDate="15/09/2023 10:46 AM" searchTime="192 milliseconds" totalRecordsAvailable="24400"
+  pageNumber="1" paging="1">
+  <searchQuery>
+    <searchText />
+    <purpose />
+    <recruitmentStatus />
+    <phase />
+    <ethicsApproval>No</ethicsApproval>
+    <gender />
+    <healthyVolunteers />
+    <healthConditions />
+    <recruitmentSites />
+    <ageGroup />
+    <recruitmentCountries />
+    <studyType />
+    <conditionCategory />
+    <conditionCode />
+    <interventionCode />
+    <getActrnOnly>False</getActrnOnly>
+  </searchQuery>
+  <trial>
+    <actrn>ACTRN12623001006639</actrn>
+    <utn />
+    <publictitle>An Open-Label, Phase 1 Study to Characterize the Effects of a Moderate CYP3A4 and P-glycoprotein
+      Inhibitor on the Pharmacokinetics of Bomedemstat (IMG-7289) in Healthy Participants</publictitle>
+    <conditions>
+      <healthcondition>Cancer</healthcondition>
+      <conditioncode>
+        <conditioncode1>Cancer</conditioncode1>
+        <conditioncode2>Myeloma</conditioncode2>
+      </conditioncode>
+      <conditioncode>
+        <conditioncode1>Blood</conditioncode1>
+        <conditioncode2>Haematological diseases</conditioncode2>
+      </conditioncode>
+    </conditions>
+    <studytype>Interventional</studytype>
+    <purpose>Treatment</purpose>
+    <recruitment>
+      <recruitmentstatus>Recruiting</recruitmentstatus>
+      <recruitmentstate>SA</recruitmentstate>
+      <hospital>CMAX Clinical Research Pty Ltd - Adelaide</hospital>
+      <postcode>5000 - Adelaide</postcode>
+      <countryoutsideaustralia>
+        <country />
+        <state />
+      </countryoutsideaustralia>
+    </recruitment>
+    <anticipatedstartdate />
+    <anticipatedenddate>4/10/2023</anticipatedenddate>
+    <phase>Phase 1</phase>
+    <ethicsapproval>Approved</ethicsapproval>
+    <briefsummary>This is a study to characterise the effects of a Moderate CYP3A4 and P-glycoprotein Inhibitor on the
+      impact of Bomedemstat (IMG-7289) in healthy volunteers. IMG-7289 may be indicated for use in patients with cancer.
+      A drug-drug interaction trial is needed to better understand how the body interacts with administered drugs
+      throughout the entire duration of drug exposure.
+
+      Who is it for?
+
+      You may be eligible for this study if you are aged 18 to 65 years and are in good general health without a
+      clinically significant medical history. People who have been diagnosed with cancer will not be eligible for this
+      study.
+
+      Study details
+
+      This trial will take place over 73 days, where participants will be screened for 28 days, receive oral medication
+      over a 13-day period, and will then be followed up. All participants will have their vital signs checked (heart
+      rate, blood pressure, temperature, etc), and will provide blood and urine samples for testing.
+
+      It is hoped this research will determine whether Moderate CYP3A4 and P-glycoprotein Inhibitor have an effect on
+      the reaction of volunteers to Bomedemstat (IMG-7289). Healthy participants in the current study will not receive
+      any health benefit (beyond that of an assessment of their medical status) from participating in the study;
+      however, data from this study will support the potential development of bomedemstat.</briefsummary>
+    <inclusivecriteria>1. Must have given written informed consent before any study related activities are carried out
+      and must be able to understand the full nature and purpose of the trial, including possible risks and adverse
+      effects.
+      2. Adult males and females, 18 to 65 years of age (inclusive) at Screening Visit.
+      3. Body mass index (BMI) greater than or equal to 18.0 and less than or equal to 32.0 kg/m2, with a body weight
+      greater than or equal to 55 and less than or equal to 100 kg at Screening Visit.
+      4. Be non-smokers (including tobacco, e-cigarettes or other nicotine containing products, and marijuana) for at
+      least 1 month prior to first study drug administration and have a negative result of cotinine test at screening
+      and on Day -1. In the event the cotinine test is positive, the test may be repeated once (at the discretion of the
+      PI) to confirm eligibility.
+      5. No prior history of chronic alcohol abuse or excessive alcohol intake, at the discretion of the PI, within 12
+      weeks prior to screening. No alcohol is to be consumed for at least 48 hours prior to admission, with negative
+      alcohol test results (at screening and on Day -1). In the event the alcohol breath test is positive, the test may
+      be repeated once (at the discretion of the PI) to confirm eligibility. Excessive alcohol intake is defined as
+      regular consumption of >12 standard units of alcohol per week, or more than 4 standard drinks on >3 days per week,
+      where 1 standard drink is 10 g of pure alcohol and is equivalent to 285 mL beer [4.9% Alc./Vol], 100 mL wine [12%
+      Alc./Vol], 30 mL spirit [40% Alc./Vol]).
+      6. No prior history of substance abuse or drug addiction within 12 months prior to first study drug administration
+      and negative urine drug screen results at screening and on Day -1. In the event the urinary drug test is positive,
+      the test may be repeated once (at the discretion of the PI) to confirm eligibility.
+      7. No prior history of relevant drug hypersensitivity.
+      8. Medically healthy (in the opinion of the PI) as determined by pre-study medical history and without CS
+      abnormalities at screening, and after check-in on Day -1, and prior to first dose administration on Day 1,
+      including:
+      a. Physical examination without any clinically relevant findings;
+      b. Systolic blood pressure in the range of 100 to 160 mmHg and diastolic blood pressure in the range of 50 to 95
+      mmHg after 5 minutes in supine position;
+      c. Pulse rate (PR) in the range of 50 to 100 beats/minute after 5 minutes rest in supine position;
+      d. Body temperature (tympanic), between 35.5°C and 37.7°C;
+      e. A 12-lead ECG within normal range (QTcF males less than or equal to 450 ms; QTcF females less than or equal to
+      470 ms) or with abnormalities that are not hazardous to the participant according to the opinion of the PI;
+      f. No clinically relevant findings in clinical laboratory blood and urinalysis tests as judged by the PI;
+      g. ALT/AST less than or equal to 1.5 ULN, total bilirubin less than or equal to 1.5 x ULN and/or creatinine
+      clearance greater than or equal to 80mL/min (calculated using Cockcroft &amp; Gault formula).
+      NOTE: Laboratory results obtained during screening and prior to first dose administration on Day 1 should be used
+      to determine eligibility criteria. In situations where laboratory results, vitals or ECGs are outside the
+      permitted range, the Investigator may retest the participant once and the subsequent within range screening result
+      may be used to determine the participant’s eligibility.
+      9. Participants with a history of Hepatitis B or C are eligible on the condition that participants have adequate
+      liver function as defined by Inclusion Criterion #8 and are hepatitis B surface antigen (HBsAg) negative and/or
+      have undetectable hepatitis C virus (HCV) RNA.
+      10. Female participants must:
+      a. Be of nonchildbearing potential i.e., surgically sterilised (hysterectomy, bilateral salpingectomy, bilateral
+      oophorectomy at least 6 months prior to dosing) or post-menopausal (where post-menopausal is defined as no menses
+      for 12 months without an alternative medical cause, and a follicle-stimulating hormone level >40 IU/L at the
+      Screening Visit), or
+      b. If of child-bearing potential, must have a negative serum pregnancy test at screening and before the first
+      study drug administration (Day -1, urine test). They must agree not to attempt to become pregnant, must not donate
+      ova, and must use a highly effective contraceptive method from signing the consent form until at least 30 days
+      after the last dose of study drug.
+      c. Must not be breast-feeding.
+      11. Male participants, if not surgically sterilised, must be willing not to donate sperm and, if engaging in
+      sexual intercourse with a female partner who could become pregnant, must be willing to use a condom in addition to
+      having the female partner use a highly effective contraceptive method from signing the consent form until at least
+      30 days after the last dose of study drug. Note that oral, injected or implanted hormonal methods of contraception
+      must be established in the female partner who could become pregnant, and in use for at least a month prior to
+      screening.
+      12. Have suitable venous access for blood sampling.
+      13. Be willing and able to comply with all study assessments and adhere to the protocol schedule and restrictions.
+
+    </inclusivecriteria>
+    <inclusiveminage>18</inclusiveminage>
+    <inclusiveminagetype>Years</inclusiveminagetype>
+    <inclusivemaxage>65</inclusivemaxage>
+    <inclusivemaxagetype>Years</inclusivemaxagetype>
+    <inclusivegender>Both males and females</inclusivegender>
+    <healthyvolunteer>Yes</healthyvolunteer>
+    <exclusivecriteria>1. Is pregnant or nursing.
+      2. Has an active or prior malignancy.
+      Exception: Participants who has been disease-free for 1 year, or a participant with a history of a completely
+      resected non-melanoma skin cancer or successfully treated in situ carcinoma are eligible.
+      3. Has thrombocytopenia, neutropenia, or anaemia, i.e., not within the normal range based on local lab references
+      with a single repeat and minor aberrations allowable at the discretion of the PI, and any prior history of myeloid
+      malignancies, including MDS.
+      4. Has had major surgery (in the opinion of the Investigator) within 3 months prior to enrollment.
+      5. Is unwilling to exclude grapefruit, grapefruit juice or products that contain grapefruit, star fruit,
+      pomegranate, pomelo, tangelo or Seville orange-containing products from the diet and all foods that contain those
+      fruits from time of enrolment until discharge from the clinical unit.
+      6. Has cardiovascular impairment, history of congestive heart failure greater than New York Heart Association
+      Class II, arterial hypertension, unstable angina, myocardial infarction, or stroke within 6 months prior to the
+      planned first dose of bomedemstat; or ventricular cardiac arrhythmia requiring medical treatment.
+      7. Participants taking medications that are known potent or moderate inducers or inhibitors of CYP3A4 (including
+      St. John’s Wort).
+      8. Blood or plasma donation of >100 mL during the 4 weeks prior to Day -1.
+      9. Participation in another clinical trial of an investigational molecule (or medical device) within 30 days (or 5
+      half-lives of the drug, whichever is longer) prior to the start of IP administration on Day 1 (or within 6 months
+      or 5 half-lives, whichever is longer, prior to the start of IP administration on Day 1 if the investigational drug
+      was an immunosuppressive biologic).
+      10. Received treatment with immune-suppressive or immune-modulative medication (including topical, systemic and
+      inhalant corticosteroids) or have received immunoglobulins and/or blood products within 4 months prior to the
+      administration of the first dose of IP.
+      11. Exposure to any prescription medications (small molecules), topically or systemically administered
+      over-the-counter drugs, dietary supplements, or herbal remedies (with the exception of aspirin) within 14 days or
+      5 half-lives (if known), (whichever is longer) prior to the start of IP administration on Day 1.
+      12. Has an active infection or recent history (<30 days before study drug administration) requiring systemic
+        treatment. 13. Is immunocompromised (in the opinion of the Investigator), including participants with known HIV
+        infection. 14. Has known hypersensitivity to any of the components of the IP. 15. Is unable to take oral
+        medications, has a history of surgery that in the opinion of the PI would interfere with the administration or
+        absorption of oral medication, has malabsorption syndrome or any other uncontrolled gastrointestinal condition
+        (e.g., nausea, diarrhoea or vomiting) that might impair the bioavailability of IP. 16. Has an uncontrolled
+        intercurrent illness including, but not limited to, uncontrolled infection, or psychiatric illness that would
+        limit compliance with study requirements. At discretion of the PI, participants with any history of depression
+        or suicidal ideation will be excluded and at a minimum, participants with a prior history should have stable
+        mental state off medications for>6 months.
+        17. A history of bleeding (i.e., hemoptysis, hematuria, gastrointestinal blood loss, epistaxis, or others with
+        greater than Grade 1 according to National Cancer Institute Common Terminology Criteria for Adverse Events
+        [NCI-CTCAE] Version 5.0) within 1 month prior to beginning therapy or any clinical indications of current active
+        bleeding.
+        18. Individuals who have smoked cigarettes or tobacco within the 1 month prior to first study drug
+        administration or have a positive urine cotinine result at Screening or Day -1.
+        19. Any other condition, which in the opinion of the PI precludes the participant’s participation in the
+        clinical study.
+    </exclusivecriteria>
+    <trialwebsite />
+    <sponsorship>
+      <primarysponsortype>Commercial sector/Industry</primarysponsortype>
+      <primarysponsorname>Imago BioSciences, Inc., a subsidiary of Merck &amp; Co., Inc.</primarysponsorname>
+      <primarysponsoraddress>126 East Lincoln AvenueP.O. Box 2000 Rahway, NJ 07065 USA</primarysponsoraddress>
+      <primarysponsorcountry>United States of America</primarysponsorcountry>
+      <fundingsource>
+        <fundingtype>Commercial sector/Industry</fundingtype>
+        <fundingname>Imago BioSciences, Inc., a subsidiary of Merck &amp; Co., Inc.</fundingname>
+        <fundingaddress>126 East Lincoln AvenueP.O. Box 2000 Rahway, NJ 07065 USA</fundingaddress>
+        <fundingcountry>United States of America</fundingcountry>
+      </fundingsource>
+    </sponsorship>
+    <publicqueriescontact>
+      <title>Dr</title>
+      <name>Susi Lee</name>
+      <address>Merck &amp; Co., Inc.126 East Lincoln AvenueP.O. Box 2000Rahway, NJ 07065 USA</address>
+      <phone>+1 917 406 6559</phone>
+      <fax />
+      <email>susi_lee@merck.com</email>
+      <country>United States of America</country>
+    </publicqueriescontact>
+    <interventioncode>Treatment: Drugs</interventioncode>
+    <lastupdatedon>15/09/2023</lastupdatedon>
+  </trial>
+</SearchResult>
+</AnzctrTrialSearchResult>
