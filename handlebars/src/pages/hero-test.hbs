@@ -1,0 +1,63 @@
+
+{{#> layouts/boilerplate-landing-page title="Home page" body-class="home" summary="This is the home page and demonstrates how to include partials and pass properties to them." }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-img="img/act_logo.png"
+            header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{!-- Subheader region (defined in layouts/boilerplate-landing-page --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/act/hero
+            hero-class=""
+            hero-title="Hero default"
+            hero-image="img/sample-hero.jpg"
+            hero-summary="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a dolorum deleniti, repudiandae amet neque, odit fugiat magni, blanditiis corporis repellendus iure eaque quasi illum iste in tempora dolor numquam."
+            hero-cta-primary="Primary button"
+            hero-cta-secondary=""
+            hero-cta="Call-to-action link"
+        }}
+
+        {{> includes/act/hero
+            hero-class="health-hero--inset-box"
+            hero-title="Hero inset box"
+            hero-image="img/sample-hero.jpg"
+            hero-summary="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a dolorum deleniti, repudiandae amet neque, odit fugiat magni, blanditiis corporis repellendus iure eaque quasi illum iste in tempora dolor numquam."
+            hero-cta-primary="Primary button"
+            hero-cta-secondary=""
+            hero-cta="Call-to-action link"
+        }}
+
+        {{> includes/act/hero
+            hero-class="health-hero--inset-box-overlap"
+            hero-title="Hero inset box overlap"
+            hero-image="img/sample-hero.jpg"
+            hero-summary="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a dolorum deleniti, repudiandae amet neque, odit fugiat magni, blanditiis corporis repellendus iure eaque quasi illum iste in tempora dolor numquam."
+            hero-cta-primary="Primary button"
+            hero-cta-secondary=""
+            hero-cta="Call-to-action link"
+        }}
+
+        {{> includes/act/hero
+            hero-class="health-hero--bg-gradient health-hero--overlap-bottom"
+            hero-title="Hero gradient"
+            hero-image="img/sample-hero.jpg"
+            hero-summary="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a dolorum deleniti, repudiandae amet neque, odit fugiat magni, blanditiis corporis repellendus iure eaque quasi illum iste in tempora dolor numquam."
+            hero-cta-primary="Primary button"
+            hero-cta-secondary=""
+            hero-cta="Call-to-action link"
+        }}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{> includes/act/home-search 
+            band-class="health-band--overlap-top"
+        }}
+    
+    {{/inline}}
+
+
+{{/layouts/boilerplate-landing-page}}

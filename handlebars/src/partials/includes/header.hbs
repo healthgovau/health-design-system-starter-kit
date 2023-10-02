@@ -7,10 +7,16 @@
           <a href="/" title="Home" rel="home" class="au-header__logo">
             <img src="img/DHAC_strip.png" alt="Australia Government Department of Health" class="au-header__logo-image au-responsive-media-img initial loading" data-was-processed="true" />
           </a>
-          <div class="au-header__text">
-            <p class="au-header__heading">HDS Starter Kit</p>
-            <p class="au-header__subline">Build HDS things quickly</p>
-          </div>
+          {{#if header-img}}
+            <div class="au-header__lockup">
+              <img src="{{header-img}}" alt="{{header-img-alt}}" />
+            </div>
+          {{else}}
+            <div class="au-header__text">
+              <p class="au-header__heading">Australia Clinical Trials</p>
+              <p class="au-header__subline">An optional subline</p>
+            </div>
+          {{/if}}
         </div>
 
       </div>

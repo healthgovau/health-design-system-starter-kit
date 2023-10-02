@@ -1,0 +1,19 @@
+<form action="#" class="au-form clinical-trials-search">
+  <div class="health-facet">
+    <div class="au-form__item">
+      <label for="anzctr-search">
+        Keyword
+      </label>
+      <input class="au-text-input au-text-input--block" type="text" id="anzctr-search" name="searchText" value="{{search-text}}" />
+    </div>
+  </div>
+
+  {{#each fieldsets}}
+    {{> includes/act/facet
+          fieldset=this.fieldset
+          description=this.description
+          state=this.state
+    }}
+  {{/each}}
+
+</form>

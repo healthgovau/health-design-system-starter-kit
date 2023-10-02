@@ -1,0 +1,19 @@
+<div class="health-facet">
+    <h2 class="au-display-md">{{fieldset}}</h2>
+    {{#if description}}
+      <div class="au-form__item-description">{{description}}</div>
+    {{/if}}
+    <div class="health-facet__list">
+      <div class="js-facets-checkbox-links">
+        {{#each fields}}
+          {{> includes/act/field 
+              state=this.state
+            }}
+        {{/each}}
+      </div>
+  </div>
+
+  <script language="JavaScript">
+    $(document).ready(function() { health.facetShowMore('.health-facet', 8); });
+  </script>
+</div>

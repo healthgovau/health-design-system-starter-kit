@@ -1,0 +1,29 @@
+
+{{#> layouts/boilerplate-standard-page title="Standard page" body-class="" summary="This is a standard page." }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-img="img/act_logo.png"
+            header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader 
+            subheader-class="health-sub-header--dark"
+        }}
+    {{/inline}}
+
+
+    {{#*inline "main-block"}}
+        {{> includes/in-page-nav }}
+        {{> includes/loremipsum--long }}
+        {{> includes/act/home--features }}
+        {{> includes/video }}
+        {{> includes/callout}}
+        {{> includes/table }}
+        {{> includes/references }}
+    {{/inline}}
+
+
+{{/layouts/boilerplate-standard-page}}

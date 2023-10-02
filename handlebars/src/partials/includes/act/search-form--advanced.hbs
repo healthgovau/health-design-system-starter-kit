@@ -1,0 +1,120 @@
+<form action="#" class="au-form clinical-trials-search">
+  <div class="au-form__item">
+    <label for="anzctr-search">
+      Keyword
+    </label>
+
+    <input class="au-text-input au-text-input--block" type="text" id="anzctr-search" name="searchText" value="{{search-text}}" />
+  </div>
+  <div class="au-form__item">
+    <label for="conditionCategory">
+      Broad health condition
+    </label>
+    <select class="au-select" name="conditionCategory" id="conditionCategory">
+      <option value="All" selected="selected">All</option><option value="Alternative and Complementary Medicine">Alternative and Complementary Medicine</option><option value="Anaesthesiology">Anaesthesiology</option><option
+        value="Blood"
+      >Blood</option><option value="Cancer">Cancer</option><option value="Cardiovascular">Cardiovascular</option><option value="Diet and Nutrition">Diet and Nutrition</option><option value="Ear">Ear</option><option value="Eye">Eye</option><option
+        value="Human Genetics and Inherited Disorders"
+      >Human Genetics and Inherited Disorders</option><option value="Infection">Infection</option><option value="Inflammatory and Immune System">Inflammatory and Immune System</option><option value="Injuries and Accidents">Injuries and Accidents</option><option
+        value="Mental Health"
+      >Mental Health</option><option value="Metabolic and Endocrine"></option><option value="Musculoskeletal">Musculoskeletal</option><option value="Neurological">Neurological</option><option value="Oral and Gastrointestinal">Oral and
+        Gastrointestinal</option><option value="Other">Other</option><option value="Physical Medicine / Rehabilitation">Physical Medicine / Rehabilitation</option><option value="Public Health">Public Health</option><option
+        value="Renal and Urogenital"
+      >Renal and Urogenital</option><option value="Reproductive Health and Childbirth">Reproductive Health and Childbirth</option><option value="Respiratory">Respiratory</option><option value="Skin">Skin</option><option
+        value="Stroke"
+      >Stroke</option><option value="Surgery">Surgery</option>
+    </select>
+  </div>
+  <div class="au-form__item">
+    <label for="conditionCode">
+      Specific condition
+    </label>
+    <div class="au-form__item-description">
+      First, select a broad health condition.
+    </div>
+    <select class="au-select" name="conditionCode" id="conditionCode" disabled>
+      <option value="All" selected="selected">All</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <label for="edit-purposeofstudy">Trial Focus</label>
+    <select class="au-select" id="edit-purposeofstudy" name="purposeOfStudy">
+      <option value="" selected="selected">All</option>
+      <option value="Treatment">Treatment</option>
+      <option value="Prevention">Prevention</option>
+      <option value="Diagnosis">Diagnosis</option>
+      <option value="Educational / counselling / training">Educational</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <label for="edit-recruitmentstatus">Is the study currently looking for suitable participants?</label>
+    <select class="au-select" id="edit-recruitmentstatus" name="recruitmentStatus">
+      <option value="">All</option><option value="Active, not recruiting">Active, not recruiting</option>
+      <option value="Completed">Completed</option>
+      <option value="Not yet recruiting">Not yet recruiting</option>
+      <option value="Recruiting" selected="selected">Recruiting</option><option value="Suspended">Suspended</option>
+      <option value="Stopped early">Stopped early</option>
+      <option value="Withdrawn">Withdrawn</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <label for="edit-recruitmentsites">Research site location</label>
+    <select name="recruitmentSites" id="edit-recruitmentsites" class="au-select">
+      <option value="">All</option>
+      <option value="ACT">ACT</option>
+      <option value="NSW">NSW</option>
+      <option value="NT">NT</option>
+      <option value="Qld">Qld</option>
+      <option value="SA">SA</option>
+      <option value="Tas">Tas</option>
+      <option value="Vic">Vic</option>
+      <option value="WA">WA</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <label for="edit-phase">Trial phase</label>
+    <select class="au-select" id="edit-phase" name="phase">
+      <option value="" selected="selected">All</option>
+      <option value="Phase 1">Phase 1</option>
+      <option value="Phase 2">Phase 2</option>
+      <option value="Phase 3">Phase 3</option>
+      <option value="Phase 4">Phase 4</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <label for="edit-gender">Gender</label>
+    <select class="au-select" id="edit-gender" name="gender">
+      <option value="" selected="selected">All</option>
+      <option value="Males">Trials with Male Participants</option>
+      <option value="Females">Trials with Female Participants</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <label for="edit-healthyvolunteers">Are Healthy Volunteers able to participate?</label>
+    <select class="au-select" id="edit-healthyvolunteers" name="healthyVolunteers">
+      <option value="" selected="selected">All</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <label for="edit-recruitmentsites">Has the study received ethics approval?</label>
+    <select class="au-select" id="edit-ethicsapproval" name="ethicsApproval">
+      <option value="">All</option>
+      <option value="Yes" selected="selected">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
+
+  <div class="au-form__item">
+    <button class="au-btn">Submit</button>
+    <button class="au-btn au-btn--tertiary">Reset</button>
+  </div>
+</form>

@@ -6,18 +6,13 @@
     <div class="health-card__icon">{{>icon}}</div>
   {{/if}}
   <div class="health-card__body">
-    <h2 class="health-card__title">
-      <a class="health-card__link" href="#">{{card-title}}</a>
-    </h2>
-    
+    <h2 class="health-card__title">{{card-title}}</h2>
     {{#if card-text}}
       <div class="health-card__text">
         <p>{{card-text}}</p>
+        {{> link-list-call-to-action }}
       </div>
     {{/if}}
-    
-    {{#if card-date}}
-      <div class="health-card__date">{{card-date}}</div>
-    {{/if}}
+   
   </div>
 </div>

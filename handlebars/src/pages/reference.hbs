@@ -1,7 +1,12 @@
 
-{{#> layouts/boilerplate-landing-page title="All components" summary="This is a full-width page to test output of any and all Handlebar components." }}
+{{#> layouts/boilerplate-landing-page title="Reference page" summary="This is a full-width page to test output of any and all Handlebar components." }}
 
     {{!-- Subheader --}}
+    {{#*inline "header-block"}}
+        {{> includes/header }}
+    {{/inline}}
+
+    {{!-- Subheader region (defined in layouts/boilerplate-landing-page --}}
     {{#*inline "subheader-block"}}
         {{> includes/subheader 
             subheader-class="health-sub-header--dark"
@@ -10,8 +15,8 @@
 
     {{#*inline "main-block"}}
       
-        {{> includes/in-page-nav }}
-
+    {{> includes/card-band-combination-test }}
+    
         {{> includes/band
             band-title="Band fully-contained (primary)"
             band-content="Custom content"
@@ -84,8 +89,7 @@
         {{> includes/cards }}
         </div>
     
-
-
+        {{> includes/in-page-nav }}
         <h2>Components copied from the HDS</h2>
         <p>This content is not in a band.</p>
         {{> includes/colours }}

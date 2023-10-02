@@ -1,0 +1,17 @@
+{{#if grid-title}} <h2>{{ grid-title }}</h2>{{/if}}
+
+<div class="health-grid health-grid--{{grid-num-xs}}col-xs health-grid--{{grid-num-md}}col-md health-grid--{{grid-num-lg}}col-lg standard-gap--soft">
+
+{{!-- Card data comes from data.json --}}
+{{#each features}}
+    {{> includes/card
+            card-title=this.card-title
+            card-text=this.card-text
+            card-class="health-card--shadow health-card--clickable"
+            card-image=""
+            card-icon="true"
+    }}
+{{/each}}
+
+
+</div>

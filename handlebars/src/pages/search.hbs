@@ -1,0 +1,33 @@
+
+{{#> layouts/boilerplate-landing-page title="Clinical trials search" body-class="" summary="Search the Australian New Zealand Clinical Trials Registry (ANZCTR). " }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-img="img/act_logo.png"
+            header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader 
+            subheader-class="health-sub-header--dark"
+        }}
+    {{/inline}}
+
+
+    {{#*inline "main-block"}}
+
+        All clinical trials are sourced from the <a href="http://www.anzctr.org.au/">ANZCTR</a>. This includes all trials with a recruitment site in Australia that are registered on ANZCTR as well as <a href="http://www.anzctr.org.au/">ClinicalTrials.gov</a>. To register a trial with ANZCTR, please <a href="http://www.anzctr.org.au/">visit this website</a>.
+
+        {{> includes/act/search-nav }}
+
+        {{> includes/act/search-form--simple
+        }}
+
+        
+
+
+    {{/inline}}
+
+
+{{/layouts/boilerplate-landing-page}}

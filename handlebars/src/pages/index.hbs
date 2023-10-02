@@ -1,49 +1,64 @@
 
-{{#> layouts/boilerplate-landing-page title="Home page" body-class="test-body-class" summary="This is the home page and demonstrates how to include partials and pass properties to them." }}
+{{#> layouts/boilerplate-landing-page title="Home page" body-class="home" summary="This is the home page and demonstrates how to include partials and pass properties to them." }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-img="img/act_logo.png"
+            header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
 
     {{!-- Subheader region (defined in layouts/boilerplate-landing-page --}}
     {{#*inline "subheader-block"}}
-        {{> includes/subheader 
-            subheader-class="health-sub-header--dark"
+
+        {{> includes/act/hero
+            hero-class="health-hero--bg-gradient health-hero--overlap-bottom"
+            hero-title="Hero gradient"
+            hero-image="img/sample-hero.jpg"
+            hero-summary="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis a dolorum deleniti, repudiandae amet neque, odit fugiat magni, blanditiis corporis repellendus iure eaque quasi illum iste in tempora dolor numquam."
+            hero-cta-primary="Primary button"
+            hero-cta-secondary=""
+            hero-cta="Call-to-action link"
         }}
     {{/inline}}
 
     {{#*inline "main-block"}}
 
-        {{> includes/band
-            band-title="Band fully-contained (primary)"
-            band-content="This content is passed to the band partial."
-            band-class="health-band--primary"
+        {{> includes/act/home-search 
+            band-class="health-band--overlap-top"
         }}
 
-        {{> includes/band
-            band-title="Band fully-contained (secondary)"
-            band-class="health-band--secondary"
-        }}
-
-        {{> includes/band
-            band-title="Band fully-contained (tertiary)"
-            band-class="health-band--tertiary"
-        }}
-
-        {{> includes/band 
-            band-title="Completely full-width background (neutral)"
-            band-content="This band's background uses the full screen width."
-            band-class="health-band--neutral--darker health-band--full-width-bg"
-        }}
+        <div class="health-band health-band--full-width-bg health-band--neutral">
+            <div class="health-band__container">
+                {{> includes/act/home--features
+                    grid-num-xs="1"
+                    grid-num-md="2"
+                    grid-num-lg="2"
+                }}
+            </div>
+        </div>
  
-        {{> includes/cards
+        {{> includes/act/band--featured-video }}
+
+        {{!-- {{> includes/cards
+            grid-title="News"
             grid-num-xs="1"
             grid-num-md="2"
             grid-num-lg="3"
             grid-title="Grid of cards"
         }}
 
-        {{> includes/cta
-            cta-text="Read more"
-        }}
+        <div class="health-band health-band--full-width-bg health-band--neutral">
+            <div class="health-band__container">
+                {{> includes/cards
+                    grid-num-xs="1"
+                    grid-num-md="2"
+                    grid-num-lg="4"
+                    grid-title="Another grid of cards in a band"
+                }}
+            </div>
+        </div> --}}
     
-
     {{/inline}}
 
 

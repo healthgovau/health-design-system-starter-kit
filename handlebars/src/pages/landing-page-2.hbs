@@ -1,0 +1,30 @@
+
+{{#> layouts/boilerplate-standard-page title="Landing page" body-class="" summary="This is a landing page. It exists as an intermediary between all pages and content pages but will be skipped my many users via drop-down primary navigation." }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-img="img/act_logo.png"
+            header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader 
+            subheader-class="health-sub-header--dark"
+        }}
+    {{/inline}}
+
+
+    {{#*inline "main-block"}}
+        <div class="health-grid health-grid--1col-xs health-grid-2col-md health-grid--3col-lg standard-gap--soft">
+            {{#each numbers}}
+                {{> includes/card--multi-link
+                    card-title=this.title
+                    card-text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sint eligendi dolorem animi molestiae, quibusdam asperiores corrupt"
+                    card-class="health-card--shadow"
+                }}
+            {{/each}}
+        </div>
+    {{/inline}}
+
+{{/layouts/boilerplate-standard-page}}

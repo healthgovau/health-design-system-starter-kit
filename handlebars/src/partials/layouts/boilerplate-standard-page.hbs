@@ -15,12 +15,11 @@
         <div class="au-body">
             {{> includes/nav--skipto }}
 
-            {{> includes/header }}
+            {{#> header-block }}
+            {{/header-block}}
             
             {{#> nav-block}}
-                {{> includes/nav--primary
-                        links=menu
-                }}
+                {{> includes/act/nav--dropdown }}
             {{/nav-block}}
 
             {{#> subheader-block}}
@@ -30,14 +29,23 @@
             {{!-- Page layout --}}
             <div class="container health-content">
                 <div class="row">
-
                     {{!-- 2-pane --}}
-                   <div class="col-md-8" id="content">
+                   <div class="col-sm-8" id="content">
                         <main class="main-content" role="main">
                             <div class="region region-content">
-                                {{#> main-block}}
-                                    {{!-- Main content goes here. --}}
-                                {{/main-block}}
+                                <article>
+                                    {{#> main-block}}
+                                        {{!-- Main content goes here. --}}
+                                    {{/main-block}}
+                                </article>
+                            </div>
+
+                            <div class="region--content_bottom">
+                                {{#> postbody-block}}
+                                    {{!-- Post-body goes here. --}}
+                                    {{> includes/footer--standard-page }}
+                                    {{> includes/anything-wrong }}
+                                {{/postbody-block}}
                             </div>
                         </main>
                     </div>
@@ -49,11 +57,8 @@
                             {{/sidenav-block}}
                         </aside>
                     </div>
-
                 </div>
             </div>
-            
-            {{> includes/postbody }}
         </div>
 
         <footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">

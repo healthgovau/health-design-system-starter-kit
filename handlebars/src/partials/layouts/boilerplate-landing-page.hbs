@@ -15,12 +15,11 @@
         <div class="au-body">
             {{> includes/nav--skipto }}
 
-            {{> includes/header }}
+            {{#> header-block }}
+            {{/header-block}}
             
             {{#> nav-block}}
-                {{> includes/nav--primary
-                        links=menu
-                }}
+                {{> includes/act/nav--dropdown }}
             {{/nav-block}}
 
             {{#> subheader-block}}
@@ -30,7 +29,6 @@
             {{!-- Page layout --}}
             <div class="container health-content">
                 <div class="row">
-        
                     {{!-- 1-pane only --}}
                     <div class="col-xs-12" id="content">
                         <main class="main-content" role="main">
@@ -39,13 +37,17 @@
                                     {{!-- Full-width content goes here. --}}
                                 {{/main-block}}
                             </div>
+
+                            <div class="region--content_bottom">
+                                {{#> postbody-block}}
+                                    {{!-- Post-body goes here. --}}
+                                    {{> includes/anything-wrong }}
+                                {{/postbody-block}}
+                            </div>
                         </main>
                     </div>
-
                 </div>
             </div>
-            
-            {{> includes/postbody }}
         </div>
 
         <footer class="au-footer au-footer--dark au-body au-body--dark" role="contentinfo">

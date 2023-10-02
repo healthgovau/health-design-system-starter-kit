@@ -6,8 +6,28 @@
       "link": "index.html"
     },
     {
-      "label": "All components",
-      "link": "test-content.html"
+      "label": "Search",
+      "link": "search.html"
+    },
+    {
+      "label": "Search results",
+      "link": "search-results.html"
+    },
+    {
+      "label": "Landing page",
+      "link": "landing-page.html"
+    },
+    {
+      "label": "Landing page 2",
+      "link": "landing-page-2.html"
+    },
+    {
+      "label": "Standard page",
+      "link": "standard-page.html"
+    },
+    {
+      "label": "Hero test",
+      "link": "hero-test.html"
     }
   ],
   "cards": [
@@ -27,11 +47,28 @@
       "card-title": "Card title 3",
       "card-text": "Cursus mattis lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi.",
       "card-class": "health-card--shadow health-card--clickable"
+    }
+  ],
+  "features": [
+    {
+      "card-title": "What is a clinical trial",
+      "card-text": "How clinical trials test new treatments to find better ways to prevent, detect or treat disease.",
+      "card-class": "health-card--shadow health-card--clickable health-card--horizontal"
     },
     {
-      "card-title": "Card title 4",
-      "card-text": "Cursus mattis lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus ipsum at nisi.",
-      "card-class": "health-card--shadow health-card--clickable"
+      "card-title": "Why be part of a clinical trial",
+      "card-text": "Helping yourself and others and being part of improving health care for everyone.",
+      "card-class": "health-card--shadow health-card--clickable health-card--horizontal"
+    },
+    {
+      "card-title": "How to be part of a clinical trial",
+      "card-text": "Who to talk to and how to find a trial.",
+      "card-class": "health-card--shadow health-card--clickable health-card--horizontal"
+    },
+    {
+      "card-title": "Consumer guide to clinical trials",
+      "card-text": "Consumers Health Forum factsheet about clinical trials.",
+      "card-class": "health-card--shadow health-card--clickable health-card--horizontal"
     }
   ],
   "tiles": [
@@ -115,6 +152,321 @@
   "img": [
     {
       "url": "https://picsum.photos/400/225"
+    }
+  ],
+  "search-results": [
+    {
+      "title": "laborum exercitation velit incididunt exercitation ea aliquip nulla non enim",
+      "link": "https://anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=6509290ab700fd227bf131f6",
+      "summary": "Sint et eiusmod ipsum eu do et ut ex ex occaecat incididunt nisi veniam in. Eu excepteur deserunt irure dolor nulla dolore dolor esse amet esse consectetur cupidatat non. Cillum fugiat occaecat occaecat ullamco nulla nisi. Ea consectetur velit fugiat excepteur magna duis velit.\r\nVoluptate tempor nostrud anim reprehenderit. Labore consequat mollit proident anim. Labore non officia tempor magna aliquip esse eu culpa ut dolor duis sunt. Est Lorem ad est ad sint fugiat ullamco ut voluptate exercitation. Cupidatat aute ex incididunt ea fugiat consequat nostrud sint culpa excepteur exercitation.\r\nDeserunt adipisicing veniam velit do do labore minim dolor adipisicing. Irure velit ipsum minim sit. Aute quis culpa incididunt esse ullamco ad sit Lorem consequat. Id proident fugiat Lorem occaecat ut irure quis mollit dolore in commodo.\r\nNulla nulla sunt voluptate cillum velit cupidatat laborum veniam. Consequat deserunt et duis Lorem aliqua amet cupidatat laboris sint enim eiusmod esse culpa duis. Nostrud fugiat proident do dolor reprehenderit eiusmod esse elit. Eu eiusmod deserunt tempor sunt magna do occaecat tempor culpa non est sit commodo. Nulla fugiat ex nostrud in ullamco ad laborum. Ullamco anim consectetur enim in incididunt cillum cillum officia incididunt veniam.\r\nSint et eiusmod ipsum eu do et ut ex ex occaecat incididunt nisi veniam in. Eu excepteur deserunt irure dolor nulla dolore dolor esse amet esse consectetur cupidatat non. Cillum fugiat occaecat occaecat ullamco nulla nisi. Ea consectetur velit fugiat excepteur magna duis velit.\r\nVoluptate tempor nostrud anim reprehenderit. Labore consequat mollit proident anim. Labore non officia tempor magna aliquip esse eu culpa ut dolor duis sunt. Est Lorem ad est ad sint fugiat ullamco ut voluptate exercitation. Cupidatat aute ex incididunt ea fugiat consequat nostrud sint culpa excepteur exercitation.\r\nDeserunt adipisicing veniam velit do do labore minim dolor adipisicing. Irure velit ipsum minim sit. Aute quis culpa incididunt esse ullamco ad sit Lorem consequat. Id proident fugiat Lorem occaecat ut irure quis mollit dolore in commodo.\r\nNulla nulla sunt voluptate cillum velit cupidatat laborum veniam. Consequat deserunt et duis Lorem aliqua amet cupidatat laboris sint enim eiusmod esse culpa duis. Nostrud fugiat proident do dolor reprehenderit eiusmod esse elit. Eu eiusmod deserunt tempor sunt magna do occaecat tempor culpa non est sit commodo. Nulla fugiat ex nostrud in ullamco ad laborum. Ullamco anim consectetur enim in incididunt cillum cillum officia incididunt veniam.\r\nSint et eiusmod ipsum eu do et ut ex ex occaecat incididunt nisi veniam in. Eu excepteur deserunt irure dolor nulla dolore dolor esse amet esse consectetur cupidatat non. Cillum fugiat occaecat occaecat ullamco nulla nisi. Ea consectetur velit fugiat excepteur magna duis velit.\r\nVoluptate tempor nostrud anim reprehenderit. Labore consequat mollit proident anim. Labore non officia tempor magna aliquip esse eu culpa ut dolor duis sunt. Est Lorem ad est ad sint fugiat ullamco ut voluptate exercitation. Cupidatat aute ex incididunt ea fugiat consequat nostrud sint culpa excepteur exercitation.\r\nDeserunt adipisicing veniam velit do do labore minim dolor adipisicing. Irure velit ipsum minim sit. Aute quis culpa incididunt esse ullamco ad sit Lorem consequat. Id proident fugiat Lorem occaecat ut irure quis mollit dolore in commodo.\r\nNulla nulla sunt voluptate cillum velit cupidatat laborum veniam. Consequat deserunt et duis Lorem aliqua amet cupidatat laboris sint enim eiusmod esse culpa duis. Nostrud fugiat proident do dolor reprehenderit eiusmod esse elit. Eu eiusmod deserunt tempor sunt magna do occaecat tempor culpa non est sit commodo. Nulla fugiat ex nostrud in ullamco ad laborum. Ullamco anim consectetur enim in incididunt cillum cillum officia incididunt veniam.\r\n",
+      "recruitmentStatus": "mollit",
+      "gender": "male",
+      "recruitmentSites": "SA",
+      "conditionCategory": "laboris",
+      "conditionCode": "qui",
+      "purposeOfStudy": "Treatment"
+    },
+    {
+      "title": "qui voluptate eu officia consectetur ipsum esse dolore et et",
+      "link": "https://anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=6509290a644e26113f7a2029",
+      "summary": "Ad excepteur nulla ipsum nisi excepteur sunt sunt minim tempor excepteur veniam cillum. Laboris ad duis culpa culpa. Consequat dolore quis culpa do ea nisi.\r\nDo labore velit deserunt eu nulla aute qui ut commodo labore. Excepteur culpa elit amet consectetur id id officia. Lorem aliquip nisi ullamco exercitation proident labore proident proident adipisicing pariatur eiusmod mollit. Do nulla reprehenderit cillum reprehenderit id aute consectetur Lorem in aliquip ad. Mollit exercitation esse eiusmod incididunt tempor dolor dolore.\r\nSunt quis excepteur ut nulla eiusmod elit cillum ea nisi. Fugiat incididunt cupidatat exercitation ipsum. Adipisicing tempor cupidatat consequat in duis. Mollit aute aliquip aliqua esse irure pariatur. Labore culpa est pariatur labore sint adipisicing dolor.\r\nDo duis Lorem laborum et ea elit velit voluptate laboris. Tempor ex ullamco consectetur laboris id Lorem pariatur tempor laboris do magna. Duis eu eiusmod reprehenderit mollit id nostrud deserunt esse dolor eu ad in anim ex. Reprehenderit tempor Lorem incididunt veniam sit irure quis sunt dolore.\r\n",
+      "recruitmentStatus": "Lorem",
+      "gender": "male",
+      "recruitmentSites": "Qld",
+      "conditionCategory": "laboris",
+      "conditionCode": "est",
+      "purposeOfStudy": "Prevention"
+    },
+    {
+      "title": "mollit laboris cupidatat amet velit id ex ut aliquip est",
+      "link": "https://anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=6509290a7606887a132673dc",
+      "summary": "Amet sunt aliqua id esse ut. In aliqua nulla officia sint eiusmod deserunt qui. Incididunt pariatur id ea adipisicing aute esse Lorem. Labore sunt cupidatat dolor proident duis pariatur magna mollit et voluptate duis tempor elit. Non eiusmod sit excepteur nulla occaecat consequat laboris sint. Fugiat laboris non do ad cillum laborum officia aliquip culpa. Laborum aliquip eiusmod cupidatat veniam enim aliquip non in commodo veniam adipisicing irure fugiat.\r\nIpsum Lorem in labore laborum incididunt voluptate minim. Deserunt proident labore aliquip nulla do elit nostrud sint minim est consectetur ullamco pariatur dolore. Excepteur ut labore culpa cillum nulla. Ullamco consectetur occaecat Lorem cupidatat nisi Lorem commodo consequat aute sit amet consectetur dolore. Do amet consequat aliquip minim deserunt cillum aute culpa. Labore deserunt ipsum aliqua aliqua id do fugiat. Proident ea do fugiat et cupidatat nisi enim aliqua eiusmod fugiat.\r\nNostrud aliquip culpa non proident ex consequat. Qui minim ad eiusmod aute id duis ea tempor ad fugiat anim enim. Sunt pariatur ea mollit laboris.\r\nAmet anim aute ipsum cupidatat fugiat sunt ut proident do adipisicing Lorem duis in velit. Commodo nisi minim laboris esse enim veniam nulla veniam labore et culpa sint veniam. Excepteur pariatur ullamco est nisi et veniam laborum.\r\n",
+      "recruitmentStatus": "dolore",
+      "gender": "male",
+      "recruitmentSites": "ACT",
+      "conditionCategory": "deserunt",
+      "conditionCode": "nostrud",
+      "purposeOfStudy": "Prevention"
+    },
+    {
+      "title": "velit irure nulla esse consectetur mollit nulla excepteur mollit amet",
+      "link": "https://anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=6509290a35ad9da1493be690",
+      "summary": "Laboris aute magna laborum minim ea et ea. Ad laborum pariatur occaecat cillum enim qui nisi sit Lorem esse elit fugiat. Minim qui amet sit laboris sit magna et sunt laboris veniam exercitation. Sint occaecat minim exercitation nulla esse laborum et id sit adipisicing. Eiusmod esse consequat laborum tempor dolor deserunt.\r\nExcepteur dolore magna irure exercitation pariatur minim pariatur labore ad non consectetur velit. Aliqua magna ex mollit ea qui mollit elit Lorem consectetur anim amet elit culpa mollit. Nostrud laboris proident excepteur reprehenderit nulla enim duis. Ullamco tempor aute excepteur velit irure pariatur id nisi cillum deserunt. Incididunt magna occaecat do tempor minim.\r\nEt do fugiat ullamco occaecat nulla in Lorem elit quis excepteur exercitation amet amet veniam. Deserunt veniam pariatur aliqua aute aliqua irure et aute in sunt esse. Do cillum officia labore voluptate in culpa quis elit id laboris. Irure et enim et enim sint laborum quis sit.\r\nIncididunt eu nostrud magna sit laboris sint adipisicing mollit dolor nisi ad excepteur est. Aliqua fugiat non consequat qui incididunt adipisicing officia. Ullamco aliqua ad nostrud incididunt.\r\n",
+      "recruitmentStatus": "commodo",
+      "gender": "male",
+      "recruitmentSites": "Qld",
+      "conditionCategory": "magna",
+      "conditionCode": "aute",
+      "purposeOfStudy": "Diagnosis"
+    },
+    {
+      "title": "magna aliqua ex occaecat consequat cupidatat sit id incididunt cillum",
+      "link": "https://anzctr.org.au/Trial/Registration/TrialReview.aspx?ACTRN=6509290a4895eaac5aa86c24",
+      "summary": "Veniam duis in voluptate qui eu aliqua sit pariatur. Ullamco laborum adipisicing proident consectetur eiusmod. Est aliquip nostrud qui fugiat Lorem proident deserunt aliquip commodo nulla ut ullamco qui aliquip. Qui non amet commodo ex deserunt tempor. Ut mollit sunt elit sint ipsum cupidatat et aliqua fugiat qui ex adipisicing nulla aute. Ad ad ut et quis magna est sint eu nulla minim cupidatat eu non minim. Anim do irure veniam magna qui laborum magna et ullamco id sunt pariatur elit.\r\nIrure reprehenderit non ex duis. Laboris cillum Lorem aliquip ullamco magna ut anim tempor id dolor excepteur incididunt ad duis. Lorem reprehenderit incididunt minim elit laborum do consequat pariatur aute. Sint eiusmod cupidatat veniam cillum reprehenderit velit pariatur aute proident consequat. Id ex excepteur sint non. Excepteur dolore irure qui in in sunt sunt aliqua consequat.\r\nConsequat magna enim voluptate nisi occaecat duis duis laborum eiusmod ullamco ex nostrud anim. Enim elit ex aliqua id exercitation culpa minim labore qui consectetur sunt. Officia id officia enim laborum aliquip aliquip in reprehenderit non nisi do. Consectetur minim qui irure id occaecat reprehenderit. Excepteur exercitation Lorem pariatur reprehenderit cillum do ea duis proident nostrud reprehenderit ad est culpa. Enim reprehenderit officia anim nostrud cillum veniam labore sunt. Eu sit aute irure in occaecat.\r\nPariatur labore irure exercitation cillum. Nostrud reprehenderit amet minim occaecat consectetur dolor quis. Commodo in est sint id dolore deserunt mollit minim proident incididunt est id nisi.\r\n",
+      "recruitmentStatus": "magna",
+      "gender": "male",
+      "recruitmentSites": "ACT",
+      "conditionCategory": "id",
+      "conditionCode": "dolor",
+      "purposeOfStudy": "Prevention"
+    }
+  ],
+  "numbers": [
+    {
+      "title": "One"
+    },
+    {
+      "title": "Two"
+    },
+    {
+      "title": "Three"
+    },
+    {
+      "title": "Four"
+    },
+    {
+      "title": "Five"
+    },
+    {
+      "title": "Six"
+    }
+  ],
+  "fieldsets": [
+    {
+      "fieldset": "Broad health condition",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "Alternative and Complementary Medicine"
+        },
+        {
+          "value": "Anaesthesiology"
+        },
+        {
+          "value": "Blood"
+        },
+        {
+          "value": "Cancer"
+        },
+        {
+          "value": "Cardiovascular"
+        },
+        {
+          "value": "Diet and Nutrition"
+        },
+        {
+          "value": "Ear"
+        },
+        {
+          "value": "Eye"
+        },
+        {
+          "value": "Human Genetics and Inherited Disorders"
+        },
+        {
+          "value": "Infection"
+        },
+        {
+          "value": "Inflammatory and Immune System"
+        },
+        {
+          "value": "Injuries and Accidents"
+        },
+        {
+          "value": "Mental Health"
+        },
+        {
+          "value": "Metabolic and Endocrine"
+        },
+        {
+          "value": "Musculoskeletal"
+        },
+        {
+          "value": "Neurological"
+        },
+        {
+          "value": "Oral and Gastrointestinal"
+        },
+        {
+          "value": "Other"
+        },
+        {
+          "value": "Physical Medicine / Rehabilitation"
+        },
+        {
+          "value": "Public Health"
+        },
+        {
+          "value": "Renal and Urogenital"
+        },
+        {
+          "value": "Reproductive Health and Childbirth"
+        },
+        {
+          "value": "Respiratory"
+        },
+        {
+          "value": "Skin"
+        },
+        {
+          "value": "Stroke"
+        },
+        {
+          "value": "Surgery"
+        }
+      ]
+    },
+    {
+      "fieldset": "Specific condition",
+      "state": "disabled",
+      "description": "First, select a broad health condition.",
+      "fields": [
+        {
+          "value": "All"
+        }
+      ]
+    },
+    {
+      "fieldset": "Trial focus",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "Treatment"
+        },
+        {
+          "value": "Prevention"
+        },
+        {
+          "value": "Diagnosis"
+        },
+        {
+          "value": "Educational"
+        }
+      ]
+    },
+    {
+      "fieldset": "Is the study currently looking for suitable participants?",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "Active, not recruiting"
+        },
+        {
+          "value": "Completed"
+        },
+        {
+          "value": "Not yet recruiting"
+        },
+        {
+          "value": "Recruiting"
+        },
+        {
+          "value": "Suspended"
+        },
+        {
+          "value": "Stopped early"
+        },
+        {
+          "value": "Withdrawn"
+        }
+      ]
+    },
+    {
+      "fieldset": "Research site location",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "ACT"
+        },
+        {
+          "value": "NSW"
+        },
+        {
+          "value": "NT"
+        },
+        {
+          "value": "Qld"
+        },
+        {
+          "value": "SA"
+        },
+        {
+          "value": "Tas"
+        },
+        {
+          "value": "WA"
+        }
+      ]
+    },
+    {
+      "fieldset": "Trial phase",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "Phase 1"
+        },
+        {
+          "value": "Phase 2"
+        },
+        {
+          "value": "Phase 3"
+        },
+        {
+          "value": "Phase 4"
+        }
+      ]
+    },
+    {
+      "fieldset": "Gender",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "Trials with male Participants"
+        },
+        {
+          "value": "Trials with female Participants"
+        }
+      ]
+    },
+    {
+      "fieldset": "Are Healthy Volunteers able to participate?",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "Yes"
+        },
+        {
+          "value": "No"
+        }
+      ]
+    },
+    {
+      "fieldset": "Has the study received ethics approval?",
+      "fields": [
+        {
+          "value": "All"
+        },
+        {
+          "value": "Yes"
+        },
+        {
+          "value": "No"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,56 @@
+
+{{#> layouts/boilerplate-landing-page title="Clinical trials search" body-class="" summary="This is a live search of the Australian New Zealand Clinical Trials Registry (ANZCTR). All clinical trials displayed on this website are sourced from the ANZCTR." }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-img="img/act_logo.png"
+            header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader 
+            subheader-class="health-sub-header--dark"
+        }}
+    {{/inline}} 
+
+
+    {{#*inline "main-block"}}
+
+    <div class="row">
+       <div class="health-view-paragraph__facets col-lg-4">
+            {{> includes/filter }}
+            {{> includes/act/search-form--advanced-facets 
+                search-text="Deserunt adipisicing"}}
+
+       </div>
+
+        <div class="health-view-paragraph__listing col-lg-8">
+            <header>
+                <div class="standard-gap--mobile-only">
+                    <span class="au-display-xl au-display--inline">100</span> results sorted by trial registration date.
+                </div>
+                {{> includes/act/search-filters--applied }}
+            </header>
+            <ul class="health-listing clinical-trials-results">
+                {{#each search-results}}
+                    {{> includes/act/search-result
+                        title=this.title
+                        link=this.link
+                        summary=this.summary
+                        recruitmentStatus=this.recruitmentStatus
+                        gender=this.gender
+                        recruitmentSites=this.recruitmentSites
+                        conditionCategory=this.conditionCategory
+                        conditionCode=this.conditionCode
+                    }}
+                {{/each}}
+            </ul>
+
+            {{> includes/pager }}
+        </div>
+    </div>
+    {{/inline}}
+
+
+{{/layouts/boilerplate-landing-page}}

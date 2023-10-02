@@ -1,0 +1,85 @@
+
+{{#> layouts/boilerplate-landing-page title="Home page" body-class="" summary="This is the home page and demonstrates how to include partials and pass properties to them." }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-img="img/act_logo.png"
+            header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{!-- Subheader region (defined in layouts/boilerplate-landing-page --}}
+    {{#*inline "subheader-block"}}
+        {{> includes/act/hero
+            hero-class="hero-act"
+            hero-title="Hero title"
+            hero-image="img/1920x700-greyscale.jpg"
+            hero-summary="Hero summary"
+            hero-cta-text="Primary action"
+            hero-cta-link="#"
+        }}
+    {{/inline}}
+
+    {{#*inline "main-block"}}
+
+        {{> includes/act/home-search }}
+
+        <div class="health-band health-band--full-width-bg health-band--neutral">
+            <div class="health-band__container">
+                {{> includes/act/home--features-icon
+                    grid-num-xs="1"
+                    grid-num-md="2"
+                    grid-num-lg="4"
+                }}
+            </div>
+        </div>
+
+        {{> includes/band
+            band-title="Band fully-contained (primary)"
+            band-content="This content is passed to the band partial."
+            band-class="health-band--primary"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (secondary)"
+            band-class="health-band--secondary"
+        }}
+
+        {{> includes/band
+            band-title="Band fully-contained (tertiary)"
+            band-class="health-band--tertiary"
+        }}
+
+        {{> includes/band 
+            band-title="Completely full-width background (neutral)"
+            band-content="This band's background uses the full screen width."
+            band-class="health-band--neutral--darker health-band--full-width-bg"
+        }}
+ 
+        {{> includes/cards
+            grid-num-xs="1"
+            grid-num-md="2"
+            grid-num-lg="3"
+            grid-title="Grid of cards"
+        }}
+
+        <div class="health-band health-band--full-width-bg health-band--neutral">
+            <div class="health-band__container">
+                {{> includes/cards
+                    grid-num-xs="1"
+                    grid-num-md="2"
+                    grid-num-lg="4"
+                    grid-title="Another grid of cards in a band"
+                }}
+            </div>
+        </div>
+
+        {{> includes/cta
+            cta-text="Read more"
+        }}
+    
+
+    {{/inline}}
+
+
+{{/layouts/boilerplate-landing-page}}
