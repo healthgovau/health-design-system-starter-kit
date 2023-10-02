@@ -1,6 +1,5 @@
 // Sub header variation. This includes our title and HP switcher.
 .health-sub-header {
-  --subheader-minheight--desktop: #{$subheader-minheight--desktop};
 
   @include AU-space('padding', 12px 0);
 
@@ -78,8 +77,7 @@
       background-size: cover;
       background-position: center center;
       background-repeat: none;
-      min-height: $subheader-minheight--desktop; // Based on 1920x700 image to prevent narrow image
-      min-height: var(--subheader-minheight--desktop);
+      min-height: var(--subheader-minheight--sm);
     }
 
     // Hero content

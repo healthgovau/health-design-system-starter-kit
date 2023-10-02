@@ -4,4 +4,51 @@
       margin: 0;
     }
   }
+
+  // Flex layouts - used in main nav dropdown
+  &.au-link-list--flex-halves {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        width: 50%;
+      }
+    }
+  }
+
+  &.au-link-list--flex-thirds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        width: 33%;
+      }
+    }
+  }
+
+  &.au-link-list--flex-quarters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        width: 50%;
+      }
+
+      @include AU-media(lg) {
+        width: 25%;
+      }
+    }
+  }
 }

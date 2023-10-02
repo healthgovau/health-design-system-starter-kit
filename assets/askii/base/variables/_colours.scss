@@ -2,7 +2,7 @@
  * @file
  * Override existing colour variables or define new ones.
  * NOTE:
- * This file (and _colours-map.scss) are only referenced when view the base theme.
+ * This file (and _custom-propoerty-map.scss) are only referenced when view the base theme.
  * When a subtheme is created (see README) they are not included in the build.
  * They exist simply to 'greyscale' the site so that it isn't a HDS/HGA clone!
  */
@@ -110,6 +110,6 @@ $project-tag-link-text: $dark; // $dark or $light
 $project-hero-bg: $grey--400; // custom
 $project-hero-text: $light; // $dark or $light
 
-// 3. Go to _colours-map.scss
-// These vars are referenced in _colours-map.scss to assign to CSS custom props
+// 3. Go to _custom-propoerty-map.scss
+// These vars are referenced in _custom-propoerty-map.scss to assign to CSS custom props
 // Some of these get calculated to save you the work (e.g. gradient colours, hover colours, etc). 

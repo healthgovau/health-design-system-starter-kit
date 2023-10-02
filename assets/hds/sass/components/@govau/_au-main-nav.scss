@@ -7,22 +7,25 @@
 
   .au-link-list {
     >li {
-
       a {
-
         color: $AU-color-foreground-text;
         border-bottom-color: var(--main-nav-active-link-border);
-        background: var(--main-nav-active-link-bg);
+        // background: var(--main-nav-active-link-bg);
 
         @include AU-media($AU-main-nav-breakpoint) {
           font-weight: bold;
         }
+      }
 
-        &:hover,
-        &:focus {
-          background: var(--main-nav-active-link-bg--hover);
+      &:hover,
+      &:active,
+      &:focus {
+        a {
+          @include AU-space(margin-bottom, -0.5unit);
+          @include AU-space(border-bottom, 0.5unit solid var(--main-nav-active-link-border));
+          z-index: 9999;
+          background-color: var(--main-nav-active-link-bg--hover);
         }
-
       }
 
       &.active,
@@ -31,9 +34,9 @@
           border-bottom-color: var(--main-nav-active-link-border);
           font-weight: bold;
 
-          @include AU-media($AU-main-nav-breakpoint) {
-            @include AU-space(padding, 1unit);
-          }
+          // @include AU-media($AU-main-nav-breakpoint) {
+          //   @include AU-space(padding, 1unit);
+          // }
 
         }
       }
@@ -60,11 +63,6 @@
     font-weight: bold;
     font-size: 1.25rem;
     @include AU-space(padding, .5unit 0);
-
-    &:hover,
-    &:focus {
-      background-color: transparent;
-    }
 
     &:before {
       content: ""
@@ -107,3 +105,96 @@
 .au-main-nav__toggle--search__open.svg-inline--fa {
   display: none;
 }
+
+//--------------------------------------------------------------
+// Main nav - dropdown
+//--------------------------------------------------------------
+.au-main-nav {
+
+  // Dropdown nav variants
+  &.au-main-nav--dropdown {
+
+    position: relative;
+
+    // Dropdown nav
+    .au-main-nav__dropdown {
+      display: none;
+      position: absolute;
+      // top: 100%; // This breaks if navigation wraps onto 2 lines
+      // @include AU-space(top, 3.5unit); // This handles wrapping navigation
+      left: 0;
+      width: calc(100% - $AU-grid-12-gutter-width);
+      z-index: 10000;
+      background: var(--main-nav-dropdown-bg);
+      box-shadow: 0px 5px 0.375em rgba(0, 0, 0, 0.2);
+      @include AU-space(padding, 1unit);
+      @include AU-space(margin-left, $AU-grid-12-gutter-width/2);
+      @include AU-space(margin-right, $AU-grid-12-gutter-width/2);
+
+      .au-link-list {
+        >li {
+          &.active a {
+            background-color: var(--main-nav-active-dropdown-link-bg--hover);
+          }
+
+          a {
+
+            &:hover,
+            &:focus,
+            &:active {
+              background-color: var(--main-nav-active-dropdown-link-bg--hover);
+            }
+          }
+        }
+      }
+    }
+
+    // Dropdown control
+    .au-main-nav__dropdown-control {
+
+      >a {
+        @include AU-space(padding-right, 2.5unit);
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          @include AU-space(right, 1unit);
+          @include AU-space(margin-top, -0.5unit);
+          @include AU-space(width, 0.8unit);
+          @include AU-space(height, 0.8unit);
+          background-color: $AU-color-foreground-text;
+          mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64 0l64 64-16 16-64-64"/><path d="M64 0l16 16-64 64L0 64"/></svg>');
+          -webkit-mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path d="M64 0l64 64-16 16-64-64"/><path d="M64 0l16 16-64 64L0 64"/></svg>');
+          transform: rotate(180deg);
+          transform: 0.25s ease-in, -webkit-transform 0.25s ease-in
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:focus-within,
+      &:active {
+        .au-main-nav__dropdown {
+          display: block;
+        }
+      }
+
+    }
+  }
+}
+
+
+// TODO create variants
+// au-main-nav--dropdown-horizontal
+// au-main-nav--dropdown-vertical
+// au-main-nav--dropdown-mega
+
+// TODO handle mobile
+// - Behaviour
+//   - links to pages vs drill-down further
+//   - accordion, slide transition, etc
+// - Trigger (click, not hover)
+// - Will need JS!
+// - Integrated (same nav) or own (like .hidden-mobile)

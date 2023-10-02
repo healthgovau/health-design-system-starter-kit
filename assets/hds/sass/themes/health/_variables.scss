@@ -56,10 +56,19 @@ $card-shadow--hover: 0px 0.125em 0.375em $colour-shadow-hover;
 $border-radius: 6px;
 
 // Sub-header (for campaigns)
-$subheader-minheight--desktop: 500px;
+$subheader-minheight--sm: 500px;
 
 // Component spacing
 $component-padding: 3rem;
 $component-padding--mobile: $component-padding/2;
 $component-margin: 3rem;
 $component-margin--mobile: $component-margin/2;
+
+// Hero
+$hero-content-width--md: 60%;
+$hero-content-width--lg: 60%;
+$hero-image-width--md: 100%;
+$hero-image-width--lg: 50%;
+$hero-minheight--md: 400px;
+$hero-minheight--lg: 500px;
+$hero-overlap-top: 75px; // Amount to nudge mobile hero content over image

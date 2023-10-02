@@ -10,15 +10,17 @@
  * Colours and colour mappings.
  */
 
-// HDS Health theme colours.
+// HDS Health theme colours and variables
 @import '../hds/sass/themes/health/colours';
-@import '../hds/sass/themes/health/colours-map';
+@import '../hds/sass/themes/health/variables';
+@import '../hds/sass/themes/health/custom-property-map';
 
 //////////////////////////////////////////////////////////
 // Add custom colour variables or colour overrides here.
 //////////////////////////////////////////////////////////
 @import 'base/variables/colours'; // Setup to make it greyscale
-@import 'base/variables/colours-map'; // Setup to make it greyscale
+@import 'base/variables/variables'; // Setup to make it greyscale
+@import 'base/variables/custom-property-map'; // Setup to make it greyscale
 /**
  * DTA Design System.
  *
@@ -47,9 +49,6 @@
  * Excludes colour and colour mapping variables which must be defined earlier
  * in the process.
  */
-
-// Add Health theme variables.
-@import '../hds/sass/themes/health/variables';
 
 /////////////////////////////////////
 // Add Health theme variables here.

@@ -15,7 +15,7 @@ a.au-btn {
   // Primary and secondary
   &.au-btn--primary {
     background-color: var(--btn-bg);
-    color: var(--btn-text) !important;
+    color: var(--btn-text);
     border-color: var(--btn-bg);
 
     &:hover:not(:disabled) {
@@ -26,7 +26,7 @@ a.au-btn {
 
   &.au-btn--secondary {
     border-color: var(--btn-bg);
-    color: var(--btn-bg) !important;
+    color: var(--btn-bg);
     ;
 
     &:hover:not(:disabled) {
