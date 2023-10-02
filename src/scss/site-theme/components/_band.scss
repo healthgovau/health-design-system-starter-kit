@@ -1,0 +1,44 @@
+.au-body {
+    .health-band {
+
+        // Featured search band - creeps up into hero
+        &.health-band--overlap-top {
+            margin: 0;
+
+            .health-band__container {
+                background: #fff;
+                margin-bottom: 10px;
+            }
+
+            @include AU-media(md) {
+                margin-bottom: 0;
+                margin-top: -2.5rem;
+                z-index: 9999;
+                padding-top: 1.5rem;
+
+                .health-band__container {
+                    transform: translateY(calc(var(--band-overlap-size) * -1 + 30px));
+                    margin-bottom: (calc(var(--band-overlap-size) * -1 + 30px));
+                    overflow: hidden;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                width: 100vw;
+                margin-inline-start: 50%;
+                transform: translatex(-50%);
+                display: inherit;
+                z-index: -1;
+                background: var(--neutral-bg);
+            }
+        }
+    }
+}
+
+
+
+// When used after content (band or other) no other class application is required.
+// However, the background must match the preview sections for it to appear seamless.

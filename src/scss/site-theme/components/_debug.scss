@@ -1,0 +1,44 @@
+// Debug breakpoints in-browser
+// html:before {
+    //     $debug-bg: #2ab3c1;
+    //     font-family: $AU-font;
+    //     @include AU-space('padding', .5unit);
+    //     display: block;
+    //     text-align: center;
+    //     position: sticky;
+    //     z-index: 9999;
+    //     top: 0;
+
+    //     @include AU-media(xs) {
+    //         content: 'Breakpoint $AU-media-xs (min-width: #{$AU-media-xs})';
+    //         background: $debug-bg;
+    //     }
+
+    //     @include AU-media(sm) {
+    //         content: 'Breakpoint $AU-media-sm (min-width: #{$AU-media-sm})';
+    //         background: lighten($debug-bg, 10%);
+    //     }
+
+    //     @include AU-media(md) {
+    //         content: 'Breakpoint $AU-media-md (min-width: #{$AU-media-md})';
+    //         background: lighten($debug-bg, 20%);
+    //     }
+
+    //     @include AU-media(lg) {
+    //         content: 'Breakpoint $AU-media-lg (min-width: #{$AU-media-lg})';
+    //         background: lighten($debug-bg, 30%);
+    //     }
+
+    //     @include AU-media(xl) {
+    //         content: 'Breakpoint $AU-media-xl (min-width: #{$AU-media-xl})';
+    //         background: lighten($debug-bg, 40%);
+    //     }
+
+    //     // Health added without AU-media() support.
+    //     // Simply uses the existing grid and widens the container.
+    //     @media (min-width: 1441px) {
+    //         content: 'Breakpoint $AU-media-xxl (min-width: 1441px)';
+    //         background: lighten($debug-bg, 50%);
+    //     }
+
+    // }

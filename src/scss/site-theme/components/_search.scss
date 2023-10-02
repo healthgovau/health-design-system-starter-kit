@@ -1,0 +1,117 @@
+.clinical-trials-filter {
+    background: var(--neutral-bg);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+
+    .svg-inline--fa {
+        background: #e7e7e7;
+        padding: 5px;
+        border-radius: 6px;
+        margin-right: 7px;
+    }
+}
+
+.health-facet {
+
+    .au-form__item {
+        margin-top: 0;
+    }
+
+    .health-facet__more {
+        margin-bottom: 0;
+    }
+}
+
+@include AU-media(lg) {
+    .clinical-trials-filter {
+        padding: 1rem 2rem;
+
+        .svg-inline--fa {
+            background: none;
+            padding: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+.clinical-trials-filter__control {
+    border: none;
+    background: none;
+}
+
+.clinical-trials-filter__form {
+    &--mobile-hidden {
+        display: none;
+    }
+
+    @include AU-media(lg) {
+        &--mobile-hidden {
+            display: block;
+        }
+    }
+}
+
+.clinical-trials-search {
+
+    // Form on home page and search page
+    .au-form__item--inline {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+
+    .au-form__item {
+
+        .au-text-input,
+        .au-select {
+            max-width: 100%;
+        }
+    }
+}
+
+// Trails search results
+
+.clinical-trials-results {
+    .clinical-trials-results__metadata {
+        margin-top: 1rem;
+        column-count: 2;
+
+        .health-field__label {
+            @extend %minor-text;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+    }
+}
+
+@include AU-media(sm) {
+    .clinical-trials-results {
+        .clinical-trials-results__metadata {
+            column-count: 3;
+
+            .health-field {
+                break-inside: avoid;
+            }
+
+        }
+
+        .health-field--inline {
+            margin-top: 0;
+
+            .health-field__label {
+                width: 15em;
+            }
+        }
+    }
+
+}
+
+.au-body .health-tabs-wrapper-inner {
+    overflow-x: hidden;
+}
+
+.health-filter {
+    .health-facet__list {
+        margin-top: 0;
+    }
+}

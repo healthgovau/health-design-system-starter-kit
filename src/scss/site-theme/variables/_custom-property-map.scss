@@ -64,7 +64,10 @@
 
     // Main-nav
     --main-nav-border: #{darken($project-subheader-bg, 10%)};
+    --main-nav-active-link-border: #{$project-main-nav--hover};
     --main-nav-active-link-bg--hover: #{$project-main-nav--hover};
+    --main-nav-dropdown-bg: #{$project-main-nav--hover}; // Drop-down BG
+    --main-nav-active-dropdown-link-bg--hover: #{$project-main-nav-dropdown--hover}; // Drop-down link BG
 
     // Callouts
     --callout-border--primary: #{$project-primary-bg};
@@ -111,7 +114,19 @@
     --tag-link-text: #{$project-tag-link-text};
 
     // Hero
-    --hero-bg: #{$project-hero-bg};
-    --hero-bg--trans: #{rgba($project-hero-bg, 0.9)};
-    --hero-text: #{$project-hero-text};
+    --hero-bg: #{$hero-bg-colour};
+    --hero-bg--inset-opaque: #{darken($hero-bg-colour, 10%)};
+    --hero-bg--trans: #{rgba($hero-bg-colour, 0.8)};
+    --hero-text: #{$hero-text-colour};
+    --hero-content-width--md: #{$hero-content-width--md};
+    --hero-content-width--lg: #{$hero-content-width--lg};
+    --hero-image-width--md: #{$hero-image-width--md};
+    --hero-image-width--lg: #{$hero-image-width--lg};
+    --hero-minheight--md: #{$hero-minheight--md};
+    --hero-minheight--lg: #{$hero-minheight--lg};
+    --hero-overlap-top: #{$hero-overlap-top};
+
+    // New for ACT
+    --subheader-content-width--desktop: 50%;
+    --band-overlap-size: #{$band-overlap-size};
 }

@@ -11,7 +11,7 @@
             flex-wrap: nowrap;
         }
 
-        // Text
+        // Coat of arms
         .au-header__logo {
             max-width: 400px;
             float: none;
@@ -41,13 +41,17 @@
             }
         }
 
-        // Image
-        .au-header__lockup {}
+        // Lockup image
+        .au-header__lockup {
+            margin: 0.75rem 0;
+        }
     }
 
     // Style the elements
     .au-header {
-        .au-header__text {
+
+        .au-header__text,
+        .au-header__lockup {
             @include AU-media('md') {
                 border-left: 1px solid #7e7e7e;
                 padding-left: 2rem;

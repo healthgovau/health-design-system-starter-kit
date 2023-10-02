@@ -2,7 +2,7 @@
  * @file
  * Override existing colour variables or define new ones.
  * NOTE:
- * This file (and _colours-map.scss) are only referenced when view the base theme.
+ * This file (and _custom-propoerty-map.scss) are only referenced when view the base theme.
  * When a subtheme is created (see README) they are not included in the build.
  * They exist simply to 'greyscale' the site so that it isn't a HDS/HGA clone!
  */
@@ -28,24 +28,31 @@ $grey--300: lighten($black, 70%); // #b3b3b3;
 $grey--200: lighten($black, 80%); // #cccccc;
 $grey--100: lighten($black, 90%); // #e6e6e6;
 
-// 1b. Colour variables
-// A good system is to define 3 colours and create tints/shades (using SASS functions or HEX).
-// This will prevent the site from becoming a kaleidoscope!
-// Let a palette generator (like https://coolors.co/generate) be your friend
+// A cool workflow: 
+// 1. Extract colours from site using https://coolors.co/image-picker
+// 2. Refine colours if needed
+// 3, Export as SCSS variables (add below)
+// 4. Create an SVG of a page image grab
+// 5. Upload the SVG to test colour combinations at https://coolors.co/visualizer (and just visualise combos)
 
-// For example
-// ===========
-$blue: #00007a;
+
+// Palette generated from https://coolors.co/palette/ffffff-f21259-5078c4-eeeef0-4e659b
+$red: #F21259;
+$turquoise: #6FCDE8;
+$blue: #5078C4;
+$indigo: #4E659B;
+$red--900: lighten($red, 10%);
+$red--800: lighten($red, 20%);
 $blue--900: lighten($blue, 10%);
 $blue--800: lighten($blue, 20%);
-
-$green: #0c4c00;
-$green--900: lighten($green, 10%);
-$green--800: lighten($green, 20%);
-
-$yellow: #eeebaa;
-$yellow--900: lighten($yellow, 10%);
-$yellow--800: lighten($yellow, 20%);
+$blue--100: lighten($blue, 90%);
+$indigo--900: lighten($indigo, 10%);
+$indigo--800: lighten($indigo, 20%);
+$indigo--500: lighten($indigo, 50%);
+$turquoise--900: lighten($turquoise, 10%);
+$turquoise--800: lighten($turquoise, 20%);
+$turquoise--750: lighten($turquoise, 25%);
+$turquoise--700: lighten($turquoise, 30%);
 
 // 2. Colour assignment
 // Then assign colours vars to meaningful uses (yes, these technically are mappings but I've kept them here for simplicity.
@@ -59,7 +66,7 @@ $project-primary-btn-text: $dark; // $dark or $light
 $project-primary-card-link-text: $link-blue; // $link-blue or $light
 
 // Secondary - used in bands, cards, etc
-$project-secondary-bg: $green; // custom
+$project-secondary-bg: $indigo; // custom
 $project-secondary-text: $light; // $dark or $light
 $project-secondary-link-text: $light; // $link-blue or $light
 $project-secondary-btn-bg: $light; // $dark, $light or custom
@@ -67,23 +74,25 @@ $project-secondary-btn-text: $dark; // $dark or $light
 $project-secondary-card-link-text: $link-blue; // $link-blue or $light
 
 // Tertiary - used in bands, cards, etc
-$project-tertiary-bg: $yellow; // custom
-$project-tertiary-text: $dark; // $dark or $light
-$project-tertiary-link-text: $link-blue; // $link-blue or $light
-$project-tertiary-btn-bg: $dark; // $dark, $light or custom
-$project-tertiary-btn-text: $light; // $dark or $light
+$project-tertiary-bg: $red; // custom
+$project-tertiary-text: $light; // $dark or $light
+$project-tertiary-link-text: $light; // $link-blue or $light
+$project-tertiary-btn-bg: $light; // $dark, $light or custom
+$project-tertiary-btn-text: $dark; // $dark or $light
 $project-tertiary-card-link-text: $link-blue; // $link-blue or $light
 
 // Generate Health pillars
-$project-brand-primary: $green; // custom
+$project-brand-primary: $blue; // custom
 
 // Footer
-$project-footer-bg: $blue; // custom
+$project-footer-bg: $indigo; // custom
 
 // Navigation
-$project-main-nav--hover: $grey--100; // custom
-$project-inpage-nav-border: $grey--700; // custom
-$project-tab-nav-border: $grey--800; // custom
+$project-main-nav--hover: $turquoise--750; // Primary nav active border & hover bg, dropdown nav background
+$project-main-nav-dropdown--hover: $turquoise--800; // Dropdown nav active & hover bg
+
+$project-inpage-nav-border: $red; // custom
+$project-tab-nav-border: $red; // custom
 
 // Side navigation
 $side-nav-link-bg--active: $grey--100; // custom
@@ -91,25 +100,25 @@ $side-nav-link-border: $grey--700; // custom
 $side-nav-link-border--bottom: $grey--300; // custom
 
 // Sub-header
-$project-subheader-bg: $grey--900; // custom
+$project-subheader-bg: $indigo; // custom
 $project-subheader-text: $light; // $dark or $light (applies to hero style header)
 
 // Cards
-$project-card-highlight-border: $black; // custom
+$project-card-highlight-border: $red;
 $project-card-text: $dark; // $dark or $light
 
 // Buttons (bg and text generate all variants)
-$project-btn-bg: $link-blue; // $link-blue  or custom
+$project-btn-bg: $red; // $link-blue  or custom
 $project-btn-text: $light; // $dark or $light
 
 // Tags
-$project-tag-link-bg: $grey--100; // custom
-$project-tag-link-text: $dark; // $dark or $light
+$project-tag-link-bg: $blue; // custom
+$project-tag-link-text: $light; // $dark or $light
 
 // Hero
-$project-hero-bg: $grey--400; // custom
-$project-hero-text: $light; // $dark or $light
+$hero-bg-colour: $indigo; // custom
+$hero-text-colour: $light; // $dark or $light
 
-// 3. Go to _colours-map.scss
-// These vars are referenced in _colours-map.scss to assign to CSS custom props
+// 3. Go to _custom-propoerty-map.scss
+// These vars are referenced in _custom-propoerty-map.scss to assign to CSS custom props
 // Some of these get calculated to save you the work (e.g. gradient colours, hover colours, etc). 

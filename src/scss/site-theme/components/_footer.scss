@@ -1,0 +1,33 @@
+// Copied from HGA
+
+.au-footer {
+
+    .layout--fourcol-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .layout__region {
+        @include AU-space(margin-bottom, 1unit);
+    }
+
+    // Override layout build classes
+    .layout--fourcol-section>.layout__region {
+        @include AU-media('sm') {
+            flex: 0 1 100%;
+        }
+
+        @include AU-media('md') {
+            flex: 0 1 50%;
+        }
+
+        @include AU-media('lg') {
+            flex: 0 1 25%;
+        }
+    }
+
+    .au-link-list>li {
+        @include AU-space(margin-left, 0);
+        @include AU-space(margin-right, 0);
+    }
+}

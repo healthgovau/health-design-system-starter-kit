@@ -1,0 +1,7 @@
+@include AU-media(md) {
+    .health-hero {
+        &.health-hero--overlap-bottom {
+            padding-bottom: var(--band-overlap-size);
+        }
+    }
+}
