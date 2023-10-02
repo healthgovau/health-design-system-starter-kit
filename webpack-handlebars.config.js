@@ -9,14 +9,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const handbreakpages = './handlebars/src/pages/';
 
-
 filenames = fs.readdirSync(handbreakpages);
 var fns = [];
 
 filenames.forEach(file => {
     fns.push(file);
 });
-
 
 module.exports = (env) => {
 
@@ -60,7 +58,7 @@ module.exports = (env) => {
                     { from: /(.*)/, to: '/test.html' },
                 ],
             },
-            liveReload: true,
+            liveReload: false,
             devMiddleware: {
                 writeToDisk: true
             }
@@ -73,7 +71,13 @@ module.exports = (env) => {
                     options: {
                         precompileOptions: {
                             page: 'home',
+                            knownHelpersOnly: false,
                         },
+                        helperDirs: [
+                            path.join(__dirname, 'handlebars', 'helpers')
+                        ],
+                        helpersPath: path.join(__dirname, 'handlebars', 'helpers'),
+                        helperDirs: path.resolve(__dirname, "./handlebars/helpers"),
                         partialDirs: [
                             path.join(__dirname, 'handlebars', 'src', 'partials')
                         ],
