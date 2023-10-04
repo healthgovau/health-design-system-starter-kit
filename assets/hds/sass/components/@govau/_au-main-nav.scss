@@ -23,7 +23,7 @@
         a {
           @include AU-space(margin-bottom, -0.5unit);
           @include AU-space(border-bottom, 0.5unit solid var(--main-nav-active-link-border));
-          z-index: 9999;
+          z-index: 400;
           background-color: var(--main-nav-active-link-bg--hover);
         }
       }
@@ -124,12 +124,19 @@
       // @include AU-space(top, 3.5unit); // This handles wrapping navigation
       left: 0;
       width: calc(100% - $AU-grid-12-gutter-width);
-      z-index: 10000;
+      z-index: 500;
       background: var(--main-nav-dropdown-bg);
       box-shadow: 0px 5px 0.375em rgba(0, 0, 0, 0.2);
-      @include AU-space(padding, 1unit);
       @include AU-space(margin-left, $AU-grid-12-gutter-width/2);
       @include AU-space(margin-right, $AU-grid-12-gutter-width/2);
+
+      // More space for mega-menu
+      @include AU-space(padding, 2unit);
+
+      // Tighter for immediate link list
+      &:has(.au-link-list) {
+        @include AU-space(padding, 1unit);
+      }
 
       .au-link-list {
         >li {
