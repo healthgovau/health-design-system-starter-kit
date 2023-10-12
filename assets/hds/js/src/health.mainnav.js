@@ -91,13 +91,6 @@ var health = health || {};
     });
   };
 
-  function dropdown() {
-    // Set classes
-    $(".au-main-nav__dropdown--open").removeClass('au-main-nav__dropdown--open');
-    $(".au-main-nav__dropdown-control--active").removeClass('au-main-nav__dropdown-control--active');
-    // ARIA
-  }
-
   $(document).ready(function () {
 
     var resizeTimer; // Set resizeTimer to empty so it resets on page load
@@ -129,47 +122,49 @@ var health = health || {};
 
 
     // Add IDs/aria to dropdown control/nav
-    var dropdownControls = $('.au-main-nav__dropdown-control');
+    var dropdownControls = $('.au-main-nav__dropdown-control > a');
     dropdownControls.each(function (i) {
-      $(this).attr("id", "dropdown-control-" + i);
-      $(this).find(".au-main-nav__dropdown").attr("aria-labelledby", "dropdown-control-" + i);
+      $(this).attr({
+        "id": "dropdown-control-" + i,
+        "aria-controls": "dropdown-control-" + i,
+        "aria-expanded": false,
+        "aria-haspopup": "true",
+        "role": "button",
+        "data-toggle": "dropdown"
+      });
+      $(this).next(".au-main-nav__dropdown").attr("aria-labelledby", "dropdown-control-" + i);
     });
 
     // Add click event handlers for all the buttons
     $(".au-main-nav__dropdown-control > a").on("click", function (event) {
       event.preventDefault();
-      $control = $(this).parent('.au-main-nav__dropdown-control');
-      $controlId = $(this).attr('id');
-      // $dropdown = $(this).next('.au-main-nav__dropdown');
+      // $control = $(this).parent('.au-main-nav__dropdown-control');
+      $control = $(this);
 
       $.each(dropdownControls, function (index, element) {
-        // Selected current
         if ($(this).attr("id") === $control.attr("id")) {
-          console.log("Clicked element " + index);
-          $control.toggleClass('au-main-nav__dropdown-control--active');
-          // $dropdown.toggleClass("au-main-nav__dropdown--open");
+          $controlParent = $control.parent(".au-main-nav__dropdown-control");
+          if ($controlParent.hasClass('au-main-nav__dropdown-control--active')) {
+            $controlParent.removeClass('au-main-nav__dropdown-control--active');
+            $(this).attr("aria-expanded", "false");
+          } else {
+            $controlParent.addClass('au-main-nav__dropdown-control--active');
+            $(this).attr("aria-expanded", "true");
+          }
         } else {
-          $(this).removeClass('au-main-nav__dropdown-control--active');
-          // $(this).next('.au-main-nav__dropdown').removeClass('au-main-nav__dropdown--open');
+          $(this).parent(".au-main-nav__dropdown-control").removeClass('au-main-nav__dropdown-control--active');
+          $(this).attr("aria-expanded", "false");
         }
       });
-
     });
 
     // Add a click event handler for the document to close any open dropdowns when clicking outside
     $(document).on("click", function (event) {
       event.preventDefault();
-      console.log("Clicked document");
       var $target = $(event.target);
       if (!$target.closest(".au-main-nav__dropdown-control > a").length) {
-        console.log("Not in target area");
-        // $(".au-main-nav__dropdown--open").removeClass('au-main-nav__dropdown--open');
+        $(".au-main-nav__dropdown-control > a").attr("aria-expanded", "false");
         $(".au-main-nav__dropdown-control--active").removeClass('au-main-nav__dropdown-control--active');
-      } else {
-        if (!$target.closest(".au-main-nav__dropdown-control--active > a").length) {
-          console.log("here");
-          // $(this).parent().removeClass('au-main-nav__dropdown-control--active');
-        }
       }
     });
 
