@@ -37,7 +37,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: right;
+      object-position: var(--hero-image-focus);
     }
 
     &__content {
@@ -186,13 +186,6 @@
         }
 
       }
-
-      // Consider image::after
-      // - full-width
-      // - portioned
-      // - bottom or right-aligned (create utility classes, eg. image--fix-top, image--fix-bottom)
-
-      // Consider mobile behaviour - e.g. https://www.genetechnology.gov.au/
     }
   }
 }

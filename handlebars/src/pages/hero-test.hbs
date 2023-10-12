@@ -3,8 +3,16 @@
 
     {{#*inline "header-block"}}
         {{> includes/header
+            header-coa-gov=true
             header-img="img/act_logo.png"
             header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{#*inline "nav-block"}}
+        {{> includes/act/nav--dropdown 
+            dropdown-type-class="au-main-nav--dropdown-columns"
+            dropdown-layout-class=""
         }}
     {{/inline}}
 
