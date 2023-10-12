@@ -1,5 +1,5 @@
 
-{{#> layouts/boilerplate-landing-page title="Clinical trials search" body-class="" summary="This is a live search of the Australian New Zealand Clinical Trials Registry (ANZCTR). All clinical trials displayed on this website are sourced from the ANZCTR." }}
+{{#> layouts/boilerplate-standard-page title="Standard page" body-class="" summary="This is a standard page." }}
 
     {{#*inline "header-block"}}
         {{> includes/header
@@ -24,13 +24,18 @@
 
 
     {{#*inline "main-block"}}
+        {{> includes/in-page-nav }}
+        {{> includes/loremipsum--long }}
+        {{> includes/act/home--features }}
+        {{> includes/video }}
+        {{> includes/callout}}
+        {{> includes/table }}
+        {{> includes/references }}
+    {{/inline}}
 
-        {{> includes/act/search-nav }}
-
-        {{> includes/act/search-form--advanced }}
-
-
+    {{#*inline "sidenav-block"}}
+        {{> includes/nav--side }}
     {{/inline}}
 
 
-{{/layouts/boilerplate-landing-page}}
+{{/layouts/boilerplate-standard-page}}

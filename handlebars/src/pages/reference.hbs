@@ -3,7 +3,16 @@
 
     {{!-- Subheader --}}
     {{#*inline "header-block"}}
-        {{> includes/header }}
+        {{> includes/header 
+            header-coa-gov=true
+        }}
+    {{/inline}}
+
+    {{#*inline "nav-block"}}
+        {{> includes/act/nav--dropdown 
+            dropdown-type-class="au-main-nav--dropdown-columns"
+            dropdown-layout-class=""
+        }}
     {{/inline}}
 
     {{!-- Subheader region (defined in layouts/boilerplate-landing-page --}}

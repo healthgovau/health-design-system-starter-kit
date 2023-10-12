@@ -1,10 +1,18 @@
 
-{{#> layouts/boilerplate-standard-page title="Landing page" body-class="" summary="This is a landing page. It exists as an intermediary between all pages and content pages but will be skipped my many users via drop-down primary navigation." }}
+{{#> layouts/boilerplate-landing-page title="Landing page" body-class="" summary="This is a landing page. It exists as an intermediary between all pages and content pages but will be skipped my many users via drop-down primary navigation." }}
 
     {{#*inline "header-block"}}
         {{> includes/header
+            header-coa-gov=true
             header-img="img/act_logo.png"
             header-img-alt="Austalian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{#*inline "nav-block"}}
+        {{> includes/act/nav--dropdown 
+            dropdown-type-class="au-main-nav--dropdown-columns"
+            dropdown-layout-class=""
         }}
     {{/inline}}
 
@@ -27,4 +35,4 @@
         </div>
     {{/inline}}
 
-{{/layouts/boilerplate-standard-page}}
+{{/layouts/boilerplate-landing-page}}
