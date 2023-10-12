@@ -117,6 +117,19 @@
 
 //--------------------------------------------------------------
 // Main nav - dropdown
+// Implement via class="au-main-nav au-main-nav--dropdown"
+
+// Two variant desktop widths:
+// 1. Default - container width  
+//
+//   Dropdown content layout is flexible but supports:
+//   a. Two-column flex (using class="au-link-list au-link-list--flex-halves")
+//   b. Three-column flex (using class="au-link-list au-link-list--flex-thirds")
+//   c. Mega-menu - freeform!
+
+// 2. Column - narrow column (for very small sites)
+//
+//   Layout is fixed.
 //--------------------------------------------------------------
 .au-main-nav {
 
@@ -135,32 +148,68 @@
         box-shadow: 0px 5px 0.375em rgba(0, 0, 0, 0.2);
       }
 
-      left: 0;
-      width: calc(100% - $AU-grid-12-gutter-width);
+      width: 100%;
+      margin-left: 0;
       z-index: 500;
       background: var(--main-nav-dropdown-bg);
-      @include AU-space(margin-left, $AU-grid-12-gutter-width/2);
-      @include AU-space(margin-right, $AU-grid-12-gutter-width/2);
+      border-left: 8px solid var(--main-nav-active-dropdown-border);
+      padding: 0;
 
-      // More space for mega-menu
-      @include AU-space(padding, 1unit);
+      @include AU-media($AU-main-nav-breakpoint) {
+        // More space for mega-menu
+        @include AU-space(padding, 2unit);
+        border-left: 0;
 
-      // Tighter for immediate link list
-      // &:has(.au-link-list) {
-      //   @include AU-space(padding, 1unit);
-      // }
+        //Tighter for immediate link list
+        &:has(.au-link-list) {
+          @include AU-space(padding, 1unit);
+        }
+      }
 
 
+
+
+      @include AU-media($AU-main-nav-breakpoint) {
+        left: 0;
+        width: calc(100% - $AU-grid-12-gutter-width);
+        @include AU-space(margin-left, $AU-grid-12-gutter-width/2);
+        @include AU-space(margin-right, $AU-grid-12-gutter-width/2);
+
+        // First link to landing page (same target as control)
+        .au-main-nav__dropdown-title {
+          position: relative;
+          width: 100%;
+
+          a:after {
+            content: ' ';
+            display: inline-block;
+            margin: 0 0 -0.1rem 0.75rem;
+            height: 16px;
+            width: 14px;
+            transition: margin .2s ease;
+            transition-property: right;
+            background: #000;
+            mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+            -webkit-mask-image: AU-svguri('<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg>');
+          }
+        }
+      }
+    }
+
+    // Accommodate existing active tree
+    .au-link-list>li.active,
+    .au-link-list>li.active-trail {
+      .au-main-nav__dropdown a {
+        font-weight: normal;
+
+        @include AU-media($AU-main-nav-breakpoint) {
+          font-weight: bold;
+        }
+      }
     }
 
     // Dropdown control
     .au-main-nav__dropdown-control {
-
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: var(--main-nav-active-dropdown-link-bg--hover);
-      }
 
       >a {
         @include AU-space(padding-right, 2.5unit);
@@ -192,7 +241,7 @@
           }
         }
 
-        // Show navigation state
+        // Display dropdown
         .au-main-nav__dropdown {
           display: block;
         }
@@ -204,14 +253,12 @@
               background-color: var(--main-nav-active-dropdown-link-bg--hover);
             }
 
-            @include AU-media($AU-main-nav-breakpoint) {
-              a {
+            a {
 
-                &:hover,
-                &:focus,
-                &:active {
-                  background-color: var(--main-nav-active-dropdown-link-bg--hover);
-                }
+              &:hover,
+              &:focus,
+              &:active {
+                background-color: var(--main-nav-active-dropdown-link-bg--hover);
               }
             }
           }
@@ -237,12 +284,15 @@
 
       .au-link-list>li {
         float: none;
-        border-left: 8px solid var(--main-nav-active-dropdown-border);
+        // border-left: 8px solid var(--main-nav-active-dropdown-border);
 
         &.au-main-nav__dropdown-title {
           border-left: 0;
-          font-weight: bold;
-          background-color: none;
+          border-bottom: 0;
+
+          a:after {
+            display: none;
+          }
         }
 
         @include AU-media($AU-main-nav-breakpoint) {
@@ -253,17 +303,3 @@
 
   }
 }
-
-
-// TODO create variants
-// au-main-nav--dropdown-horizontal
-// au-main-nav--dropdown-vertical
-// au-main-nav--dropdown-mega
-
-// TODO handle mobile
-// - Behaviour
-//   - links to pages vs drill-down further
-//   - accordion, slide transition, etc
-// - Trigger (click, not hover)
-// - Will need JS!
-// - Integrated (same nav) or own (like .hidden-mobile)

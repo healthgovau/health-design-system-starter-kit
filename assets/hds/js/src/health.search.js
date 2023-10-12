@@ -103,7 +103,7 @@ var health = health || {};
 
     // Copy across the elements from the sub menu into the main nav.
     // Only show them in the mobile menu.
-    $('.health-sub-nav ul.au-link-list li').clone().insertAfter('.au-main-nav ul li:last-of-type').addClass('au-main-nav--mobile-only');
+    $('.health-sub-nav ul.au-link-list li').clone().appendTo('.au-main-nav__menu-inner > ul.au-link-list').addClass('au-main-nav--mobile-only');
 
     // Search button handler.
     $('.au-main-nav__toggle--search').click(function (e) {

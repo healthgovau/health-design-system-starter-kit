@@ -101,10 +101,6 @@ var health = health || {};
     });
     healthSearchResize();
 
-    // Copy across the elements from the sub menu into the main nav.
-    // Only show them in the mobile menu.
-    $('.health-sub-nav ul.au-link-list li').clone().insertAfter('.au-main-nav ul li:last-of-type').addClass('au-main-nav--mobile-only');
-
     // Search button handler.
     $('.au-main-nav__toggle--search').click(function (e) {
       $('.health-search--global').toggle();
@@ -119,7 +115,6 @@ var health = health || {};
 
     // Add correct grid class to second refine search in listings.
     $('.region-navigation #search-api-page-search-form-default-search--2').addClass('col-xs-12');
-
 
     // Add IDs/aria to dropdown control/nav
     var dropdownControls = $('.au-main-nav__dropdown-control > a');
@@ -138,7 +133,6 @@ var health = health || {};
     // Add click event handlers for all the buttons
     $(".au-main-nav__dropdown-control > a").on("click", function (event) {
       event.preventDefault();
-      // $control = $(this).parent('.au-main-nav__dropdown-control');
       $control = $(this);
 
       $.each(dropdownControls, function (index, element) {
@@ -160,9 +154,9 @@ var health = health || {};
 
     // Add a click event handler for the document to close any open dropdowns when clicking outside
     $(document).on("click", function (event) {
-      event.preventDefault();
       var $target = $(event.target);
       if (!$target.closest(".au-main-nav__dropdown-control > a").length) {
+        // event.preventDefault();
         $(".au-main-nav__dropdown-control > a").attr("aria-expanded", "false");
         $(".au-main-nav__dropdown-control--active").removeClass('au-main-nav__dropdown-control--active');
       }

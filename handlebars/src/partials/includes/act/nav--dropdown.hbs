@@ -1,4 +1,4 @@
-<nav class="au-main-nav au-main-nav--dropdown" aria-label="main">
+<nav class="au-main-nav au-main-nav--dropdown {{dropdown-type-class}}" aria-label="main">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -42,39 +42,102 @@
               <ul class="au-link-list">
                 <li><a href="index.html">Home</a></li>
                 <li class="au-main-nav__dropdown-control">
-                  <a href="landing-page-2.html">Drop-down (thirds)</a>
+                  <a href="index.html" role="button" aria-haspopup="true" aria-expanded="false">Nav dropdown 1</a>
                   <div class="au-main-nav__dropdown">
-                    <ul class="au-link-list au-link-list--flex-thirds">
-                      <li><a href="#">Lorem, ipsum dolor sit amet</a></li>
-                      <li><a href="#">Ihil laborum explicabo similique non</a></li>
-                      <li><a href="#">Facilis perferendis</a></li>
-                      <li><a href="#">Molestias aperiam, velit corporis</a></li>
-                      <li><a href="#">Earum exercitationem recusandae inventore</a></li>
-                      <li><a href="#">Repudiandae animi</a></li>
-                      <li><a href="#">Fugiat blanditiis consectetur</a>
+                    <ul class="au-link-list {{dropdown-layout-class}}">
+                      <li class="au-main-nav__dropdown-title"><a href="index.html">Landing page link</a></li>
+                      <li><a href="standard-page.html">Nav item 1</a></li>
+                      <li><a href="landing-page.html">Nav item 2</a></li>
+                      <li><a href="search-results.html">Nav item 3</a></li>
+                      <li><a href="index.html">Nav item 4</a></li>
                     </ul>
                   </div>
                 </li>
-                <li class="au-main-nav__dropdown-control">
-                  <a href="landing-page-2.html">Drop-down (quarters)</a>
+                <li class="au-main-nav__dropdown-control active">
+                  <a href="index.html" role="button" aria-haspopup="true">Nav dropdown 2</a>
                   <div class="au-main-nav__dropdown">
-                    <ul class="au-link-list au-link-list--flex-quarters">
-                      <li><a href="#">Lorem, ipsum dolor sit amet</a></li>
-                      <li><a href="#">Ihil laborum explicabo similique non</a></li>
-                      <li><a href="#">Facilis perferendis</a></li>
-                      <li><a href="#">Molestias aperiam, velit corporis</a></li>
-                      <li><a href="#">Earum exercitationem recusandae inventore</a></li>
-                      <li><a href="#">Repudiandae animi</a></li>
-                      <li><a href="#">Fugiat blanditiis consectetur</a>
+                    <ul class="au-link-list {{dropdown-layout-class}}">
+                      <li class="au-main-nav__dropdown-title"><a href="index.html">Landing page link</a></li>
+                      <li><a href="#">Level two</a></li>
+                      <li><a href="#">Level two</a></li>
+                      <li><a href="#">Level two</a></li>
+                      <li><a href="#">Level two</a></li>
+                      <li><a href="#">Level two</a></li>
+                      <li><a href="#">Level two</a></li>
+                      <li><a href="#">Level two</a></li>
+                      <li><a href="#">Level two</a></li>
                     </ul>
+                  </div>
+                </li>
+
+                <li class="au-main-nav__dropdown-control">
+                  <a href="landing-page-2.html">Nav dropdown (mega)</a>
+                  <div class="au-main-nav__dropdown">
+                    <div class="health-layout health-layout--2col">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <h2 class="au-display-lg">Section heading</h2>
+                          <p class="d">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar nisl at erat mattis</p>
+                          {{! <div class="health-card health-card--shadow health-card--clickable">
+                            <div class="health-card__body">
+                              <h3 class="health-card__title" id="-calltoaction-card-">
+                                <a class="health-card__link" href="/resources/rebel-base-calculator/app" tabindex="-1">
+                                  Call-to-action card
+                                </a>
+                              </h3>
+                              <div class="health-card__text">
+                                <div class="health-field health-field--label-hidden">
+                                  <div class="health-field__item"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consectetur sodales est, a commodo libero.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div> }}
+                        </div>
+                        <div class="col-md-9">
+                          <div class="health-grid health-listing health-grid--1col-xs health-grid--2col-md health-grid--3col-lg">
+                            <div>
+                              <h3 class="au-display-md">Sub-heading</h3>
+                              <ul class="list--cta-links">
+                                <li><a href="#" class="list--cta-links__link">Link one</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link two</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link three</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link four</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link five</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link with a longer title to cause wrapping</a></li>
+                              </ul>
+                            </div>
+                            <div>
+                              <h3 class="au-display-md">Sub-heading</h3>
+                              <ul class="list--cta-links">
+                                <li><a href="#" class="list--cta-links__link">Link one</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link two</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link three</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link four</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link five</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link with a longer title to cause wrapping</a></li>
+                              </ul>
+                            </div>
+                            <div>
+                              <h3 class="au-display-md">Sub-heading</h3>
+                              <ul class="list--cta-links">
+                                <li><a href="#" class="list--cta-links__link">Link one</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link two</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link three</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link four</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link five</a></li>
+                                <li><a href="#" class="list--cta-links__link">Link with a longer title to cause wrapping</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </li>
                 <li><a href="search-results.html">Search results</a></li>
                 <li><a href="landing-page.html">Landing page</a></li>
-                <li class="active"><a href="standard-page.html">Standard page</a></li>
-                <li class="au-main-nav--mobile-only"><a href="#">Link 1</a></li>
-                <li class="au-main-nav--mobile-only"><a href="#">Link 2</a></li>
-                <li class="au-main-nav--mobile-only"><a href="#">Link 3</a></li>
+                <li><a href="standard-page.html">Standard page</a></li>
               </ul>
               <div class="au-main-nav__focus-trap-bottom"></div>
             </div>
