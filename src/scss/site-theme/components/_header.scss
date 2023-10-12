@@ -4,6 +4,7 @@
     .au-header__flex-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
 
         @include AU-media('md') {
@@ -11,11 +12,39 @@
             flex-wrap: nowrap;
         }
 
-        // Coat of arms
+        // Department coat of arms
         .au-header__logo {
             max-width: 400px;
             float: none;
             margin: 0;
+        }
+
+        // Australian Government coat of arms
+        &.au-header--ausgov {
+            flex-direction: row;
+            gap: 1rem;
+            @include AU-space(padding-top, 0.5unit);
+
+            @include AU-media('md') {
+                gap: 2rem;
+                @include AU-space(padding-top, 0);
+            }
+
+            .au-header__logo {
+                max-width: 33%;
+                max-width: 33vw;
+
+                @include AU-media('md') {
+                    max-width: 320px;
+                }
+            }
+
+            .au-header__text,
+            .au-header__lockup {
+                border-left: 1px solid #7e7e7e;
+                padding-left: 1rem;
+            }
+
         }
 
         // Text
@@ -55,6 +84,25 @@
             @include AU-media('md') {
                 border-left: 1px solid #7e7e7e;
                 padding-left: 2rem;
+            }
+        }
+
+        // Switch stacked/inline based on breakpoint
+        .au-header__logo-image--hidden {
+            &-mobile {
+                display: none;
+
+                @include AU-media('md') {
+                    display: block;
+                }
+            }
+
+            &-desktop {
+                display: block;
+
+                @include AU-media('md') {
+                    display: none;
+                }
             }
         }
 
