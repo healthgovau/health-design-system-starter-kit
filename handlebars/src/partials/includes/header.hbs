@@ -3,10 +3,17 @@
     <div id="pillars"></div>
     <div class="row">
       <div class="col-xs-12 col-md-8">
-        <div class="au-header__flex-container">
-          <a href="/" title="Home" rel="home" class="au-header__logo">
-            <img src="img/DHAC_strip.png" alt="Australia Government Department of Health" class="au-header__logo-image au-responsive-media-img initial loading" data-was-processed="true" />
-          </a>
+        <div class="au-header__flex-container {{#if header-coa-gov}}au-header--ausgov{{/if}}">
+          {{#if header-coa-gov}}
+            <a href="/" title="Home" rel="home" class="au-header__logo">
+              <img src="img/australian-government-strip-black.png" alt="Australia Government" class="au-header__logo-image au-header__logo-image--hidden-mobile au-responsive-media-img" />
+              <img src="img/australian-government-stacked-black.png" alt="Australia Government" class="au-header__logo-image au-header__logo-image--hidden-desktop au-responsive-media-img" />
+            </a>
+          {{else}}
+            <a href="/" title="Home" rel="home" class="au-header__logo">
+              <img src="img/DHAC_strip.png" alt="Australia Government Department of Health" class="au-header__logo-image au-responsive-media-img" />
+            </a>
+          {{/if}}
           {{#if header-img}}
             <div class="au-header__lockup">
               <img src="{{header-img}}" alt="{{header-img-alt}}" />
@@ -26,7 +33,6 @@
           <ul class="au-link-list au-link-list--inline">
             <li><a href="#">Link 1</a></li>
             <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
           </ul>
         </div>
         <div class="health-search health-search--global">
@@ -153,7 +159,7 @@
           "Xenotarsosaurus", "Dinosauriform", "Hypsibema", "Podokesaurus", "Sonidosaurus", "Colepiocephale", "Kelmayisaurus", "Crichtonsaurus", "Stegoceras", "Borogovia", "Lourinhasaurus", "Picrodon", "Mononychus", "Bothriospondylus", "Siamosaurus",
           "Technosaurus", "Theropod", "Neosodon", "Velociraptor", "Eolosaurus", "Archaeovolans", "Chebsaurus", "Compsosuchus", "Othnielosaurus", "Banji", "Proiguanodon", "Rahonavis", "Majungasaurus", "Nanotyrannosaurus", "Bissektipelta",
           "Revueltosaurus", "Lexovisaurus", "Antrodemus", "Hikanodon", "Tyrannosaurus", "Barrosasaurus", "Sinoceratops", "Megadontosaurus", "Sinosauropteryx", "Heilongjiangosaurus", "Maxakalisaurus", "Jensenosaurus", "Dandakosaurus", "Therosaurus",
-          "Sarahsaurus", "Hypselorhachis", "Archaeodontosaurus", "Gresslyosaurus", "Stenopelix" ]; health.searchAutocomplete('#search-field', dinosaurData); });
+          "Sarahsaurus", "Hypselorhachis", "Archaeodontosaurus", "Gresslyosaurus", "Stenopelix" ]; health.searchAutocomplete('#search-field', dinosaurData);});
         </script>
       </div>
     </div>
