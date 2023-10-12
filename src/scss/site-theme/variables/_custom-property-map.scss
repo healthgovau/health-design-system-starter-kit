@@ -68,6 +68,7 @@
     --main-nav-active-link-bg--hover: #{$project-main-nav--hover};
     --main-nav-dropdown-bg: #{$project-main-nav--hover}; // Drop-down BG
     --main-nav-active-dropdown-link-bg--hover: #{$project-main-nav-dropdown--hover}; // Drop-down link BG
+    --main-nav-active-dropdown-border: #{darken($project-main-nav-dropdown--hover, 20%)};
 
     // Callouts
     --callout-border--primary: #{$project-primary-bg};

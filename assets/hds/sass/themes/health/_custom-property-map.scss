@@ -86,14 +86,18 @@
     --hero-content-width--lg: #{$hero-content-width--lg};
     --hero-image-width--md: #{$hero-image-width--md};
     --hero-image-width--lg: #{$hero-image-width--lg};
+    --hero-image-focus: #{$hero-image-focus};
     --hero-minheight--md: #{$hero-minheight--md};
     --hero-minheight--lg: #{$hero-minheight--lg};
     --hero-overlap-top: #{$hero-overlap-top};
     // Main-nav
     --main-nav-border: #{$colour-primary-blue};
     --main-nav-active-link-bg--hover: #{$colour-primary-blue-very-pale};
-    --main-nav-active-link-border: #{$colour-white};
-    --main-nav-dropdown-bg: #{$colour-white};
+    --main-nav-active-link-border: #{$colour-primary-blue-very-pale};
+    --main-nav-dropdown-bg: #{$colour-primary-blue-very-pale};
+    --main-nav-active-dropdown-link-bg--hover: #{$colour-primary-blue-pale}; // Drop-down link BG
+
+
     // Accordion
     --accordion-title-bg: #{$colour-lightest};
     --accordion-title-bg--active: #{$colour-light};
