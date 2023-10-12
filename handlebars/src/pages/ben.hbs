@@ -1,0 +1,88 @@
+
+{{#> layouts/boilerplate-standard-page title="Ben's page" body-class="" summary="Just some helpful guidance regarding ACT site implementation." }}
+
+    {{#*inline "header-block"}}
+        {{> includes/header
+            header-coa-gov=true
+            header-img="img/act_logo.png"
+            header-img-alt="Australian Clinical Trials"
+        }}
+    {{/inline}}
+
+    {{#*inline "nav-block"}}
+        {{> includes/act/nav--dropdown 
+            dropdown-type-class="au-main-nav--dropdown-columns"
+            dropdown-layout-class=""
+        }}
+    {{/inline}}
+
+    {{#*inline "subheader-block"}}
+        {{> includes/subheader 
+            subheader-class="health-sub-header--dark"
+        }}
+    {{/inline}}
+
+
+    {{#*inline "main-block"}}
+    <h2>Dropdown navigation</h2>
+    <p>Uses existing man navigation component and adds a dropdown variant</p>
+    <h3>Mega menu</h3>
+    <p>When implementing add class <code>au-main-nav--dropdown</code> for mega-menu.</p>
+   <textarea>
+        <nav class="au-main-nav au-main-nav--dropdown"></nav>
+    </textarea>
+    <h3>Columns</h3>
+    <p>For ACT, also add class <code>au-main-nav--dropdown-columns</code></p>
+    <textarea>
+        <nav class="au-main-nav au-main-nav--dropdown au-main-nav--dropdown-columns"></nav>
+    </textarea>
+    <h3>List item</h3>
+    <p>The markup is as follows:</p>
+    <textarea>
+        <li class="au-main-nav__dropdown-control">
+            <a href="index.html">Nav dropdown 2</a>
+            <div class="au-main-nav__dropdown">
+            <ul class="au-link-list au-link-list--flex-thirds">
+                <li class="au-main-nav__dropdown-title"><a href="index.html">Same as level 1</a></li>
+                <li><a href="#">Level two</a></li>
+                <li><a href="#">Level two</a></li>
+                <li><a href="#">Level two</a></li>
+                <li><a href="#">Level two</a></li>
+                <li><a href="#">Level two</a></li>
+                <li><a href="#">Level two</a></li>
+                <li><a href="#">Level two</a></li>
+                <li><a href="#">Level two</a></li>
+            </ul>
+            </div>
+        </li>
+    </textarea>
+    <p>The <code>au-main-nav__dropdown-control</code> class turns the nav item into a dropdown control.</p>
+    <p>The <code>au-main-nav__dropdown</code> is the container for the dropdown itself.</p>
+    <p>For ACT, the contents use <code>au-link-list au-link-list--flex-thirds</code> classes. The HDS will support other layouts.</p>
+    <p>The <code>au-main-nav__dropdown-title</code> element shoud repeat the level 1 element (as the level 1 element link is disabled).</p>
+    <p>The rest of the lists elements shoudl be generated from level 2 menu items.</p>
+
+    <h2>Header logo/lockup</h2>
+    <p>The logo and lockup supports images and text. The ACT site implements flexbox layout and the Australian Government logo (responsive). This is a candidate for rolling to the HDS.</p>
+    <textarea>
+        <div class="au-header__flex-container au-header--ausgov">
+            <a href="index.html" title="Home" rel="home" class="au-header__logo">
+                <img src="img/australian-government-strip-black.png" alt="Australia Government" class="au-header__logo-image au-header__logo-image--hidden-mobile au-responsive-media-img">
+                <img src="img/australian-government-stacked-black.png" alt="Australia Government" class="au-header__logo-image au-header__logo-image--hidden-desktop au-responsive-media-img">
+            </a>
+            <div class="au-header__lockup">
+                <img src="img/act_logo.png" alt="Austalian Clinical Trials">
+            </div>
+        </div>
+    </textarea>
+    <p>The <code>au-header--ausgov</code> class handles the layout for that logo type.</p>
+    <p>Potentially we could review ASK settings for selecting:
+        <ul>
+            <li>Image or text lockup</li>
+            <li>Departmental or Australian Government logo</li>
+        </ul>
+    </p>
+    {{/inline}}
+
+
+{{/layouts/boilerplate-standard-page}}
